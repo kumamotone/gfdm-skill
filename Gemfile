@@ -3,9 +3,13 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.5'
-gem 'bootstrap-sass', '2.3.2.0'
+# gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.12.3'
 gem 'bcrypt-ruby', '3.1.2'
+
+gem 'twitter-bootswatch-rails'
+gem 'twitter-bootswatch-rails-helpers'
+gem 'therubyracer'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
