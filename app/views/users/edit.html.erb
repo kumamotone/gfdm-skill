@@ -1,5 +1,5 @@
-<% provide(:title, "Edit user") %>
-<h1>Update your profile</h1>
+<% provide(:title, "アカウント情報変更") %>
+<h1>アカウント情報変更</h1>
 
 <div class="row">
   <div class="span6 offset3">
@@ -15,13 +15,10 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirm Password" %>
+      <%= f.label :password_confirmation, "もう一度" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+      <%= f.submit "変更", class: "btn btn-large btn-primary" %>
     <% end %>
-
-    <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails">change</a>
   </div>
 </div>
