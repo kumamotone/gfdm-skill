@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621111801) do
+ActiveRecord::Schema.define(version: 20150621145054) do
 
   create_table "musics", force: true do |t|
     t.string   "name",       null: false
@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(version: 20150621111801) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           default: false
+    t.float    "new_sp"
+    t.float    "other_sp"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

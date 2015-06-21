@@ -30,6 +30,23 @@ class SkillsController < ApplicationController
   def edit
   end
 
+
+  def update_user_sp(skill)
+    @hot = @user.skills.where(music_id: 1..711).order("sp DESC").limit(25)
+    hot_sp = 0.0
+
+    @hot.each do |h|
+      hot_sp = hot_sp + h.sp
+    end
+    
+    @other = @user.skills.where(music_id: 712..756).order("sp DESC").limit(25)
+    other_sp = 0.0
+
+    @other.each do |o|
+      other_sp = other_sp + o.sp
+    end
+  end
+
   # POST /skills
   # POST /skills.json
   def create
@@ -37,6 +54,7 @@ class SkillsController < ApplicationController
     if @skill.save
       @skill.sp = calc_sp(@skill) 
       @skill.update_attributes(skill_params)
+      update_user_sp(@skill)
       flash[:success] = "スキルが登録されました．"
       redirect_to current_user 
     else
@@ -50,6 +68,7 @@ class SkillsController < ApplicationController
     if @skill.update_attributes(skill_params)
       @skill.sp = calc_sp(@skill) 
       @skill.update_attributes(skill_params)
+      update_user_sp(@skill)
       flash[:success] = "スキルを更新しました．"
       redirect_to current_user
     else

@@ -1,12 +1,26 @@
 <% provide(:title, @user.name ) %>
-<div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= @user.name %> さんのスキル 
-      </h1>
-    </section>
-  </aside>
+  <h1>
+    <%= @user.name %> さんのスキル 
+  </h1>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Skill</th>
+        <th>Hot</th>
+        <th>Other</th>
+        <th>All</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><%= @skill_sp %></td>
+      <td><%= @hot_sp %></td>
+      <td><%= @other_sp %></td>
+      <td><%= @all_sp %></td>
+    </tr>
+  </table>
+
   <h2>Hot</h2>
   <table class="table table-striped table-bordered table-hover table-condensed">
     <thead>
@@ -22,9 +36,8 @@
     </thead>
 
     <tbody>
-    <% @user.skills.each do |skill| %>
-      <% if skill.music.ishot == true %>
-        <tr class=<%= show_color(skill.kind)  %>>
+    <% @hot.each do |skill| %>
+      <tr class=<%= show_color(skill.kind)  %>>
       <td></td>
       <td><%= link_to skill.music.name, edit_skill_path(skill) %></td>
       <td><%= fetch_level(skill.music_id, skill.kind) %> <%= show_kind(skill.kind) %></td>
@@ -34,8 +47,34 @@
       <td><%= skill.comment %></td>
     </tr>
   <% end %>
+    </tbody>
+  </table>
+  <h2>Other</h2>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+    <thead>
+      <tr>
+        <th>順</th>
+        <th>曲名</th>
+        <th>レベル</th>
+        <th>達成率</th>
+        <th>スキル</th>
+        <th>ランク</th>
+        <th>コメント</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @other.each do |skill| %>
+      <tr class=<%= show_color(skill.kind)  %>>
+      <td></td>
+      <td><%= link_to skill.music.name, edit_skill_path(skill) %></td>
+      <td><%= fetch_level(skill.music_id, skill.kind) %> <%= show_kind(skill.kind) %></td>
+      <td><%= skill.rate %> ％</td>
+      <td><%= skill.sp %></td>
+      <td><%= show_rank(skill.rate, skill.isfc) %></td> 
+      <td><%= skill.comment %></td>
+    </tr>
   <% end %>
     </tbody>
   </table>
-</div>
 
