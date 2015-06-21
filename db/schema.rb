@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150618162551) do
+ActiveRecord::Schema.define(version: 20150619181659) do
 
   create_table "musics", force: true do |t|
     t.string   "name",       null: false
@@ -31,6 +31,28 @@ ActiveRecord::Schema.define(version: 20150618162551) do
     t.boolean  "ishot",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "skills", force: true do |t|
+    t.integer  "music_id"
+    t.integer  "user_id"
+    t.float    "d_bsc"
+    t.float    "d_adv"
+    t.float    "d_ext"
+    t.float    "d_mas"
+    t.float    "g_bsc"
+    t.float    "g_adv"
+    t.float    "g_ext"
+    t.float    "g_mas"
+    t.float    "b_bsc"
+    t.float    "b_adv"
+    t.float    "b_ext"
+    t.float    "b_mas"
+    t.string   "comment"
+    t.boolean  "isfc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "sp"
   end
 
   create_table "users", force: true do |t|

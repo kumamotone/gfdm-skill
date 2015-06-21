@@ -7,6 +7,32 @@
       </h1>
     </section>
   </aside>
+     <h2>Hot</h2>
+      <table>
+    <thead>
+    <tr>
+      <th>順</th>
+      <th>曲名</th>
+      <th>レベル</th>
+      <th>達成率</th>
+      <th>スキル</th>
+      <th>ランク</th>
+      <th>コメント</th>
+    </tr>
+  </thead>
+
+  <tbody>
+     <% @v_skill.each do |skill| %>
+      <% if skill.music.ishot == true %>
+      <tr>
+        <td></td>
+        <td><%= skill.music.name %></td>
+        <td><%= max_sp_drum(skill) %></td>
+        <td><%= max_rate_drum(skill) %></td>
+        <td><%= skill.comment %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
 </div>
-
-
