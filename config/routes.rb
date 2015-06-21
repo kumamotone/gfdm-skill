@@ -1,7 +1,26 @@
 SampleApp::Application.routes.draw do
-  resources :skills
+  resources :skills do
+    collection do 
+      get 'newdrum'
+      get 'newguitar'
+      get 'createdrum'
+      get 'createguitar'
+    end
+    member do
+      get 'editdrum'
+      get 'editguitar'
+      get 'updatedrum'
+      get 'updateguitar'
+    end
+  end
+
   resources :musics, only: [:index]
-  resources :users 
+  resources :users do
+    member do
+      get 'drum'
+      get 'guitar'
+    end
+  end
   resources :sessions, only: [:new, :create, :destroy]
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'

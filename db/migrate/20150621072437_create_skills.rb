@@ -11,8 +11,5 @@ class CreateSkills < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :skills, :user_id
-    add_index :skills, :music_id
-    add_index :skills, [:user_id, :music_id], unique: true
-  end
+ end
 end

@@ -7,7 +7,8 @@
           <li><%= link_to "曲一覧", musics_path %></li>
           <% if signed_in? %>
             <li><%= link_to "マイページ", current_user %></li>
-            <li><%= link_to "スキル登録", new_skill_path %></li>
+            <li><%= link_to "スキル登録(Drum)",  newdrum_skills_path %></li>
+            <li><%= link_to "スキル登録(Guitar)", newguitar_skills_path %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 アカウント<b class="caret"></b>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621145054) do
+ActiveRecord::Schema.define(version: 20150621182457) do
 
   create_table "musics", force: true do |t|
     t.string   "name",       null: false
@@ -36,16 +36,18 @@ ActiveRecord::Schema.define(version: 20150621145054) do
   create_table "skills", force: true do |t|
     t.integer  "music_id"
     t.integer  "user_id"
-    t.integer  "kind"
     t.float    "rate"
     t.float    "sp"
     t.string   "comment"
     t.boolean  "isfc"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "d_kind"
+    t.integer  "g_kind"
   end
 
-  add_index "skills", ["music_id"], name: "index_skills_on_music_id"
+  add_index "skills", ["user_id", "music_id", "d_kind"], name: "index_skills_on_user_id_and_music_id_and_d_kind", unique: true
+  add_index "skills", ["user_id", "music_id", "g_kind"], name: "index_skills_on_user_id_and_music_id_and_g_kind", unique: true
   add_index "skills", ["user_id", "music_id"], name: "index_skills_on_user_id_and_music_id"
   add_index "skills", ["user_id"], name: "index_skills_on_user_id"
 
@@ -57,8 +59,14 @@ ActiveRecord::Schema.define(version: 20150621145054) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           default: false
-    t.float    "new_sp"
-    t.float    "other_sp"
+    t.float    "d_sp"
+    t.float    "d_hot_sp"
+    t.float    "d_other_sp"
+    t.float    "d_all_sp"
+    t.float    "g_sp"
+    t.float    "g_hot_sp"
+    t.float    "g_other_sp"
+    t.float    "g_all_sp"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

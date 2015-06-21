@@ -1,0 +1,24 @@
+ <div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@skill) do |s| %>
+      <%= render 'shared/error_messages', object: s.object %>
+
+      <%= s.label :name, "曲名" %>
+      <%= s.collection_select :music_id, Music.all, :id, :name, {}, {:class => 'chosen-select'} %>
+
+      <%= s.label :g_kind, "難易度" %>
+      <%= s.select :g_kind, g_kind_choices %>
+
+      <%= s.label :rate, "達成率" %>
+      <%= s.text_field :rate %> ％
+
+      <%= s.label :isfc, "フルコンボ？" %>
+      <%= s.check_box :isfc %>
+      
+      <%= s.label :comment, "コメント" %>
+      <%= s.text_field :comment %>
+
+      <%= s.submit "登録", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

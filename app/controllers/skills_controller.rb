@@ -3,13 +3,6 @@ class SkillsController < ApplicationController
   before_action :signed_in_user, only: [:create, :destroy] 
   before_action :correct_user, only: :destroy
 
-  def self.kind_choices
-    [["BSC",0],
-     ["ADV",1],
-     ["EXT",2],
-     ["MAS",3]]
-  end
-
   # GET /skills
   # GET /skills.json
   def index
@@ -22,14 +15,20 @@ class SkillsController < ApplicationController
   end
 
   # GET /skills/new
-  def new
+  def newdrum
+    @skill = Skill.new
+  end
+
+  def newguitar
     @skill = Skill.new
   end
 
   # GET /skills/1/edit
-  def edit
+  def editdrum
   end
 
+  def editguitar
+  end
 
   def update_user_sp(skill)
     @hot = @user.skills.where(music_id: 1..711).order("sp DESC").limit(25)
@@ -47,30 +46,34 @@ class SkillsController < ApplicationController
     end
   end
 
-  # POST /skills
-  # POST /skills.json
   def create
     @skill = current_user.skills.build(skill_params) 
+    
     if @skill.save
-      @skill.sp = calc_sp(@skill) 
-      @skill.update_attributes(skill_params)
-      flash[:success] = "スキルが登録されました．"
-      redirect_to current_user 
+      if @skill.g_kind.nil?
+        skill.sp = d_calc_sp(@skill) 
+        @skill.update_attributes(skill_params)
+        flash[:success] = "スキルが登録されました．"
+        redirect_to drum_user_path 
+      else
+        skill.sp = d_calc_sp(@skill) 
+        @skill.update_attributes(skill_params)
+        flash[:success] = "スキルが登録されました．"
+        redirect_to guitar_user_path
+      end
     else
-      render 'new' 
+      render 'newdrum' 
     end
   end
 
-  # PATCH/PUT /skills/1
-  # PATCH/PUT /skills/1.json
   def update
     if @skill.update_attributes(skill_params)
-      @skill.sp = calc_sp(@skill) 
+      @skill.sp = d_calc_sp(@skill) 
       @skill.update_attributes(skill_params)
       flash[:success] = "スキルを更新しました．"
       redirect_to current_user
     else
-      render 'edit'
+      render 'editdrum'
     end
   end
 
@@ -81,11 +84,18 @@ class SkillsController < ApplicationController
     redirect_to current_user, :flash => { :success => "スキルを削除しました．" }
   end
 
-  def calc_sp(skill)
+  def d_calc_sp(skill)
     rate = skill.rate
-    level = ApplicationController.helpers.fetch_level(skill.music_id, skill.kind)
+    level = ApplicationController.helpers.fetch_level(skill.music_id, skill.d_kind)
     return ((rate * level * 20) * 0.01).round(2) #.to_d.floor(2).to_f
   end
+
+  def g_calc_sp(skill)
+    rate = skill.rate
+    level = ApplicationController.helpers.fetch_level(skill.music_id, skill.g_kind)
+    return ((rate * level * 20) * 0.01).round(2) #.to_d.floor(2).to_f
+  end
+
 
   private  
 
@@ -96,7 +106,7 @@ class SkillsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def skill_params
-      params[:skill].permit(:music_id, :user_id, :kind, :rate, :isfc, :comment) # define right permission
+      params[:skill].permit(:music_id, :user_id, :d_kind, :g_kind, :rate, :isfc, :comment) # define right permission
     end
 
     def correct_user

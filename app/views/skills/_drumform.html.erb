@@ -6,11 +6,8 @@
       <%= s.label :name, "曲名" %>
       <%= s.collection_select :music_id, Music.all, :id, :name, {}, {:class => 'chosen-select'} %>
 
-      <%= s.label :kind, "難易度" %>
-      <%= s.select :kind, [["BSC",0],
-     ["ADV",1],
-     ["EXT",2],
-     ["MAS",3]] %>
+      <%= s.label :d_kind, "難易度" %>
+      <%= s.select :d_kind, d_kind_choices %>
 
       <%= s.label :rate, "達成率" %>
       <%= s.text_field :rate %> ％

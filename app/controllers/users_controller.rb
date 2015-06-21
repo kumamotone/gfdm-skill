@@ -8,34 +8,58 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @hot = @user.skills.where(music_id: 712..756)
-    @other = @user.skills.where(music_id: 1..711) # 終端位置変更の必要あり
-    #@user.skills.order("sp DESC").each do |s|
-    #  music = Music.find(s.music_id)
-    #  if music.ishot
-    #    @hot.push(s)
-    #  else
-    #    @other.push(s)
-    #  end
-    #end
+  end
+
+  def drum 
+    @user = User.find(params[:id])
+    @hot = @user.skills.where(music_id: 712..756, d_kind: 0..3).order("sp DESC")
+    @other = @user.skills.where(music_id: 1..711, d_kind: 0..3).order("sp DESC") # 終端位置変更の必要あり
     
-    hot_limit = @user.skills.where(music_id: 712..756).order("sp DESC").limit(25)
+    hot_limit = @user.skills.where(music_id: 712..756, d_kind: 0..3).order("sp DESC").limit(25)
     @hot_sp = 0.0
 
     hot_limit.each do |h|
       @hot_sp = @hot_sp + h.sp
     end
     
-    other_limit = @user.skills.where(music_id: 1..711).order("sp DESC").limit(25)
+    other_limit = @user.skills.where(music_id: 1..711, d_kind: 0..3).order("sp DESC").limit(25)
+    @other_sp = 0.0
+
+    other_limit.each do |o|
+      @other_sp = @other_sp + o.sp
+    end
+   
+    @hot_sp = @hot_sp.round(2)
+    @other_sp = @other_sp.round(2)
+    @skill_sp = @hot_sp + @other_sp
+    @all_sp = @skill_sp
+  end
+
+  def guitar 
+    @user = User.find(params[:id])
+    @hot = @user.skills.where(music_id: 712..756, g_kind: 4..11).order("sp DESC")
+    @other = @user.skills.where(music_id: 1..711, g_kind: 4..11) .order("sp DESC")# 終端位置変更の必要あり
+    
+    hot_limit = @user.skills.where(music_id: 712..756, g_kind: 4..11).order("sp DESC").limit(25)
+    @hot_sp = 0.0
+
+    hot_limit.each do |h|
+      @hot_sp = @hot_sp + h.sp
+    end
+    
+    other_limit = @user.skills.where(music_id: 1..711, g_kind: 4..11).order("sp DESC").limit(25)
     @other_sp = 0.0
 
     other_limit.each do |o|
       @other_sp = @other_sp + o.sp
     end
     
+    @hot_sp = @hot_sp.round(2)
+    @other_sp = @other_sp.round(2)
     @skill_sp = @hot_sp + @other_sp
     @all_sp = @skill_sp
   end
+
 
   def new
     @user = User.new  
