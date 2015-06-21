@@ -54,7 +54,6 @@ class SkillsController < ApplicationController
     if @skill.save
       @skill.sp = calc_sp(@skill) 
       @skill.update_attributes(skill_params)
-      update_user_sp(@skill)
       flash[:success] = "スキルが登録されました．"
       redirect_to current_user 
     else
@@ -68,7 +67,6 @@ class SkillsController < ApplicationController
     if @skill.update_attributes(skill_params)
       @skill.sp = calc_sp(@skill) 
       @skill.update_attributes(skill_params)
-      update_user_sp(@skill)
       flash[:success] = "スキルを更新しました．"
       redirect_to current_user
     else
