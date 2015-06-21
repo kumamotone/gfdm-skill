@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+  resources :skills
   resources :musics, only: [:index]
   resources :users 
   resources :sessions, only: [:new, :create, :destroy]

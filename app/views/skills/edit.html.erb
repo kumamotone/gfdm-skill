@@ -1,0 +1,8 @@
+<% provide(:title, 'スキル編集') %>
+<h1>スキル編集</h1>
+
+<%= render 'form' %>
+
+<%= link_to "このスキル情報を削除する", @skill, method: :delete,
+                                  data: { confirm: "本当に？" } %>
+
