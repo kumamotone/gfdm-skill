@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20150621145054) do
   end
 
   add_index "skills", ["music_id"], name: "index_skills_on_music_id"
-  add_index "skills", ["user_id", "music_id"], name: "index_skills_on_user_id_and_music_id"
+  add_index "skills", ["user_id", "music_id"], name: "index_skills_on_user_id_and_music_id", unique: true
   add_index "skills", ["user_id"], name: "index_skills_on_user_id"
 
   create_table "users", force: true do |t|
@@ -57,8 +57,10 @@ ActiveRecord::Schema.define(version: 20150621145054) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           default: false
-    t.float    "new_sp"
+    t.float    "sp"
+    t.float    "hot_sp"
     t.float    "other_sp"
+    t.float    "all_sp"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
