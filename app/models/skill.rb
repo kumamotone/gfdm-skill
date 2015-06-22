@@ -31,7 +31,6 @@ class Skill < ActiveRecord::Base
   def self.import(file,id)
     imported_num = 0
     
-    binding.pry
     # 文字コード変換のためにKernel#openとCSV#newを併用。
     # 参考: http://qiita.com/labocho/items/8559576b71642b79df67
     open(file.path, 'r:cp932:utf-8', undef: :replace) do |f|
