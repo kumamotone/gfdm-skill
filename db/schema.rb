@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150622055252) do
+ActiveRecord::Schema.define(version: 20150622125436) do
 
   create_table "musics", force: true do |t|
     t.string   "name",       null: false
@@ -49,6 +49,22 @@ ActiveRecord::Schema.define(version: 20150622055252) do
   add_index "skills", ["user_id", "music_id", "kind"], name: "index_skills_on_user_id_and_music_id_and_kind", unique: true
   add_index "skills", ["user_id"], name: "index_skills_on_user_id"
 
+  create_table "sps", force: true do |t|
+    t.integer  "user_id"
+    t.float    "d"
+    t.float    "dhot"
+    t.float    "dother"
+    t.float    "dall"
+    t.float    "g"
+    t.float    "ghot"
+    t.float    "gother"
+    t.float    "gall"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sps", ["user_id"], name: "index_sps_on_user_id"
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -57,10 +73,6 @@ ActiveRecord::Schema.define(version: 20150622055252) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           default: false
-    t.float    "sp"
-    t.float    "hot_sp"
-    t.float    "other_sp"
-    t.float    "all_sp"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

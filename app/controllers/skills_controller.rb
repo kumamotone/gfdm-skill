@@ -30,23 +30,6 @@ class SkillsController < ApplicationController
   def edit
   end
 
-
-  def update_user_sp(skill)
-    @hot = @user.skills.where(music_id: 1..711).order("sp DESC").limit(25)
-    hot_sp = 0.0
-
-    @hot.each do |h|
-      hot_sp = hot_sp + h.sp
-    end
-    
-    @other = @user.skills.where(music_id: 712..756).order("sp DESC").limit(25)
-    other_sp = 0.0
-
-    @other.each do |o|
-      other_sp = other_sp + o.sp
-    end
-  end
-
   # POST /skills
   # POST /skills.json
   def create
@@ -55,7 +38,11 @@ class SkillsController < ApplicationController
       @skill.sp = calc_sp(@skill) 
       @skill.update_attributes(skill_params)
       flash[:success] = "スキルが登録されました．"
-      redirect_to current_user 
+      if (@skill.kind.between?(0,3))
+        redirect_to drum_user_path(@skill.user_id)
+      else
+        redirect_to guitar_user_path(@skill.user_id)
+      end
     else
       render 'new' 
     end
@@ -68,7 +55,11 @@ class SkillsController < ApplicationController
       @skill.sp = calc_sp(@skill) 
       @skill.update_attributes(skill_params)
       flash[:success] = "スキルを更新しました．"
-      redirect_to current_user
+      if (@skill.kind.between?(0,3))
+        redirect_to drum_user_path(@skill.user_id)
+      else
+        redirect_to guitar_user_path(@skill.user_id)
+      end
     else
       render 'edit'
     end
@@ -78,7 +69,11 @@ class SkillsController < ApplicationController
   # DELETE /skills/1.json
   def destroy
    @skill.destroy
-    redirect_to current_user, :flash => { :success => "スキルを削除しました．" }
+      if (@skill.kind.between?(0,3))
+        redirect_to drum_user_path(@skill.user_id), :flash => { :success => "スキルを削除しました．" }
+      else
+        redirect_to guitar_user_path(@skill.user_id), :flash => { :success => "スキルを削除しました．" }
+      end
   end
 
   def calc_sp(skill)

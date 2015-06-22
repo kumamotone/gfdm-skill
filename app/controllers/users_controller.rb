@@ -9,15 +9,21 @@ class UsersController < ApplicationController
    def import
     @user = User.find(params[:id])
     if params[:csv_file].blank?
-      redirect_to(root_path, alert: 'インポートするCSVファイルを選択してください')
+      redirect_to(@user, alert: 'インポートするCSVファイルを選択してください')
     else
       num = Skill.import(params[:csv_file],@user.id)
-      redirect_to(root_path, notice: "#{num.to_s} 件のスキルを追加 / 更新しました")
+      redirect_to(@user, notice: "#{num.to_s} 件のスキルを追加 / 更新しました")
     end
   end
 
   def show
     @user = User.find(params[:id])
+    @sp = Sp.find_by_user_id(@user.id)
+
+    if @sp.nil?
+      @sp = Sp.create(user_id: @user.id, d: 0.0, dhot: 0.0, dother: 0.0, dall: 0.0, g: 0.0, ghot: 0.0, gother: 0.0, gall: 0.0) 
+    end
+
     respond_to do |format|
       format.html
       format.csv { send_data @user.skills.to_csv }
@@ -26,6 +32,12 @@ class UsersController < ApplicationController
 
   def drum
     @user = User.find(params[:id])
+    @sp = Sp.find_by_user_id(@user.id)
+
+    if @sp.nil?
+      @sp = Sp.create(user_id: @user.id, d: 0.0, dhot: 0.0, dother: 0.0, dall: 0.0, g: 0.0, ghot: 0.0, gother: 0.0, gall: 0.0) 
+    end
+
     @hot = @user.skills.where(music_id: 712..756, kind: 0..3).order("sp DESC")
     @other = @user.skills.where(music_id: 1..711, kind: 0..3).order("sp DESC")# 終端位置変更の必要あり
     
@@ -57,12 +69,23 @@ class UsersController < ApplicationController
       @all_sp = @all_sp + o.sp
     end
 
-    #all sp round
+    # all sp round
     @all_sp = @all_sp.round(2)
+
+    # DBに保存
+   
+    @sp.update( d: @skill_sp, dhot: @hot_sp, dother: @other_sp, dall: @all_sp)
+    @sp.save
   end
 
   def guitar
     @user = User.find(params[:id])
+    @sp = Sp.find_by_user_id(@user.id)
+
+    if @sp.nil?
+      @sp = Sp.create(user_id: @user.id, d: 0.0, dhot: 0.0, dother: 0.0, dall: 0.0, g: 0.0, ghot: 0.0, gother: 0.0, gall: 0.0) 
+    end
+
     @hot = @user.skills.where(music_id: 712..756, kind: 4..11).order("sp DESC")
     @other = @user.skills.where(music_id: 1..711, kind: 4..11).order("sp DESC")# 終端位置変更の必要あり
     
@@ -96,7 +119,13 @@ class UsersController < ApplicationController
 
     #all sp round
     @all_sp = @all_sp.round(2)
-  end
+
+    @sp.g = @skill_sp
+    @sp.ghot = @hot_sp
+    @sp.gother = @other_sp
+    @sp.gall = @all_sp
+    @sp.save
+   end
 
   def new
     @user = User.new  
@@ -134,7 +163,8 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation, :d_sp, :d_hot_sp, :d_other_sp, :d_all_sp,
+                                  :g_sp, :g_hot_sp, :g_other_sp, :g_all_sp)
     end
 
     # Before actions

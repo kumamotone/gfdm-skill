@@ -3,18 +3,54 @@
   <%= @user.name %> さんのページ 
 </h1>
 
-<p><%= link_to "Drummania", drum_user_path %></p>
-<p><%= link_to "GuitarFreaks", guitar_user_path %></p>
+<h2><%= link_to "Drummania のスキル表", drum_user_path %></h2>
 
-<p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Skill</th>
+      <th>Hot</th>
+      <th>Other</th>
+      <th>All</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><%= @sp.d %></td>
+    <td><%= @sp.dhot %></td>
+    <td><%= @sp.dother %></td>
+    <td><%= @sp.dall %></td>
+  </tr>
+</table>
+
+<h2><%= link_to "GuitarFreaks のスキル表", guitar_user_path %></h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Skill</th>
+      <th>Hot</th>
+      <th>Other</th>
+      <th>All</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><%= @sp.g %></td>
+    <td><%= @sp.ghot %></td>
+    <td><%= @sp.gother %></td>
+    <td><%= @sp.gall %></td>
+  </tr>
+</table>
+
+<h2>スキルを読み込む (要ログイン)</h2>
+
 <%= form_tag(import_user_path, :method => :post, multipart: true) do %>
   <div class="form-group">
   <%= file_field_tag :csv_file %>
-  </div>
+</div>
 <%= submit_tag "CSVインポート", :class => "btn btn-primary" %>
 <% end %>
-</p>
 
-<p>
+<h2>スキルを書き出す</h2>
 <%= link_to "CSVエクスポート", user_path(format: "csv"), :class => "btn btn-success" %>
-</p>
