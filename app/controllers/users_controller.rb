@@ -86,8 +86,8 @@ class UsersController < ApplicationController
       @sp = Sp.create(user_id: @user.id, d: 0.0, dhot: 0.0, dother: 0.0, dall: 0.0, g: 0.0, ghot: 0.0, gother: 0.0, gall: 0.0) 
     end
 
-    @hot = @user.skills.where(music_id: 712..756, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC")
-    @other = @user.skills.where(music_id: 1..711, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC") # 終端位置変更の必要あり
+    @hot = @user.skills.where(music_id: 712..756, kind: 4..11).order("sp DESC").group("music_id, user_id").order("sp DESC")
+    @other = @user.skills.where(music_id: 1..711, kind: 4..11).order("sp DESC").group("music_id, user_id").order("sp DESC") # 終端位置変更の必要あり
     
     # hot計算
     @hot_sp = 0.0
