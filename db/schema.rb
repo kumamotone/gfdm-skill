@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621145054) do
+ActiveRecord::Schema.define(version: 20150622055252) do
 
   create_table "musics", force: true do |t|
     t.string   "name",       null: false
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20150621145054) do
   end
 
   add_index "skills", ["music_id"], name: "index_skills_on_music_id"
-  add_index "skills", ["user_id", "music_id"], name: "index_skills_on_user_id_and_music_id", unique: true
+  add_index "skills", ["user_id", "music_id", "kind"], name: "index_skills_on_user_id_and_music_id_and_kind", unique: true
   add_index "skills", ["user_id"], name: "index_skills_on_user_id"
 
   create_table "users", force: true do |t|
