@@ -19,31 +19,62 @@ module ApplicationHelper
       music.d_ext
     when 3 then
       music.d_mas
-    end
+    when 4 then 
+      music.g_bsc
+    when 5 then 
+      music.g_adv
+    when 6 then 
+      music.g_ext
+    when 7 then
+      music.g_mas
+    when 8 then 
+      music.b_bsc
+    when 9 then 
+      music.b_adv
+    when 10 then 
+      music.b_ext
+    when 11 then
+      music.b_mas
+     end
   end
 
   def show_kind (kind)
     case kind
-      when 0
+      when 0,4,8
         "BSC"
-      when 1
+      when 1,5,9
         "ADV"
-      when 2
+      when 2,6,10
         "EXT"
-      when 3
+      when 3,7,11
         "MAS"
       end
   end
 
+  def kind_choices
+    [["BSC",0],
+     ["ADV",1],
+     ["EXT",2],
+     ["MAS",3],
+     ["BSC(G)",4],
+     ["ADV(G)",5],
+     ["EXT(G)",6],
+     ["MAS(G)",7],
+     ["BSC(B)",8],
+     ["ADV(B)",9],
+     ["EXT(B)",10],
+     ["MAS(B)",11]]
+  end
+
   def show_color (kind)
     case kind
-    when 0
+    when 0,4,8
       "info"
-    when 1
+    when 1,5,9
       "warning"
-    when 2 
+    when 2,6,10
       "danger"
-    when 3 
+    when 3,7,11 
       "active"
     end
   end
@@ -85,3 +116,4 @@ module ApplicationHelper
    end
  end
 end
+

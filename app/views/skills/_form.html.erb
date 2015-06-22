@@ -7,10 +7,7 @@
       <%= s.collection_select :music_id, Music.all.order("name ASC"), :id, :name, {}, {:class => 'searchable'} %>
 
       <%= s.label :kind, "難易度" %>
-      <%= s.select :kind, [["BSC",0],
-     ["ADV",1],
-     ["EXT",2],
-     ["MAS",3]] %>
+      <%= s.select :kind, kind_choices %> 
 
       <%= s.label :rate, "達成率" %>
       <%= s.text_field :rate %> ％
