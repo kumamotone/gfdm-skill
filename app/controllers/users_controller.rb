@@ -8,6 +8,10 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.csv { send_data @user.skills.to_csv }
+    end
   end
 
   def drum
@@ -26,9 +30,13 @@ class UsersController < ApplicationController
     @other.limit(25).each do |o|
       @other_sp = @other_sp + o.sp
     end
-   
+  
+    # hot_sp, other_sp round
+    @hot_sp = @hot_sp.round(2)
+    @other_sp = @other_sp.round(2)
+
     # sp計算
-    @skill_sp = @hot_sp + @other_sp
+    @skill_sp = (@hot_sp + @other_sp).round(2)
     
     # all計算
     @all_sp = 0.0
@@ -38,6 +46,9 @@ class UsersController < ApplicationController
     @other.each do |o|
       @all_sp = @all_sp + o.sp
     end
+
+    #all sp round
+    @all_sp = @all_sp.round(2)
   end
 
   def guitar
@@ -57,8 +68,12 @@ class UsersController < ApplicationController
       @other_sp = @other_sp + o.sp
     end
    
+    # hot_sp, other_sp round
+    @hot_sp = @hot_sp.round(2)
+    @other_sp = @other_sp.round(2)
+
     # sp計算
-    @skill_sp = @hot_sp + @other_sp
+    @skill_sp = (@hot_sp + @other_sp).round(2)
     
     # all計算
     @all_sp = 0.0
@@ -68,6 +83,9 @@ class UsersController < ApplicationController
     @other.each do |o|
       @all_sp = @all_sp + o.sp
     end
+
+    #all sp round
+    @all_sp = @all_sp.round(2)
   end
 
   def new
