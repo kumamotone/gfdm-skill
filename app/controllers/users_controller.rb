@@ -163,8 +163,7 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation, :d_sp, :d_hot_sp, :d_other_sp, :d_all_sp,
-                                  :g_sp, :g_hot_sp, :g_other_sp, :g_all_sp)
+                                   :password_confirmation, :g_comment, :d_comment, :profile, :place)
     end
 
     # Before actions

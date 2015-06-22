@@ -1,7 +1,11 @@
 <% provide(:title, @user.name ) %>
 <h1>
-  <%= @user.name %> さんのページ 
+  name: <%= @user.name %> 
 </h1>
+
+<div class="well">
+  <%= @user.profile %>
+</div>
 
 <h2><%= link_to "Drummania のスキル表", drum_user_path %></h2>
 

@@ -1,8 +1,11 @@
-<% provide(:title, @user.name ) %>
+<% provide(:title, @user.name + ' さんのスキル (DrumMania)' ) %>
   <h1>
     <%= @user.name %> さんのスキル (DrumMania) 
   </h1>
-   <table class="table">
+  <div class="well">
+    <%= @user.d_comment %>
+  </div>
+ <table class="table">
     <thead>
       <tr>
         <th>Skill</th>

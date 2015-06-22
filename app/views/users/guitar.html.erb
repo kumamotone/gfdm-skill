@@ -1,7 +1,11 @@
-<% provide(:title, @user.name ) %>
+<% provide(:title, @user.name + ' さんのスキル (GuitarFreaks)' ) %>
   <h1>
     <%= @user.name %> さんのスキル (GuitarFreaks) 
   </h1>
+  
+  <div class="well">
+    <%= @user.g_comment %>
+  </div>
   
   <table class="table">
     <thead>

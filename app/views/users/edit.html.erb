@@ -6,18 +6,27 @@
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.label :name, "名前" %>
+      <%= f.text_field :name, placeholder: "プロフィール画面に表示されます．" %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.label :email, "メールアドレス" %>
+      <%= f.text_field :email, placeholder: "ログインの際に必要になります．" %>
 
-      <%= f.label :password %>
+      <%= f.label :password, "パスワード" %>
       <%= f.password_field :password %>
 
       <%= f.label :password_confirmation, "もう一度" %>
       <%= f.password_field :password_confirmation %>
+      
+      <%= f.label :d_comment, "コメント (Drummania用)" %>
+      <%= f.text_area :d_comment %>
+      
+      <%= f.label :g_comment, "コメント (GuitarFreaks用)" %>
+      <%= f.text_area :g_comment %>
 
+      <%= f.label :profile, "コメント (プロフィールページ用)" %>
+      <%= f.text_area :profile %>
+      
       <%= f.submit "変更", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>

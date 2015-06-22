@@ -10,13 +10,13 @@
       <%= s.select :kind, kind_choices %> 
 
       <%= s.label :rate, "達成率" %>
-      <%= s.text_field :rate %> ％
+      <%= s.text_field :rate, placeholder: "例: 86.79" %>
 
-      <%= s.label :isfc, "フルコンボ？" %>
+      <%= s.label :isfc, "FULL COMBO" %>
       <%= s.check_box :isfc %>
       
       <%= s.label :comment, "コメント" %>
-      <%= s.text_field :comment %>
+      <%= s.text_field :comment, placeholder: "省略可" %>
 
       <%= s.submit "登録", class: "btn btn-large btn-primary" %>
     <% end %>

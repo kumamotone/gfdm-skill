@@ -6,13 +6,13 @@
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.label :name, "名前" %>
+      <%= f.text_field :name, placeholder: "プロフィール画面に表示されます．" %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.label :email, "メールアドレス" %>
+      <%= f.text_field :email, placeholder: "ログインの際に必要になります．" %>
 
-      <%= f.label :password %>
+      <%= f.label :password, "パスワード" %>
       <%= f.password_field :password %>
 
       <%= f.label :password_confirmation, "もう一度" %>
