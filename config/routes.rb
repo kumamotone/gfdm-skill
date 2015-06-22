@@ -5,6 +5,7 @@ SampleApp::Application.routes.draw do
     member do
       get 'drum'
       get 'guitar'
+      post 'import'
     end
   end
   resources :sessions, only: [:new, :create, :destroy]

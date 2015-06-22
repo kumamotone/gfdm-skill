@@ -5,7 +5,17 @@ class UsersController < ApplicationController
   def index
     @users = User.paginate(page: params[:page])
   end
-  
+
+   def import
+    @user = User.find(params[:id])
+    if params[:csv_file].blank?
+      redirect_to(root_path, alert: 'インポートするCSVファイルを選択してください')
+    else
+      num = Skill.import(params[:csv_file],@user.id)
+      redirect_to(root_path, notice: "#{num.to_s} 件のスキルを追加 / 更新しました")
+    end
+  end
+
   def show
     @user = User.find(params[:id])
     respond_to do |format|

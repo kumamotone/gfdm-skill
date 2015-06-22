@@ -1,4 +1,5 @@
 require 'csv'
+require 'nkf'
 
 class Skill < ActiveRecord::Base
   belongs_to :user
@@ -10,11 +11,11 @@ class Skill < ActiveRecord::Base
   validates :rate, presence: true, numericality: {less_than_or_equal_to: 100.0} # 数値か小数点のみ有効
 
   def self.to_csv
-    CSV.generate do |csv|
+    csv_str = CSV.generate do |csv|
       # column_namesはカラム名を配列で返す
       # 例: ["id", "name", "price", "released_on", ...]
       new_column_names = column_names.delete_if {|item| item == "id" || 
-      item == "user_id" || item == "created_at" || item == "updated_at" }
+                                                 item == "user_id" || item == "created_at" || item == "updated_at" }
       csv << new_column_names
       all.each do |s|
         # attributes はカラム名と値のハッシュを返す
@@ -24,5 +25,46 @@ class Skill < ActiveRecord::Base
         csv << s.attributes.values_at(*new_column_names)
       end
     end
+    NKF::nkf('--sjis -Lw', csv_str)
+  end
+
+  def self.import(file,id)
+    imported_num = 0
+    
+    binding.pry
+    # 文字コード変換のためにKernel#openとCSV#newを併用。
+    # 参考: http://qiita.com/labocho/items/8559576b71642b79df67
+    open(file.path, 'r:cp932:utf-8', undef: :replace) do |f|
+      csv = CSV.new(f, :headers => :first_row)
+      csv.each do |row|
+        next if row.header_row?
+
+        # CSVの行情報をHASHに変換
+        table = Hash[[row.headers, row.fields].transpose]
+
+        # 登録済みユーザー情報取得。
+        # 登録されてなければ作成
+        
+        skill = find_by(:music_id => table["music_id"], :kind => table["kind"], :user_id => id)
+        if skill.nil?
+          skill = new
+          skill.user_id = id
+        end
+
+        # 情報更新
+        skill.attributes = table.to_hash.slice(
+          *table.to_hash.except(:id, :created_at, :updated_at).keys)
+
+        # バリデーションOKの場合は保存
+        if skill.valid?
+          skill.save!
+          imported_num += 1
+        end
+      end
+    end
+
+    # 更新件数を返却
+    imported_num
+
   end
 end

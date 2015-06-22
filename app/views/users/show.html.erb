@@ -1,12 +1,20 @@
 <% provide(:title, @user.name ) %>
-  <h1>
-    <%= @user.name %> さんのページ 
-  </h1>
+<h1>
+  <%= @user.name %> さんのページ 
+</h1>
 
-  <p><%= link_to "Drummania", drum_user_path %></p>
-  <p><%= link_to "GuitarFreaks", guitar_user_path %></p>
+<p><%= link_to "Drummania", drum_user_path %></p>
+<p><%= link_to "GuitarFreaks", guitar_user_path %></p>
 
-  <p>
-  Download:
-    <%= link_to "CSV", user_path(format: "csv") %>
-  </p>
+<p>
+<%= form_tag(import_user_path, :method => :post, multipart: true) do %>
+  <div class="form-group">
+  <%= file_field_tag :csv_file %>
+  </div>
+<%= submit_tag "CSVインポート", :class => "btn btn-primary" %>
+<% end %>
+</p>
+
+<p>
+<%= link_to "CSVエクスポート", user_path(format: "csv"), :class => "btn btn-success" %>
+</p>
