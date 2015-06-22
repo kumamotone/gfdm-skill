@@ -8,6 +8,36 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @hot = @user.skills.where(music_id: 712..756).order("sp DESC")
+    @other = @user.skills.where(music_id: 1..711).order("sp DESC")# 終端位置変更の必要あり
+    
+    # hot計算
+    @hot_sp = 0.0
+    @hot.limit(25).each do |h|
+      @hot_sp = @hot_sp + h.sp
+    end
+    
+    # other計算
+    @other_sp = 0.0
+    @other.limit(25).each do |o|
+      @other_sp = @other_sp + o.sp
+    end
+   
+    # sp計算
+    @skill_sp = @hot_sp + @other_sp
+    
+    # all計算
+    @all_sp = 0.0
+    @hot.each do |h|
+      @all_sp = @all_sp + h.sp
+    end
+    @other.each do |o|
+      @all_sp = @all_sp + o.sp
+    end
+  end
+
+  def show
+    @user = User.find(params[:id])
     @hot = @user.skills.where(music_id: 712..756)
     @other = @user.skills.where(music_id: 1..711) # 終端位置変更の必要あり
     #@user.skills.order("sp DESC").each do |s|
