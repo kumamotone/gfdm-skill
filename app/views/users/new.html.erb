@@ -9,11 +9,11 @@
       <%= f.label :name, "名前" %>
       <%= f.text_field :name, placeholder: "プロフィール画面に表示されます．" %>
 
-      <%= f.label :email, "メールアドレス" %>
+      <%= f.label :email, "メールアドレス" ,class: "control-group" %>
       <%= f.text_field :email, placeholder: "ログインの際に必要になります．" %>
 
-      <%= f.label :password, "パスワード" %>
-      <%= f.password_field :password %>
+      <%= f.label :password, "パスワード" ,class: "control-group" %>
+      <%= f.password_field :password, class: "control-group" %>
 
       <%= f.label :password_confirmation, "もう一度" %>
       <%= f.password_field :password_confirmation %>

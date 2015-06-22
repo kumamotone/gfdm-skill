@@ -12,6 +12,5 @@
  *= require_tree .
  *= require select2
  *= require select2-bootstrap
- *= require rails_bootstrap_forms
  *= require dataTables/jquery.dataTables
  */
