@@ -60,5 +60,6 @@ group :production do
   # gem 'rails_12factor', '0.0.2'
 
   # scale
-  gem 'mysql2'
+  #gem 'mysql2'
+  gem 'sqlite3', '1.3.8'
 end
