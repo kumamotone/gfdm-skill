@@ -2,6 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #
+
+$(document).ready ->
+  $('#sTable').dataTable 'pagingType': 'full_numbers'
+
 $(document).ready ->
   t = $('#sortableTable').DataTable(
     'lengthMenu': [ 
@@ -49,5 +53,4 @@ $(document).ready ->
       return
     return
   ).draw()
-
 
