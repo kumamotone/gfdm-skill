@@ -1,10 +1,10 @@
 namespace :db do 
-  desc "Fill database with sample data"
+  desc "Adminを足す（必ずパスワードとメールアドレスを変更すること！！"
   task populate: :environment do
-    admin = User.create!(name: "Admin User",
+    admin = User.create!(name: "Admin",
                          email: "admin@admin.com",
-                         password: "mimi_nary_admin",
-                         password_confirmation: "mimi_nary_admin",
+                         password: "hogehoge",
+                         password_confirmation: "hogehoge",
                          admin: true)
   end
 end
