@@ -56,11 +56,11 @@ class SkillsController < ApplicationController
       @skill.sp = calc_sp(@skill) 
       @skill.update_attributes(skill_params)
       flash[:success] = "スキルを更新しました．"
-      # if (@skill.kind.between?(0,3))
-      #  redirect_to drum_user_path(@skill.user_id)
-      #else
-      #  redirect_to guitar_user_path(@skill.user_id)
-      #end
+       if (@skill.kind.between?(0,3))
+        redirect_to drum_user_path(@skill.user_id)
+      else
+        redirect_to guitar_user_path(@skill.user_id)
+      end
     else
       render 'edit'
     end
