@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def index
-    @users = User.paginate(page: params[:page])
+    @user = User.find(params[:id])
+    #@users = User.paginate(page: params[:page])
   end
 
    def import
