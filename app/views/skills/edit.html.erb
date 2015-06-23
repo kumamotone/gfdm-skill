@@ -1,8 +1,32 @@
 <% provide(:title, 'スキル編集') %>
 <h1>スキル編集</h1>
 
-<%= render 'form' %>
+ <div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@skill) do |s| %>
+      <%= render 'shared/error_messages', object: s.object %>
 
-<%= link_to "このスキル情報を削除する", @skill, method: :delete,
-                                  data: { confirm: "本当に？" } %>
+      <%= s.label :name, "曲名" %>
+      <%= fetch_music_name(@skill.music_id) %>
 
+      <%= s.label :kind, "難易度" %>
+      <%= s.select :kind, kind_choices %> 
+
+      <%= s.label :rate, "達成率" %>
+      <%= s.text_field :rate, placeholder: "例: 86.79" %>
+
+      <%= s.label :isfc, "FULL COMBO" %>
+      <%= s.check_box :isfc %>
+      
+      <%= s.label :comment, "コメント" %>
+      <%= s.text_field :comment, placeholder: "省略可" %>
+
+      <%= s.submit "編集", class: "btn btn-large btn-primary" %>
+    <% end %>
+      <%= link_to "削除", @skill, method: :delete, data: { confirm: "本当に削除してもよろしいですか？" }, class: "btn btn-danger" %>
+ </div>
+</div>
+<h2>あなたが登録しているほかの難易度</h1>
+
+
+<h2>この曲を登録している他のユーザ</h1>

@@ -115,5 +115,10 @@ module ApplicationHelper
       "EXC"
    end
  end
+
+  def fetch_music_name (id)
+    music = Music.find_by_id(id)
+    music.name
+  end
 end
 
