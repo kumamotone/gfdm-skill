@@ -7,7 +7,7 @@
       <%= render 'shared/error_messages', object: s.object %>
 
       <%= s.label :name, "曲名" %>
-      <%= s.collection_select :music_id, Music.all.order("name ASC"), :id, :name, {}, {:class => 'searchable'} %>
+      <%= s.collection_select :music_id, Music.all.order("name ASC"), :id, :name, {}, {:class => 'searchable', autofocus: true} %>
 
       <%= s.label :kind, "難易度" %>
       <%= s.select :kind, kind_choices %> 
