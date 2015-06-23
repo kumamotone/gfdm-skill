@@ -46,15 +46,3 @@
     <td><%= @sp.gall %></td>
   </tr>
 </table>
-
-<h2>スキルを読み込む (要ログイン)</h2>
-
-<%= form_tag(import_user_path, :method => :post, multipart: true) do %>
-  <div class="form-group">
-  <%= file_field_tag :csv_file %>
-</div>
-<%= submit_tag "CSVインポート", :class => "btn btn-primary" %>
-<% end %>
-
-<h2>スキルを書き出す</h2>
-<%= link_to "CSVエクスポート", user_path(format: "csv"), :class => "btn btn-success" %>

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user, only: [:edit, :update]
-  before_action :correct_user,   only: [:edit, :update]
+  before_action :signed_in_user, only: [:edit, :update, :destroy, :manage, :import]
+  before_action :correct_user,   only: [:edit, :update, :manage, :import]
+  before_action :admin_user,     only: :destroy
 
   def index
     @users = User.paginate(page: params[:page])
@@ -16,17 +17,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def manage 
+    respond_to do |format|
+      format.html
+      format.csv { send_data @user.skills.to_csv }
+    end
+  end
   def show
     @user = User.find(params[:id])
     @sp = Sp.find_by_user_id(@user.id)
 
     if @sp.nil?
       @sp = Sp.create(user_id: @user.id, d: 0.0, dhot: 0.0, dother: 0.0, dall: 0.0, g: 0.0, ghot: 0.0, gother: 0.0, gall: 0.0) 
-    end
-
-    respond_to do |format|
-      format.html
-      format.csv { send_data @user.skills.to_csv }
     end
   end
 
@@ -182,6 +184,10 @@ class UsersController < ApplicationController
     #    redirect_to signin_url, notice: "Please sign in."
     #  end
     #end
+
+    def admin_user
+      redirect_to(root_path) unless current_user.admin?
+    end
 
     def correct_user
       @user = User.find(params[:id])

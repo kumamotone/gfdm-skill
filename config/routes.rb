@@ -5,6 +5,7 @@ SampleApp::Application.routes.draw do
     member do
       get 'drum'
       get 'guitar'
+      get 'manage'
       post 'import'
     end
   end
