@@ -1,5 +1,5 @@
 SampleApp::Application.routes.draw do
-  resources :skills, only: [:new, :create, :destroy]
+  resources :skills, except: [:index, :show]
   resources :musics, only: [:index]
   resources :users do
     member do
