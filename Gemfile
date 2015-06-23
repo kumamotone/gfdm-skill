@@ -6,7 +6,7 @@ gem 'rails', '4.0.5'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.12.3'
 gem 'bcrypt-ruby', '3.1.2'
-gem 'will_paginate', '3.0.4'
+#gem 'will_paginate', '3.0.4'
 gem "jquery-turbolinks" # Turbolinksで遷移したときもjQuery.ready()を呼び出してくれる
 gem "select2-rails"
 gem 'jquery-datatables-rails'
@@ -54,6 +54,11 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
+
+  # heroku 
+  # gem 'pg', '0.15.1'
+  # gem 'rails_12factor', '0.0.2'
+
+  # scale
+  gem 'mysql2'
 end
