@@ -38,7 +38,7 @@ class SkillsController < ApplicationController
       @skill.sp = calc_sp(@skill) 
       @skill.update_attributes(skill_params)
       flash[:success] = "スキルが登録されました．"
-      render 'new'
+      redirect_to new_skill_path
       #if (@skill.kind.between?(0,3))
       #  redirect_to drum_user_path(@skill.user_id)
       #else
