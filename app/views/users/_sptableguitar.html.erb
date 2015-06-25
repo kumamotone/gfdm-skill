@@ -1,0 +1,17 @@
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Skill</th>
+        <th>Hot</th>
+        <th>Other</th>
+        <th>All</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><%= number_with_precision @sp.g, precision:2 %></td>
+      <td><%= number_with_precision @sp.ghot, precision: 2 %></td>
+      <td><%= number_with_precision @sp.dother, precision: 2 %></td>
+      <td><%= number_with_precision @sp.dall,precision: 2 %></td>
+    </tr>
+  </table>

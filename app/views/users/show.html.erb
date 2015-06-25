@@ -9,40 +9,8 @@
 
 <h2><%= link_to "Drummania のスキル表", drum_user_path %></h2>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Skill</th>
-      <th>Hot</th>
-      <th>Other</th>
-      <th>All</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td><%= @sp.d %></td>
-    <td><%= @sp.dhot %></td>
-    <td><%= @sp.dother %></td>
-    <td><%= @sp.dall %></td>
-  </tr>
-</table>
+  <%= render 'sptabledrum' %>
 
 <h2><%= link_to "GuitarFreaks のスキル表", guitar_user_path %></h2>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Skill</th>
-      <th>Hot</th>
-      <th>Other</th>
-      <th>All</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td><%= @sp.g %></td>
-    <td><%= @sp.ghot %></td>
-    <td><%= @sp.gother %></td>
-    <td><%= @sp.gall %></td>
-  </tr>
-</table>
+  <%= render 'sptableguitar' %>

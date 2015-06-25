@@ -27,56 +27,56 @@
     <tr>
     <td><%= music.name %></td>
     <td><%= if music.d_bsc != 0.0
-              music.d_bsc
+              number_with_precision music.d_bsc, precision: 2
             else "-"
             end %></td>
     <td><%= if music.d_adv != 0.0
-              music.d_adv
+              number_with_precision music.d_adv, precision: 2
             else "-"
             end %></td>
     <td><%= if music.d_ext != 0.0
-            music.d_ext
+              number_with_precision music.d_ext, precision: 2
             else "-"
             end %></td>
     <td>
       <%= if music.d_mas != 0.0
-            music.d_mas
+              number_with_precision music.d_mas, precision: 2
           else "-"
           end %>
     </td>
     <td>
       <%= if music.g_bsc != 0.0
-          music.g_bsc
+            number_with_precision music.g_bsc, precision: 2
           else "-"
           end %></td>
         <td><%= if music.g_adv != 0.0
-                  music.g_adv
-                else "-"
-                end %></td>
-  <td><%= if music.g_ext != 0.0
-            music.g_ext 
+            number_with_precision music.g_adv, precision: 2
+          else "-"
+          end %></td>
+        <td><%= if music.g_ext != 0.0
+            number_with_precision music.g_ext, precision: 2 
           else "-"
           end %></td>
         <td><%= if music.g_mas != 0.0
-                  music.g_mas 
-                else "-"
-                end %></td>
+            number_with_precision music.g_mas, precision: 2 
+          else "-"
+          end %></td>
         <td><%= if music.b_bsc != 0.0
-                  music.b_bsc 
-                else "-"
-                end %></td>
+            number_with_precision music.b_bsc, precision: 2 
+          else "-"
+          end %></td>
         <td><%= if music.b_adv != 0.0
-                  music.b_adv
-                else "-"
-                end %></td>
+            number_with_precision music.b_adv, precision: 2
+            else "-"
+            end %></td>
         <td><%= if music.b_ext != 0.0
-                  music.b_ext 
-                else "-"
-                end %></td>
+            number_with_precision music.b_ext, precision: 2 
+            else "-"
+            end %></td>
         <td><%= if music.b_mas != 0.0
-                  music.b_mas 
-                else "-"
-                end %></td>
+            number_with_precision music.b_mas, precision: 2 
+            else "-"
+            end %></td>
             </tr>
     <% end %>
       </tbody>
