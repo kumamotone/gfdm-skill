@@ -1,4 +1,4 @@
 #!/bin/sh
 
 set -e
-ln -snf /home/sqale/etc/database.yml /home/sqale/current/config/database.yml
+cp /home/sqale/etc/database.yml /home/sqale/current/config/database.yml
