@@ -27,3 +27,8 @@ test:
 #  pool: 5
 #  timeout: 5000
 
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: sqale_64dd2d130f
+  host: mysql001.sqale.jp
