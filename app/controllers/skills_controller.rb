@@ -80,7 +80,7 @@ class SkillsController < ApplicationController
   def calc_sp(skill)
     rate = skill.rate
     level = ApplicationController.helpers.fetch_level(skill.music_id, skill.kind)
-    return ((rate * level * 20) * 0.01).round(2) #.to_d.floor(2).to_f
+    return ((rate * level * 20) * 0.01).to_d.floor(2).to_f
   end
 
   private  

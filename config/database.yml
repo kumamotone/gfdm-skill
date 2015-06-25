@@ -15,6 +15,9 @@ development:
 test:
   adapter: sqlite3
   database: db/test.sqlite3
+  encoding: utf8
+  charset: utf8
+  collation: utf8_bin
   pool: 5
   timeout: 5000
 
@@ -24,11 +27,3 @@ test:
 #  pool: 5
 #  timeout: 5000
 
-
-production:
-  adapter: mysql2
-  encoding: utf8
-  username: sqale_64dd2d130f
-  password: 
-  database: sqale_64dd2d130f
-  host: mysql001.sqale.jp
