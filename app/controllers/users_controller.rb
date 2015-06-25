@@ -41,11 +41,11 @@ class UsersController < ApplicationController
       @sp = Sp.create(user_id: @user.id, d: 0.0, dhot: 0.0, dother: 0.0, dall: 0.0, g: 0.0, ghot: 0.0, gother: 0.0, gall: 0.0) 
     end
 
-    @hot= @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 713 AND 757) AND (s."kind" BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
-    @other = @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 1 AND 712) AND (s."kind" BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
+    #@hot= @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 713 AND 757) AND (s."kind" BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
+    #@other = @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 1 AND 712) AND (s."kind" BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
 
-    # @hot = @user.skills.where(music_id: 712..756, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")
-    # @other = @user.skills.where(music_id: 1..711, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")# 終端位置変更の必要あり
+    @hot = @user.skills.where(music_id: 713..757, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")
+    @other = @user.skills.where(music_id: 1..712, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")# 終端位置変更の必要あり
     
     # hot計算
     @hot_sp = 0.0
@@ -93,11 +93,11 @@ class UsersController < ApplicationController
     end
 
 
-    @hot= @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 713 AND 757) AND (s."kind" BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
-    @other = @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 1 AND 712) AND (s."kind" BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
+    #@hot= @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 713 AND 757) AND (s."kind" BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
+    #@other = @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 1 AND 712) AND (s."kind" BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
  
-    # @hot = @user.skills.where(music_id: 712..756, kind: 4..11).order("sp DESC").group("music_id, id").order("sp DESC")
-    # @other = @user.skills.where(music_id: 1..711, kind: 4..11).order("sp DESC").group("music_id, id").order("sp DESC") # 終端位置変更の必要あり
+    @hot = @user.skills.where(music_id: 713..757, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC")
+    @other = @user.skills.where(music_id: 1..712, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC") # 終端位置変更の必要あり
     
     # hot計算
     @hot_sp = 0.0
