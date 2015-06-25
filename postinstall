@@ -1,0 +1,4 @@
+#!/bin/sh
+
+set -e
+ln -s /home/sqale/etc/database.yml /home/sqale/current/config/database.yml

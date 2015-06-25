@@ -18,20 +18,8 @@ test:
   pool: 5
   timeout: 5000
 
-
-#heroku
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
-
-#sqale
-#
 #production:
-#  adapter: mysql2
-#  encoding: utf8
-#  username: sqale_64dd2d130f
-#  password: 
-#  database: sqale_64dd2d130f
-#  host: mysql001.sqale.jp
+#  adapter: sqlite3
+#  database: db/production.sqlite3
+#  pool: 5
+#  timeout: 5000
