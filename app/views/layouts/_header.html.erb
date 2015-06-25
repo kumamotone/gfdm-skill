@@ -1,9 +1,9 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "GITADORA Tri-boost スキルシミュ",root_path, id: "logo" %>
+    <div class="container-fluid">
+      <%= link_to "Tri-boost SS",root_path, id: "logo" %>
       <nav>
-        <ul class="nav pull-right">
+        <ul class="nav">
           <li><%= link_to "曲一覧", musics_path %></li>
           <% if signed_in? %>
             <li><%= link_to "公開用ページ", current_user %></li>
@@ -26,6 +26,7 @@
           <% end %>
         </ul>
       </nav>
+    </div>
     </div>
   </div>
 </header>
