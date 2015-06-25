@@ -1,6 +1,11 @@
 SampleApp::Application.routes.draw do
   resources :skills, except: [:index, :show]
-  resources :musics, only: [:index]
+  resources :musics, only: [:index] do
+    collection do
+      get 'hot'
+      get 'other'
+    end
+  end
   resources :users do
     member do
       get 'drum'
