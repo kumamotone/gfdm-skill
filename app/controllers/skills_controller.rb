@@ -1,6 +1,6 @@
 class SkillsController < ApplicationController
   before_action :set_skill, only: [:show, :edit, :update, :destroy]
-  before_action :signed_in_user, only: [:create, :destroy, :update] 
+  before_action :signed_in_user, only: [:edit, :create, :destroy, :update] 
   before_action :correct_user, only: [:edit, :destroy, :update, :destroy]
 
   def self.kind_choices
