@@ -7,35 +7,50 @@
       <%= render 'shared/error_messages', object: f.object %>
 
       <div class="form-group">
-      <%= f.label :name, "名前", :class => "col-sm-3 control-label" %>
-      <div class="col-sm-6">
-      <%= f.text_field :name, placeholder: "プロフィール画面に表示されます．" %>
-      </div>
+        <%= f.label :name, "名前", :class => "col-sm-3 control-label" %>
+        <div class="col-sm-6">
+        <%= f.text_field :name, placeholder: "プロフィール画面に表示されます．", class: "form-control" %>
+        </div>
       </div>
 
       <div class="form-group">
-      <%= f.label :email, "メールアドレス", :class => "col-sm-3 control-label"  %>
+        <%= f.label :email, "メールアドレス", :class => "col-sm-3 control-label"  %>
+        <div class="col-sm-6">
+        <%= f.text_field :email, placeholder: "ログインの際に必要になります．", class: "form-control"  %>
+       </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password, "パスワード", :class => "col-sm-3 control-label"  %> 
+        <div class="col-sm-6">
+        <%= f.password_field :password, class: "form-control" %>
+        </div>
+     </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation, "パスワード (確認)", :class => "col-sm-3 control-label"  %>
+        <div class="col-sm-6">
+        <%= f.password_field :password_confirmation, class: "form-control"  %>
+      </div>
+     </div>
+
+      <div class="form-group">
+        <%= f.label :d_comment, "コメント (Drummania用)", :class => "col-sm-3 control-label"  %>
+        <div class="col-sm-6">
+        <%= f.text_area :d_comment, class: "form-control"  %>
+        </div>
+      </div>      
+      <div class="form-group">
+      <%= f.label :g_comment, "コメント (GuitarFreaks用)", :class => "col-sm-3 control-label"  %>
       <div class="col-sm-6">
-      <%= f.text_field :email, placeholder: "ログインの際に必要になります．" %>
+      <%= f.text_area :g_comment, class: "form-control"  %>
       </div>
       </div>
-
-      <%= f.label :password, "パスワード" %>
-      <%= f.password_field :password %>
-
-      <%= f.label :password_confirmation, "パスワード (確認)" %>
-      <%= f.password_field :password_confirmation %>
-      
-      <%= f.label :d_comment, "コメント (Drummania用)" %>
-      <%= f.text_area :d_comment %>
-      
-      <%= f.label :g_comment, "コメント (GuitarFreaks用)" %>
-      <%= f.text_area :g_comment %>
-
-      <%= f.label :profile, "コメント (プロフィールページ用)" %>
-      <%= f.text_area :profile %>
-      
+      <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-6">
       <%= f.submit "変更", class: "btn btn-large btn-primary" %>
+      </div>
+      </div>
     <% end %>
     </div>
   </div>

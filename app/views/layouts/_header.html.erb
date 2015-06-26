@@ -8,11 +8,11 @@
         <span class="icon-bar"></span>
       </button>
       <!-- タイトルなどのテキスト -->
-      <%= link_to "Tri-boost SS",root_path, id: "logo", class: "navbar-brand" %>
+      <%= link_to "GITADORA Tri-boost Skill Simulator",root_path	, class: "navbar-brand" %>
     </div>
 
     <div class="collapse navbar-collapse" id="nav-menu-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "曲一覧", musics_path %></li>
           <% if signed_in? %>
             <li><%= link_to "公開用ページ", current_user %></li>
