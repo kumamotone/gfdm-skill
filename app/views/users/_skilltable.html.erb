@@ -20,7 +20,7 @@
       <td><%= number_with_precision((fetch_level(skill.music_id, skill.kind)), precision:2) %> <%= show_kind(skill.kind) %></td>
       <td><%= number_with_precision(skill.rate,precision: 2) %> ％</td>
       <td><%= number_with_precision(skill.sp,precision: 2) %></td>
-      <td><%= fetch_level(skill.music_id, skill.kind) %> <%= show_kind(skill.kind) %></td>
+      <td><%= show_rank(skill.rate, skill.isfc) %></td> 
       <td><%= skill.comment %></td>
     </tr>
   <% end %>
