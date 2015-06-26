@@ -5,8 +5,9 @@
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
     <%= csrf_meta_tags %>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
     <%= render 'layouts/shim' %>
     <%= favicon_link_tag %>
   </head>
@@ -15,9 +16,11 @@
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
-      <%= yield %>
+      <div class="container">
+        <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
+      </div>
     </div>
   </body>
 </html>
