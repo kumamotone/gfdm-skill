@@ -9,7 +9,7 @@
       <div class="form-group">
         <%= f.label :name, "名前", :class => "col-sm-3 control-label" %>
         <div class="col-sm-6">
-        <%= f.text_field :name, placeholder: "プロフィール画面に表示されます．", class: "form-control" %>
+        <%= f.text_field :name, class: "form-control" %>
         </div>
       </div>
 
@@ -30,14 +30,14 @@
       <div class="form-group">
         <%= f.label :password_confirmation, "パスワード (確認)", :class => "col-sm-3 control-label"  %>
         <div class="col-sm-6">
-        <%= f.password_field :password_confirmation, class: "form-control"  %>
+        <%= f.password_field :password_confirmation,placeholder: "プロフィール画面に表示されます．(任意)", class: "form-control"  %>
       </div>
      </div>
 
       <div class="form-group">
         <%= f.label :d_comment, "コメント (Drummania用)", :class => "col-sm-3 control-label"  %>
         <div class="col-sm-6">
-        <%= f.text_area :d_comment, class: "form-control"  %>
+        <%= f.text_area :d_comment, placeholder: "プロフィール画面に表示されます．(任意)", class: "form-control"  %>
         </div>
       </div>      
       <div class="form-group">
@@ -53,5 +53,4 @@
       </div>
     <% end %>
     </div>
-  </div>
 </div>

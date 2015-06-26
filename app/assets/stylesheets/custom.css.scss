@@ -17,7 +17,6 @@ tr.mas{
  background-color:#9999ff !important;
 }
 
-
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -28,6 +27,10 @@ tr.mas{
 
 html {
   overflow-y: scroll;
+}
+
+body {
+  //padding-top: 60px;
 }
 
 section {
@@ -123,6 +126,7 @@ footer {
 .debug_dump {
   clear: both;
   float: left;
+  width: 100%;
   margin-top: 45px;
   @include box_sizing;
 }
@@ -132,9 +136,9 @@ footer {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
+  //width: 100%;
+  margin-bottom: 8px;
+  // @include box_sizing;
 }
 
 input {
@@ -150,17 +154,3 @@ input {
 .field_with_errors {
   @extend .has-error;
 }
-
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
-
-input {
-  height: auto !important;
-}
-

@@ -4,7 +4,7 @@
 
 $ ->
   $(".searchable").select2({
-      width: 460 
+  
     })
 
 
