@@ -4,6 +4,18 @@
 
 $grayMediumLight: #eaeaea;
 
+tr.bsc{
+ background-color:#99ddff !important;
+}
+tr.adv{
+ background-color:#ffffcc !important;
+}
+tr.ext{
+ background-color:#ffcccc !important;
+}
+tr.mas{
+ background-color:#9999ff !important;
+}
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -88,11 +100,11 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
+  color: $gray-light;
   a {
     color: $gray;
     &:hover {
-      color: $grayDarker;
+      color: $gray-darker;
     }
   }
   small {

@@ -69,13 +69,13 @@ module ApplicationHelper
   def show_color (kind)
     case kind
     when 0,4,8
-      "info"
+      "bsc"
     when 1,5,9
-      "warning"
+      "adv"
     when 2,6,10
-      "danger"
+      "ext"
     when 3,7,11 
-      "active"
+      "mas"
     end
   end
 

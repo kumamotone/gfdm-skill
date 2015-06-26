@@ -10,7 +10,10 @@
  *
  *= require_self
  *= require_tree .
+ *= require dataTables/jquery.dataTables
  *= require select2
  *= require select2-bootstrap
- *= require dataTables/jquery.dataTables
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
