@@ -23,12 +23,15 @@ class SkillsController < ApplicationController
 
   # GET /skills/new
   def new
-    # create_max
     @skill = Skill.new
   end
 
   # GET /skills/1/edit
   def edit
+  end
+
+  def update_maxuser 
+    create_max    
   end
 
   def updatedrum(id)
@@ -37,9 +40,11 @@ class SkillsController < ApplicationController
 
     #@hot= @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 713 AND 757) AND (s."kind" BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
     #@other = @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 1 AND 712) AND (s."kind" BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
+    @hot= @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 712 AND 900) AND (s.kind BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 0 AND 3)) ', @user.id]  )
+    @other = @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 1 AND 711) AND (s.kind BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 0 AND 3)) ', @user.id]  )
 
-    @hot = @user.skills.where(music_id: 712..900, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")
-    @other = @user.skills.where(music_id: 1..711, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")# 終端位置変更の必要あり
+    #@hot = @user.skills.where(music_id: 712..900, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")
+    #@other = @user.skills.where(music_id: 1..711, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")# 終端位置変更の必要あり
     
     # hot計算
     @hot_sp = 0.0
@@ -82,8 +87,8 @@ class SkillsController < ApplicationController
     @user = User.find(id)
     @sp = Sp.find_by_user_id(@user.id)
 
-    #@hot= @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 713 AND 757) AND (s."kind" BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
-    #@other = @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 1 AND 712) AND (s."kind" BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
+    @hot= @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 712 AND 900) AND (s.kind BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 4 AND 11)) ', @user.id]  )
+    @other = @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 1 AND 711) AND (s.kind BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 4 AND 11)) ', @user.id]  )
  
     @hot = @user.skills.where(music_id: 712..900, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC")
     @other = @user.skills.where(music_id: 1..711, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC") # 終端位置変更の必要あり
@@ -181,12 +186,13 @@ class SkillsController < ApplicationController
   end
    
   def create_max
-   user = User.find(3)
-   #user.skills.destroy_all;
-   #create_max_drum(true) 
-   #create_max_drum(false) 
-   #create_max_guitar(true) 
-   #create_max_guitar(false) 
+   max_id = 3
+   user = User.find(max_id)
+   user.skills.destroy_all;
+   create_max_drum(true) 
+   create_max_drum(false) 
+   create_max_guitar(true) 
+   create_max_guitar(false) 
   end
 
   def create_max_guitar(ih)
@@ -205,7 +211,7 @@ class SkillsController < ApplicationController
     while true do
       if hm_gmas[gmas_cnt].g_mas >= [hm_gext[gext_cnt].g_ext, hm_bmas[bmas_cnt].b_mas, hm_bext[bext_cnt].b_ext].max
         # すでにほかのが登録済みの場合はスキップ
-        unless user.skills.where(music_id: hm_gmas[gmas_cnt].id).empty?
+        unless user.skills.where(music_id: hm_gmas[gmas_cnt].id).where("kind > ?", 3).empty?
           gmas_cnt += 1;
           next;
         end
@@ -225,34 +231,34 @@ class SkillsController < ApplicationController
         last_level = hm_gmas[gmas_cnt].g_mas 
       elsif hm_gext[gext_cnt].g_ext >= [hm_gmas[gmas_cnt].g_mas, hm_bmas[bmas_cnt].b_mas, hm_bext[bext_cnt].b_ext].max 
         # すでにほかのが登録済みの場合はスキップ
-        unless user.skills.where(music_id: hm_gext[gext_cnt].id).empty?
+        unless user.skills.where(music_id: hm_gext[gext_cnt].id).where("kind > ?", 3).empty?
           gext_cnt += 1;
           next;
         end
         # スキル作成
         skill = Skill.new
-        skill.user_id = 6 
+        skill.user_id = 3
         skill.music_id = hm_gext[gext_cnt].id
         skill.rate = 100.0
-        skill.kind = 2 
+        skill.kind = 6
         skill.sp = calc_sp(skill)
         # 申し訳程度のvalidをしてセーブ
         if skill.valid?
           skill.save
         end
-        bext_cnt += 1;
+        gext_cnt += 1;
         skill_cnt += 1;
         last_level = hm_gext[gext_cnt].g_ext 
       elsif hm_bmas[bmas_cnt].b_mas >= [hm_gext[gext_cnt].g_ext, hm_gmas[gmas_cnt].g_mas, hm_bext[bext_cnt].b_ext].max
         # すでにほかのが登録済みの場合はスキップ
-        unless user.skills.where(music_id: hm_bmas[bmas_cnt].id).empty?
+        unless user.skills.where(music_id: hm_bmas[bmas_cnt].id).where("kind > ?", 3).empty?
           bmas_cnt += 1;
           next;
         end
          # スキル作成
         skill = Skill.new
         skill.user_id = 3 
-        skill.music_id = hm_gmas[bmas_cnt].id
+        skill.music_id = hm_bmas[bmas_cnt].id
         skill.rate = 100.0
         skill.kind = 11
         skill.sp = calc_sp(skill)
@@ -265,14 +271,14 @@ class SkillsController < ApplicationController
         last_level = hm_bmas[bmas_cnt].b_mas 
       elsif hm_bext[bext_cnt].b_ext >= [hm_gmas[gmas_cnt].g_mas, hm_bmas[bmas_cnt].b_mas, hm_gext[gext_cnt].g_ext].max 
         # すでにほかのが登録済みの場合はスキップ
-        unless user.skills.where(music_id: hm_bext[bext_cnt].id).empty?
+        unless user.skills.where(music_id: hm_bext[bext_cnt].id).where("kind > ?", 3).empty?
           bext_cnt += 1;
           next;
         end
         # スキル作成
         skill = Skill.new
-        skill.user_id = 6 
-        skill.music_id = hm_gext[bext_cnt].id
+        skill.user_id = 3
+        skill.music_id = hm_bext[bext_cnt].id
         skill.rate = 100.0
         skill.kind = 10
         skill.sp = calc_sp(skill)
@@ -287,6 +293,87 @@ class SkillsController < ApplicationController
 
       break if skill_cnt >= 25
     end
+    # スキル下限の曲も表示したいので，登録する
+
+    while hm_gmas[gmas_cnt].g_mas == last_level
+        # すでにほかのが登録済みの場合はスキップ
+        unless user.skills.where(music_id: hm_gmas[gmas_cnt].id).where("kind > ?", 3).empty?
+          gmas_cnt += 1;
+          next;
+        end
+         # スキル作成
+        skill = Skill.new
+        skill.user_id = 3 
+        skill.music_id = hm_gmas[gmas_cnt].id
+        skill.rate = 100.0
+        skill.kind = 7
+        skill.sp = calc_sp(skill)
+        if skill.valid?
+          # 申し訳程度のvalidをしてセーブ
+          skill.save
+        end
+        gmas_cnt += 1;
+    end 
+
+    while hm_gext[gext_cnt].g_ext == last_level
+        # すでにほかのが登録済みの場合はスキップ
+        unless user.skills.where(music_id: hm_gext[gext_cnt].id).where("kind > ?", 3).empty?
+          gext_cnt += 1;
+          next;
+        end
+        # スキル作成
+        skill = Skill.new
+        skill.user_id = 3
+        skill.music_id = hm_gext[gext_cnt].id
+        skill.rate = 100.0
+        skill.kind = 6
+        skill.sp = calc_sp(skill)
+        # 申し訳程度のvalidをしてセーブ
+        if skill.valid?
+          skill.save
+        end
+        gext_cnt += 1;
+    end 
+
+    while hm_bmas[bmas_cnt].b_mas == last_level
+        # すでにほかのが登録済みの場合はスキップ
+        unless user.skills.where(music_id: hm_bmas[bmas_cnt].id).where("kind > ?", 3).empty?
+          bmas_cnt += 1;
+          next;
+        end
+         # スキル作成
+        skill = Skill.new
+        skill.user_id = 3 
+        skill.music_id = hm_bmas[bmas_cnt].id
+        skill.rate = 100.0
+        skill.kind = 11
+        skill.sp = calc_sp(skill)
+        if skill.valid?
+          # 申し訳程度のvalidをしてセーブ
+          skill.save
+        end
+        bmas_cnt += 1;
+    end 
+
+    while hm_bext[bext_cnt].b_ext == last_level
+        # すでにほかのが登録済みの場合はスキップ
+        unless user.skills.where(music_id: hm_bext[bext_cnt].id).where("kind > ?", 3).empty?
+          bext_cnt += 1;
+          next;
+        end
+        # スキル作成
+        skill = Skill.new
+        skill.user_id = 3
+        skill.music_id = hm_bext[bext_cnt].id
+        skill.rate = 100.0
+        skill.kind = 10
+        skill.sp = calc_sp(skill)
+        # 申し訳程度のvalidをしてセーブ
+        if skill.valid?
+          skill.save
+        end
+        bext_cnt += 1;
+    end 
   end
 
   def create_max_drum(ih)
@@ -300,7 +387,12 @@ class SkillsController < ApplicationController
     last_level = 9.99
     while true do
       if hm_mas[mas_cnt].d_mas >= hm_ext[ext_cnt].d_ext
-        # スキル作成
+        # すでにEXTが登録済みの場合はスキップ
+        unless user.skills.where(music_id: hm_mas[mas_cnt].id).where("kind < ?", 4).empty?
+          mas_cnt += 1;
+          next;
+        end
+         # スキル作成
         skill = Skill.new
         skill.user_id = 3 
         skill.music_id = hm_mas[mas_cnt].id
@@ -316,7 +408,7 @@ class SkillsController < ApplicationController
         last_level = hm_mas[mas_cnt].d_mas 
       else 
         # すでにMASが登録済みの場合はスキップ
-        unless user.skills.where(music_id: hm_ext[ext_cnt].id).empty?
+        unless user.skills.where(music_id: hm_ext[ext_cnt].id).where("kind < ?", 4).empty?
           ext_cnt += 1;
           next;
         end
@@ -374,7 +466,6 @@ class SkillsController < ApplicationController
           skill.save
         end
         ext_cnt = ext_cnt + 1;
-        skill_cnt = skill_cnt + 1;
     end 
   end
 
