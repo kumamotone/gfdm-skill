@@ -17,7 +17,13 @@
     <% @hot.each do |skill| %>
       <tr class=<%= show_color(skill.kind)  %>>
       <td></td>
-      <td><%= link_to skill.music.name, edit_skill_path(skill) %></td>
+      <td>
+          <% if current_user?(@user) %>
+            <%= link_to skill.music.name, edit_skill_path(skill) %>
+          <% else %>
+            <%= skill.music.name %>
+          <% end %>
+      </td>
       <td><%= number_with_precision((fetch_level(skill.music_id, skill.kind)), precision:2) %> <%= show_kind(skill.kind) %></td>
       <td><%= number_with_precision(skill.rate,precision: 2) %> ％</td>
       <td><%= number_with_precision(skill.sp,precision: 2) %></td>
@@ -45,7 +51,13 @@
     <% @other.each do |skill| %>
       <tr class=<%= show_color(skill.kind)  %>>
       <td></td>
-      <td><%= link_to skill.music.name, edit_skill_path(skill) %></td>
+      <td>
+          <% if current_user?(@user) %>
+            <%= link_to skill.music.name, edit_skill_path(skill) %>
+          <% else %>
+            <%= skill.music.name %>
+          <% end %>
+      </td>
       <td><%= number_with_precision((fetch_level(skill.music_id, skill.kind)), precision:2) %> <%= show_kind(skill.kind) %></td>
       <td><%= number_with_precision(skill.rate,precision: 2) %> ％</td>
       <td><%= number_with_precision(skill.sp,precision: 2) %></td>
