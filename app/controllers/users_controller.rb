@@ -19,10 +19,6 @@ class UsersController < ApplicationController
   end
 
   def manage 
-    respond_to do |format|
-      format.html
-      format.csv { send_data @user.skills.to_csv }
-    end
   end
   def show
     @user = User.find(params[:id])
@@ -30,6 +26,10 @@ class UsersController < ApplicationController
 
     if @sp.nil?
       @sp = Sp.create(user_id: @user.id, d: 0.0, dhot: 0.0, dother: 0.0, dall: 0.0, g: 0.0, ghot: 0.0, gother: 0.0, gall: 0.0) 
+    end
+    respond_to do |format|
+      format.html
+      format.csv { send_data @user.skills.to_csv }
     end
   end
 

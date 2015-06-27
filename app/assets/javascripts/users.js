@@ -7,6 +7,19 @@ $(document).ready(function() {
 $(document).ready(function() {
   var t;
   t = $('#sortableTable').DataTable({
+        "bPaginate": false,  
+        "bInfo": false,  
+        "bFilter": false,
+        "bAutoWidth": false,
+        "aoColumns" : [
+            { sWidth: '50px' },
+            { sWidth: '200px' },
+            { sWidth: '120px' },
+            { sWidth: '100px' },
+            { sWidth: '100px' },
+            { sWidth: '100px' },
+            { sWidth: '300px' }
+        ],
     'lengthMenu': [[25, 50, -1], [25, 50, "All"]],
     'order': [[4, 'desc']],
     'language': {
@@ -29,6 +42,9 @@ $(document).ready(function() {
 $(document).ready(function() {
   var t;
   t = $('#sortableTable2').DataTable({
+        "bPaginate": false,  
+        "bInfo": false,  
+        "bFilter": false,
     'lengthMenu': [[25, 50, -1], [25, 50, "All"]],
     'order': [[4, 'desc']],
     'language': {
