@@ -117,7 +117,7 @@ module ApplicationHelper
       else
         "B"
       end
-    when 73..89.99 then 
+    when 73..79.99 then 
       if isfc
         "A/FC"
       else
