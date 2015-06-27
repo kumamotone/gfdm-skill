@@ -30,20 +30,20 @@
       <div class="form-group">
         <%= f.label :password_confirmation, "パスワード (確認)", :class => "col-sm-3 control-label"  %>
         <div class="col-sm-6">
-        <%= f.password_field :password_confirmation,placeholder: "プロフィール画面に表示されます．(任意)", class: "form-control"  %>
+        <%= f.password_field :password_confirmation, class: "form-control"  %>
       </div>
      </div>
 
       <div class="form-group">
         <%= f.label :d_comment, "コメント (Drummania用)", :class => "col-sm-3 control-label"  %>
         <div class="col-sm-6">
-        <%= f.text_area :d_comment, placeholder: "プロフィール画面に表示されます．(任意)", class: "form-control"  %>
+        <%= f.text_area :d_comment, placeholder: "スキル画面に表示されます．(任意)", class: "form-control"  %>
         </div>
       </div>      
       <div class="form-group">
       <%= f.label :g_comment, "コメント (GuitarFreaks用)", :class => "col-sm-3 control-label"  %>
       <div class="col-sm-6">
-      <%= f.text_area :g_comment, class: "form-control"  %>
+      <%= f.text_area :g_comment, placeholder: "スキル画面に表示されます．(任意)", class: "form-control"  %>
       </div>
       </div>
       <div class="form-group">

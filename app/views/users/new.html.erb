@@ -30,7 +30,7 @@
       <div class="form-group">
         <%= f.label :password_confirmation, "パスワード (確認)", :class => "col-sm-3 control-label"  %>
         <div class="col-sm-6">
-        <%= f.password_field :password_confirmation,placeholder: "プロフィール画面に表示されます．(任意)", class: "form-control"  %>
+        <%= f.password_field :password_confirmation, class: "form-control"  %>
       </div>
      </div>
 
@@ -48,7 +48,7 @@
       </div>
       <div class="form-group">
       <div class="col-sm-offset-3 col-sm-6">
-      <%= f.submit "変更", class: "btn btn-large btn-primary" %>
+      <%= f.submit "アカウント作成", class: "btn btn-large btn-primary" %>
       </div>
       </div>
     <% end %>

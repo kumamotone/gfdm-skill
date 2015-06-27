@@ -1,16 +1,18 @@
 <% provide(:title, @user.name ) %>
 <h1>
-  name: <%= @user.name %> 
+  <%= @user.name %> 
 </h1>
 
+<% if current_user?(@user) %>
 <div class="well">
-  <%= @user.profile %>
+  公開用URLは http://tri.gfdm-skill.net<%= drum_user_path %> (Drummania) と http://tri.gfdm-skill.net<%= guitar_user_path %> (GuitarFreaks) です．
 </div>
+<% end %>
 
-<h2><%= link_to "Drummania のスキル表", drum_user_path %></h2>
+<h2><%= link_to "Drummania のスキル表へ", drum_user_path %></h2>
 
   <%= render 'sptabledrum' %>
 
-<h2><%= link_to "GuitarFreaks のスキル表", guitar_user_path %></h2>
+<h2><%= link_to "GuitarFreaks のスキル表へ", guitar_user_path %></h2>
 
   <%= render 'sptableguitar' %>
