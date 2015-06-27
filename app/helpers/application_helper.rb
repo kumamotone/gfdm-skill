@@ -7,6 +7,14 @@ module ApplicationHelper
       "#{page_title} | #{base_title}"
     end
   end
+
+  def calc_sp(skill)
+    rate = skill.rate
+    level = ApplicationController.helpers.fetch_level(skill.music_id, skill.kind)
+    return ((rate * level * 20) * 0.01).to_d.floor(2).to_f
+  end
+
+  
   def fetch_level(music_id ,kind)
     music = Music.find(music_id)
 
@@ -40,14 +48,30 @@ module ApplicationHelper
 
   def show_kind (kind)
     case kind
-      when 0,4,8
+      when 0
         "BSC"
-      when 1,5,9
+      when 1
         "ADV"
-      when 2,6,10
+      when 2
         "EXT"
-      when 3,7,11
+      when 3
         "MAS"
+      when 4
+        "BSC(G)"
+      when 5
+        "ADV(G)"
+      when 6
+        "EXT(G)"
+      when 7
+        "MAS(G)"
+      when 8
+        "BSC(B)"
+      when 9
+        "ADV(B)"
+      when 10
+        "EXT(B)"
+      when 11
+        "MAS(B)"
       end
   end
 
@@ -81,31 +105,31 @@ module ApplicationHelper
 
   def show_rank(rate, isfc)
     case rate
-    when 0..63 then 
+    when 0..62.99 then 
       if isfc
         'C/FC'
       else
         'C'
       end
-    when 63..73 then 
+    when 63..72.99 then 
       if isfc
         "B/FC"
       else
         "B"
       end
-    when 73..80 then 
+    when 73..89.99 then 
       if isfc
         "A/FC"
       else
         "A"
       end
-    when 80..95 then 
+    when 80..94.99 then 
       if isfc
         "S/FC"
       else 
         "S"
       end
-    when 95..100 then 
+    when 95..99.99 then 
       if isfc
         "SS/FC"
       else 

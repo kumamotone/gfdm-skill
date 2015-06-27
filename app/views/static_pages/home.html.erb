@@ -5,7 +5,10 @@
 
   <h2>スキル表の例</h2>
   <%= link_to "こちら", user_path(1) %>．
-  
+
+  <h2>MAX SKILL</h2>
+  <p><%= link_to "Drummania", drum_user_path(3) %>,<%= link_to "GuitarFreaks", guitar_user_path(3) %> (6/27 中途半端実装中)</p> 
+
   <h2>ユーザ検索</h2>
   <p>とりあえず <%= link_to "ユーザ一覧", 'users#index' %> で簡単な名前等の検索だけできます．</p> 
 

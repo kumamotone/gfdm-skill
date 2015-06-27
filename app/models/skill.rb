@@ -9,13 +9,14 @@ class Skill < ActiveRecord::Base
   validates :music_id, presence: true, uniqueness: { scope: [:user_id, :kind] }
   validates :kind, presence: true
   validates :rate, presence: true, numericality: {less_than_or_equal_to: 100.0} # 数値か小数点のみ有効
+  validates_format_of :rate, :with=>/\A\d+(\.\d{1,2})?\z/
 
   def self.to_csv
     csv_str = CSV.generate do |csv|
       # column_namesはカラム名を配列で返す
       # 例: ["id", "name", "price", "released_on", ...]
       new_column_names = column_names.delete_if {|item| item == "id" || 
-                                                 item == "user_id" || item == "created_at" || item == "updated_at" }
+                                                 item == "user_id" || item == "sp" || item == "created_at" || item == "updated_at" }
       csv << new_column_names
       all.each do |s|
         # attributes はカラム名と値のハッシュを返す
@@ -53,6 +54,7 @@ class Skill < ActiveRecord::Base
         # 情報更新
         skill.attributes = table.to_hash.slice(
           *table.to_hash.except(:id, :created_at, :updated_at).keys)
+        skill.sp = ApplicationController.helpers.calc_sp(skill)
 
         # バリデーションOKの場合は保存
         if skill.valid?
