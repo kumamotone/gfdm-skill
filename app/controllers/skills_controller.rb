@@ -30,107 +30,6 @@ class SkillsController < ApplicationController
   def edit
   end
 
-  def update_maxuser 
-    create_max    
-  end
-
-  def updatedrum(id)
-    @user = User.find(id)
-    @sp = Sp.find_by_user_id(@user.id)
-
-    #@hot= @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 713 AND 757) AND (s."kind" BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
-    #@other = @user.skills.find_by_sql( ['SELECT s.* FROM "skills" AS s WHERE s."user_id" = ? AND (s."music_id" BETWEEN 1 AND 712) AND (s."kind" BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM "skills" AS t WHERE s."music_id" = t."music_id" AND s."sp" < t."sp") ', @user.id]  )
-    @hot= @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 712 AND 900) AND (s.kind BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 0 AND 3)) ', @user.id]  )
-    @other = @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 1 AND 711) AND (s.kind BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 0 AND 3)) ', @user.id]  )
-
-    #@hot = @user.skills.where(music_id: 712..900, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")
-    #@other = @user.skills.where(music_id: 1..711, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")# 終端位置変更の必要あり
-    
-    # hot計算
-    @hot_sp = 0.0
-    @hot.first(25).each do |h|
-      @hot_sp = @hot_sp + h.sp
-    end
-    
-    # other計算
-    @other_sp = 0.0
-    @other.first(25).each do |o|
-      @other_sp = @other_sp + o.sp
-    end
-  
-    # hot_sp, other_sp round
-    @hot_sp = @hot_sp.round(2)
-    @other_sp = @other_sp.round(2)
-
-    # sp計算
-    @skill_sp = (@hot_sp + @other_sp).round(2)
-    
-    # all計算
-    @all_sp = 0.0
-    @hot.each do |h|
-      @all_sp = @all_sp + h.sp
-    end
-    @other.each do |o|
-      @all_sp = @all_sp + o.sp
-    end
-
-    # all sp round
-    @all_sp = @all_sp.round(2)
-
-    # DBに保存
-   
-    @sp.update( d: @skill_sp, dhot: @hot_sp, dother: @other_sp, dall: @all_sp)
-    @sp.save
-  end
-
-  def updateguitar (id)
-    @user = User.find(id)
-    @sp = Sp.find_by_user_id(@user.id)
-
-    @hot= @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 712 AND 900) AND (s.kind BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 4 AND 11)) ', @user.id]  )
-    @other = @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 1 AND 711) AND (s.kind BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 4 AND 11)) ', @user.id]  )
- 
-    @hot = @user.skills.where(music_id: 712..900, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC")
-    @other = @user.skills.where(music_id: 1..711, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC") # 終端位置変更の必要あり
-    
-    # hot計算
-    @hot_sp = 0.0
-    @hot.first(25).each do |h|
-      @hot_sp = @hot_sp + h.sp
-    end
-    
-    # other計算
-    @other_sp = 0.0
-    @other.first(25).each do |o|
-      @other_sp = @other_sp + o.sp
-    end
-   
-    # hot_sp, other_sp round
-    @hot_sp = @hot_sp.round(2)
-    @other_sp = @other_sp.round(2)
-
-    # sp計算
-    @skill_sp = (@hot_sp + @other_sp).round(2)
-    
-    # all計算
-    @all_sp = 0.0
-    @hot.each do |h|
-      @all_sp = @all_sp + h.sp
-    end
-    @other.each do |o|
-      @all_sp = @all_sp + o.sp
-    end
-
-    #all sp round
-    @all_sp = @all_sp.round(2)
-
-    @sp.g = @skill_sp
-    @sp.ghot = @hot_sp
-    @sp.gother = @other_sp
-    @sp.gall = @all_sp
-    @sp.save
-  end
-
   # POST /skills
   # POST /skills.json
   def create
@@ -140,9 +39,9 @@ class SkillsController < ApplicationController
       @skill.update_attributes(skill_params)
 
       if @skill.kind.between?(0,3) 
-        updatedrum(@skill.user_id)
+        ApplicationController.helpers.updatedrum(@skill.user_id)
       else
-        updateguitar(@skill.user_id)
+        ApplicationController.helpers.updateguitar(@skill.user_id)
       end
 
       flash[:success] = "スキルが登録されました．"

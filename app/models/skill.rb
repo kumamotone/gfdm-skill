@@ -63,6 +63,8 @@ class Skill < ActiveRecord::Base
         end
       end
     end
+        ApplicationController.helpers.updatedrum(id)
+        ApplicationController.helpers.updateguitar(id)
 
     # 更新件数を返却
     imported_num
