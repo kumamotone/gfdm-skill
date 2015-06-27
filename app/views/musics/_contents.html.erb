@@ -5,6 +5,7 @@
       <th colspan="4">Drum</th>
       <th colspan="4">Guitar</th>
       <th colspan="4">Bass</th>
+      <th rowspan="2">id</th>
     </tr>
     <tr>
       <th>BSC</th>
@@ -77,7 +78,8 @@
             number_with_precision music.b_mas, precision: 2 
             else "-"
             end %></td>
-            </tr>
+        <td><%= music.id %></td>
+        </tr>
     <% end %>
       </tbody>
     </table>
