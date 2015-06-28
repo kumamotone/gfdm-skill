@@ -17,4 +17,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require dataTables/jquery.dataTables
+//= require google-analytics-turbolinks
 //= require_tree .

@@ -10,6 +10,7 @@ gem 'bcrypt-ruby', '3.1.2'
 gem "jquery-turbolinks" # Turbolinksで遷移したときもjQuery.ready()を呼び出してくれる
 gem "select2-rails"
 gem 'jquery-datatables-rails'
+gem 'google-analytics-turbolinks'
 
 group :development, :test do
   gem 'debug_inspector', '0.0.2'

@@ -66,6 +66,7 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.8)
     formatador (0.2.5)
+    google-analytics-turbolinks (0.0.4)
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -227,6 +228,7 @@ DEPENDENCIES
   coffee-rails (= 4.0.1)
   debug_inspector (= 0.0.2)
   factory_girl_rails (= 4.2.1)
+  google-analytics-turbolinks
   guard (= 2.6.1)
   guard-rspec (= 2.5.0)
   guard-spork (= 1.5.0)
