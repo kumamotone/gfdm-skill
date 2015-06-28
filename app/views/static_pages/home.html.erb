@@ -1,19 +1,22 @@
-  <h1>GITADORA Tri-boost Skill Simulator(β)</h1>
+  <h1>GITADORA Tri-boost Skill Simulator (β)</h1>
 
   <h2>これ何？</h2>
   <p><%= link_to "GuitarFreaks & DrumMania Skill Simulator" ,"http://xv-s.heteml.jp/skill/" %> の非公式の後継です．Tri-boostになってから本家が活動停止してスキル表を共有する手立てがなくなったため，またほしい機能を色々実装できればと思い作成しました．</p>
 
   <h2>スキル表の例</h2>
-  <%= link_to "こちら", user_path(1) %>．
+  <%= link_to "DM", drum_user_path(1) %>, <%= link_to "GF", guitar_user_path(1) %>
 
   <h2>MAX SKILL(理論値スキル計算)</h2>
-  <p><%= link_to "Drummania", drum_user_path(3) %>,<%= link_to "GuitarFreaks", guitar_user_path(3) %> <p> 
+  <p><%= link_to "DM", drum_user_path(3) %>, <%= link_to "GF", guitar_user_path(3) %> <p> 
 
   <h2>ユーザ検索</h2>
-  <p>とりあえず <%= link_to "ユーザ一覧", 'users#index' %> で簡単な名前等の検索だけできます．</p> 
+  <p>とりあえず <%= link_to "ユーザ一覧", 'users#index' %> で名前の検索やスキルポイントでの並び替え等はできます．</p> 
 
+  <h2>連絡等</h2>
+  <p>不具合や曲情報の間違いなどは <%= link_to "更新情報ブログ", "http://gfdmskill.blog.fc2.com/" %> のコメント欄などでお知らせください．</p>
+  
   <h2>開発者の方へ</h2>
-  <p>本アプリは Ruby on Rails で開発しており，ソースコードは<%= link_to "GitHub","https://github.com/kumamotone/gfdm-skill" %>上で公開しています．機能を追加したい方はぜひ開発にご参加ください．</p>
+  <p>ソースコードは<%= link_to "GitHub","https://github.com/kumamotone/gfdm-skill" %>上で公開しています．機能を追加したい方はぜひ開発にご参加ください．</p>
 
   <h2>Links</h2>
   <ul>
@@ -22,4 +25,3 @@
     <li>BEMANIWiki 2nd</li>
     <li><%= link_to "http://bemaniwiki.com/index.php?GITADORA%20Tri-Boost" ,"http://bemaniwiki.com/index.php?GITADORA%20Tri-Boost" %> </li>
   </ul>
-

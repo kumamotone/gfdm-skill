@@ -15,12 +15,13 @@
       <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "曲一覧", musics_path %></li>
           <% if signed_in? %>
-            <li><%= link_to "公開用ページ", current_user %></li>
+            <li><%= link_to "スキル表 (Drum)", drum_user_path(current_user.id) %></li>
+            <li><%= link_to "スキル表 (Guitar)", guitar_user_path(current_user.id) %></li>
             <li><%= link_to "スキル登録", new_skill_path %></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">アカウント<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><%= link_to "ファイルのインポート", manage_user_path(current_user) %></li>
+                <li><%= link_to "インポート/エクスポート", manage_user_path(current_user) %></li>
                 <li><%= link_to "設定", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
                 <li><%= link_to "ログアウト", signout_path, method: "delete" %></li>
@@ -28,6 +29,7 @@
             </li>
           <% else %>
             <li><%= link_to "ログイン", signin_path %></li>
+            <li><%= link_to "新規登録", signup_path %></li>
           <% end %>
         </ul>
     </div>
