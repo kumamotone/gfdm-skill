@@ -14,38 +14,6 @@ module ApplicationHelper
     return ((rate * level * 20) * 0.01).to_d.floor(2).to_f
   end
 
-  
-  def fetch_level(music_id ,kind)
-    music = Music.find(music_id)
-
-    case kind
-    when 0 then 
-      music.d_bsc
-    when 1 then 
-      music.d_adv
-    when 2 then 
-      music.d_ext
-    when 3 then
-      music.d_mas
-    when 4 then 
-      music.g_bsc
-    when 5 then 
-      music.g_adv
-    when 6 then 
-      music.g_ext
-    when 7 then
-      music.g_mas
-    when 8 then 
-      music.b_bsc
-    when 9 then 
-      music.b_adv
-    when 10 then 
-      music.b_ext
-    when 11 then
-      music.b_mas
-     end
-  end
-
   def show_kind (kind)
     case kind
       when 0

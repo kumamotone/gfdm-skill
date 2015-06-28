@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
-gem 'rails', '4.0.5'
+gem 'rails', '4.2.1'
 gem 'bootstrap-sass', '3.2.0.2' #, '2.3.2.0'
 gem 'sprockets', '2.12.3'
 gem 'bcrypt-ruby', '3.1.2'
