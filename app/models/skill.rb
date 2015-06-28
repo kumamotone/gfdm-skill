@@ -8,6 +8,7 @@ class Skill < ActiveRecord::Base
   validates :comment, length: { maximum: 100 }
   validates :music_id, presence: true, uniqueness: { scope: [:user_id, :kind] }
   validates :kind, presence: true
+  #validates :sp, presence: true, numericality: {greater_than: 0, less_than: 200.0} 
   validates :rate, presence: true, numericality: {less_than_or_equal_to: 100.0} # 数値か小数点のみ有効
   validates_format_of :rate, :with=>/\A\d+(\.\d{1,2})?\z/
 

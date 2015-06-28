@@ -34,10 +34,8 @@ class SkillsController < ApplicationController
   # POST /skills.json
   def create
     @skill = current_user.skills.build(skill_params) 
+    @skill.sp = calc_sp(@skill) 
     if @skill.save
-      @skill.sp = calc_sp(@skill) 
-      @skill.update_attributes(skill_params)
-
       if @skill.kind.between?(0,3) 
         ApplicationController.helpers.updatedrum(@skill.user_id)
       else
@@ -59,9 +57,8 @@ class SkillsController < ApplicationController
   # PATCH/PUT /skills/1
   # PATCH/PUT /skills/1.json
   def update
+    @skill.sp = calc_sp(@skill) 
     if @skill.update_attributes(skill_params)
-      @skill.sp = calc_sp(@skill) 
-      @skill.update_attributes(skill_params)
       flash[:success] = "スキルを更新しました．"
        if (@skill.kind.between?(0,3))
         redirect_to drum_user_path(@skill.user_id)
