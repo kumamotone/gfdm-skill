@@ -1,7 +1,8 @@
 class SkillsController < ApplicationController
   before_action :set_skill, only: [:show, :edit, :update, :destroy]
-  before_action :signed_in_user, only: [:edit, :create, :destroy, :update] 
-  before_action :correct_user, only: [:edit, :destroy, :update, :destroy]
+  before_filter :authenticate_user!, only: [:edit, :destroy, :update]
+  #before_action :signed_in_user, only: [:edit, :create, :destroy, :update] 
+  #before_action :correct_user, only: [:edit, :destroy, :update]
 
   def self.kind_choices
     [["BSC",0],
@@ -383,8 +384,8 @@ class SkillsController < ApplicationController
       params[:skill].permit(:music_id, :user_id, :kind, :rate, :isfc, :comment) # define right permission
     end
 
-    def correct_user
-      @skill= current_user.skills.find_by(id: params[:id])
-      redirect_to current_user , notice: "正しいユーザでログインしてください．" if @skill.nil?
-    end
+    #def correct_user
+    #  @skill= current_user.skills.find_by(id: params[:id])
+    #  redirect_to current_user , notice: "正しいユーザでログインしてください．" if @skill.nil?
+    #end
 end

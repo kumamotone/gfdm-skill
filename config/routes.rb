@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+  devise_for :users
   resources :skills, except: [:index, :show] 
   resources :musics do
     collection do

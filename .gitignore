@@ -17,3 +17,4 @@ doc/
 .DS_Store
 .idea
 .secret
+/config/environments/development.rb
