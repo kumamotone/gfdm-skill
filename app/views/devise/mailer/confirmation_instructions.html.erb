@@ -1,5 +1,9 @@
-<p>Welcome <%= @email %>!</p>
+<p><%= @resource.name %> さん</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>本メールは GITADORA Skill Simulator からの自動送信です．</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p>アカウントを認証するには，以下のリンクをクリックしてください．</p>
+
+<p><%= link_to "アカウントを認証", confirmation_url(@resource, confirmation_token: => @token) %></p>
+
+<p>以上よろしくお願いいたします．<br>GITADORA Skill Simulator</p>

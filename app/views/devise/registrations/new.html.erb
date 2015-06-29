@@ -1,36 +1,58 @@
-<h2>Sign up</h2>
+<% provide(:title, 'アカウント作成') %>
+<h1>アカウント作成</h1>
 
+<div class="row">
+    <div class="form-horizontal" role="form">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="form-group">
+      <div class="form-group">
         <%= f.label :name, "名前", :class => "col-sm-3 control-label" %>
         <div class="col-sm-6">
-        <%= f.text_field :name, class: "form-control" %>
+        <%= f.text_field :name, class: "form-control",autocomplete: "off"  %>
         </div>
       </div>
 
- 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :email, "メールアドレス", :class => "col-sm-3 control-label"  %>
+        <div class="col-sm-6">
+        <%= f.text_field :email, placeholder: "ログインの際に必要になります．", class: "form-control",autocomplete: "off"  %>
+       </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :password, "パスワード", :class => "col-sm-3 control-label"  %> 
+        <div class="col-sm-6">
+        <%= f.password_field :password, class: "form-control",autocomplete: "off"  %>
+        </div>
+     </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-<%= render "devise/shared/links" %>
+      <div class="form-group">
+        <%= f.label :password_confirmation, "パスワード (確認)", :class => "col-sm-3 control-label"  %>
+        <div class="col-sm-6">
+        <%= f.password_field :password_confirmation, class: "form-control",autocomplete: "off" %>
+      </div>
+     </div>
+
+      <div class="form-group">
+        <%= f.label :d_comment, "コメント (Drummania用)", :class => "col-sm-3 control-label"  %>
+        <div class="col-sm-6">
+        <%= f.text_area :d_comment, placeholder: "プロフィール画面に表示されます．(任意)",autocomplete: "off", class: "form-control"  %>
+        </div>
+      </div>      
+      <div class="form-group">
+      <%= f.label :g_comment, "コメント (GuitarFreaks用)", :class => "col-sm-3 control-label"  %>
+      <div class="col-sm-6">
+      <%= f.text_area :g_comment, placeholder: "プロフィール画面に表示されます．(任意)",autocomplete: "off", class: "form-control"  %>
+      </div>
+      </div>
+      <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-6">
+      <%= f.submit "アカウント作成", class: "btn btn-large btn-primary" %>
+      </div>
+      </div>
+    <% end %>
+    </div>
+    <%= render "devise/shared/links" %>
+</div>
+
