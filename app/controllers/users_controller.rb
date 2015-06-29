@@ -32,8 +32,29 @@ class UsersController < ApplicationController
   def drum
     @user = User.find(params[:id])
 
-    @hot= @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 712 AND 900) AND (s.kind BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 0 AND 3)) ', @user.id]  )
-    @other = @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 1 AND 711) AND (s.kind BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 0 AND 3)) ', @user.id]  )
+    @hot= @user.skills.find_by_sql( ['SELECT s.* 
+                                     FROM skills AS s
+                                     WHERE s.user_id = ? AND
+                                          (s.music_id BETWEEN 712 AND 900) AND
+                                          (s.kind BETWEEN 0 AND 3)
+                                     AND NOT EXISTS
+                                        ( SELECT 1 FROM skills AS t
+                                          WHERE s.music_id = t.music_id AND
+                                                s.user_id = t.user_id AND
+                                                s.sp < t.sp AND (t.kind BETWEEN 0 AND 3))
+                                     ORDER BY sp DESC', @user.id]  )
+    @other = @user.skills.find_by_sql( ['SELECT s.* 
+                                     FROM skills AS s
+                                     WHERE s.user_id = ? AND
+                                          (s.music_id BETWEEN 1 AND 711) AND
+                                          (s.kind BETWEEN 0 AND 3)
+                                     AND NOT EXISTS
+                                        ( SELECT 1 FROM skills AS t
+                                          WHERE s.music_id = t.music_id AND
+                                                s.user_id = t.user_id AND
+                                                s.sp < t.sp AND (t.kind BETWEEN 0 AND 3))
+                                     ORDER BY sp DESC', @user.id]  )
+
     ActiveRecord::Associations::Preloader.new.preload(@hot, :music)
     ActiveRecord::Associations::Preloader.new.preload(@other, :music)
     #@hot = @user.skills.where(music_id: 712..900, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")
@@ -77,9 +98,30 @@ class UsersController < ApplicationController
 
   def guitar
     @user = User.find(params[:id])
+    @hot= @user.skills.find_by_sql( ['SELECT s.* 
+                                     FROM skills AS s
+                                     WHERE s.user_id = ? AND
+                                          (s.music_id BETWEEN 712 AND 900) AND
+                                          (s.kind BETWEEN 4 AND 11)
+                                     AND NOT EXISTS
+                                        ( SELECT 1 FROM skills AS t
+                                          WHERE s.music_id = t.music_id AND
+                                                s.user_id = t.user_id AND
+                                                s.sp < t.sp AND (t.kind BETWEEN 4 AND 11))
+                                     ORDER BY sp DESC', @user.id]  )
+    @other = @user.skills.find_by_sql( ['SELECT s.* 
+                                     FROM skills AS s
+                                     WHERE s.user_id = ? AND
+                                          (s.music_id BETWEEN 1 AND 711) AND
+                                          (s.kind BETWEEN 4 AND 11)
+                                     AND NOT EXISTS
+                                        ( SELECT 1 FROM skills AS t
+                                          WHERE s.music_id = t.music_id AND
+                                                s.user_id = t.user_id AND
+                                                s.sp < t.sp AND (t.kind BETWEEN 4 AND 11))
+                                     ORDER BY sp DESC', @user.id]  )
 
-    @hot= @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 712 AND 900) AND (s.kind BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 4 AND 11)) ', @user.id]  )
-    @other = @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 1 AND 711) AND (s.kind BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 4 AND 11)) ', @user.id]  )
+
     ActiveRecord::Associations::Preloader.new.preload(@hot, :music)
     ActiveRecord::Associations::Preloader.new.preload(@other, :music)
  
