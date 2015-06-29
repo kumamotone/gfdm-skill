@@ -6,7 +6,7 @@
   <p><%= link_to "DrumManiaスキル表へ", drum_user_path %></p>
 
   <div class="well">
-    <%= @user.g_comment %>
+    <%= simple_format @user.g_comment %>
   </div>
   
   <%= render 'sptableguitar' %>

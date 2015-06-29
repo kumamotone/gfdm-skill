@@ -7,7 +7,7 @@
   <p><%= link_to "GuitarFreaksスキル表へ", guitar_user_path %></p>
 
   <div class="well">
-    <%= @user.d_comment %>
+    <%= simple_format @user.d_comment %>
   </div>
   <%= render 'sptabledrum' %>
   <%= render 'skilltable' %>
