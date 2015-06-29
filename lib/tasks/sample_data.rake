@@ -2,7 +2,7 @@ namespace :db do
   desc "Adminを足す（必ずパスワードとメールアドレスを変更すること！！"
   task populate: :environment do
     admin = User.create!(name: "Admin",
-                         email: "admin@admin.com",
+                         email: "desper1jp+admin@gmail.com",
                          password: "hogehoge",
                          password_confirmation: "hogehoge",
                          admin: true)
