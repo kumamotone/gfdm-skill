@@ -4,7 +4,7 @@
 <% #devise/sessions と sessions になぜか同じファイルを置かないと動かないのであとでリファクタリングするべき おそらくルーティングのせい %>
 <div class="row">
     <div class="form-horizontal" role="form">
-    <%= form_for(:session, url: sessions_path) do |f| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
       <div class="form-group">
         <%= f.label :email, "メールアドレス", :class => "col-sm-3 control-label"  %>
@@ -19,11 +19,11 @@
         <%= f.password_field :password, class: "form-control" %>
         </div>
      </div>
-
-      <div class="form-group">
+ 
+     <div class="form-group">
       <% if devise_mapping.rememberable? -%>
-        <div class="field">
-          <%= f.check_box :remember_me %>
+      <div class="col-sm-offset-3 col-sm-6">
+          <%= f.check_box :remember_me, {checked: true} %>
           <%= f.label :remember_me, "ログイン状態を保持する" %>
         </div>
       <% end %>
