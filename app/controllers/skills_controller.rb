@@ -55,6 +55,10 @@ class SkillsController < ApplicationController
     end
   end
 
+  def update_maxuser 
+    create_max    
+  end
+
   # PATCH/PUT /skills/1
   # PATCH/PUT /skills/1.json
   def update

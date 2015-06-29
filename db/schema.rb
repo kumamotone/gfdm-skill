@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150629011553) do
+ActiveRecord::Schema.define(version: 20150629062804) do
 
   create_table "musics", force: true do |t|
     t.string   "name",       null: false
@@ -49,22 +49,6 @@ ActiveRecord::Schema.define(version: 20150629011553) do
   add_index "skills", ["user_id", "music_id", "kind"], name: "index_skills_on_user_id_and_music_id_and_kind", unique: true
   add_index "skills", ["user_id"], name: "index_skills_on_user_id"
 
-  create_table "sps", force: true do |t|
-    t.integer  "user_id"
-    t.float    "d"
-    t.float    "dhot"
-    t.float    "dother"
-    t.float    "dall"
-    t.float    "g"
-    t.float    "ghot"
-    t.float    "gother"
-    t.float    "gall"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "sps", ["user_id"], name: "index_sps_on_user_id"
-
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -90,6 +74,14 @@ ActiveRecord::Schema.define(version: 20150629011553) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.float    "d",                      default: 0.0
+    t.float    "dhot",                   default: 0.0
+    t.float    "dother",                 default: 0.0
+    t.float    "dall",                   default: 0.0
+    t.float    "g",                      default: 0.0
+    t.float    "ghot",                   default: 0.0
+    t.float    "gother",                 default: 0.0
+    t.float    "gall",                   default: 0.0
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

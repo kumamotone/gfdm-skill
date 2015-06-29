@@ -8,6 +8,7 @@
         <th>ユーザ名</th>
         <th>DM スキル</th>
         <th>GF スキル</th>
+        <th>最終更新</th>
       </tr>
     </thead>
   <tbody>
@@ -15,9 +16,9 @@
     <tr>
       <td><%= user.id %></td>
       <td><%= link_to user.name, user %> </td>
-      <td>
-        <%= fetch_sp_d(user.id) %></td>
-    <td><%= fetch_sp_g(user.id) %></td>
+      <td><%= user.d %></td>
+      <td><%= user.g %></td>
+      <td><%= user.updated_at %></td>
     </tr>
   <% end %>
   </tbody>

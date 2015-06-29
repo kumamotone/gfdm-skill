@@ -4,6 +4,5 @@
 
 <p>アカウントを認証するには，以下のリンクをクリックしてください．</p>
 
-<p><%= link_to "アカウントを認証", confirmation_url(@resource, confirmation_token: => @token) %></p>
-
+<p><%= link_to 'ユーザー登録を完了する', confirmation_url(@resource, :confirmation_token => @token) %></p>
 <p>以上よろしくお願いいたします．<br>GITADORA Skill Simulator</p>

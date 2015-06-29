@@ -22,11 +22,7 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find(params[:id])
-    @sp = Sp.find_by_user_id(@user.id)
-
-    if @sp.nil?
-      @sp = Sp.create(user_id: @user.id, d: 0.0, dhot: 0.0, dother: 0.0, dall: 0.0, g: 0.0, ghot: 0.0, gother: 0.0, gall: 0.0) 
-    end
+    
     respond_to do |format|
       format.html
       format.csv { send_data @user.skills.to_csv }
@@ -35,11 +31,6 @@ class UsersController < ApplicationController
 
   def drum
     @user = User.find(params[:id])
-    @sp = Sp.find_by_user_id(@user.id)
-
-    if @sp.nil?
-      @sp = Sp.create(user_id: @user.id, d: 0.0, dhot: 0.0, dother: 0.0, dall: 0.0, g: 0.0, ghot: 0.0, gother: 0.0, gall: 0.0) 
-    end
 
     @hot= @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 712 AND 900) AND (s.kind BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 0 AND 3)) ', @user.id]  )
     @other = @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 1 AND 711) AND (s.kind BETWEEN 0 AND 3) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 0 AND 3)) ', @user.id]  )
@@ -81,17 +72,11 @@ class UsersController < ApplicationController
 
     # DBに保存
    
-    @sp.update( d: @skill_sp, dhot: @hot_sp, dother: @other_sp, dall: @all_sp)
-    @sp.save
+    @user.update_attributes(d: @skill_sp, dhot: @hot_sp, dother: @other_sp, dall: @all_sp)
   end
 
   def guitar
     @user = User.find(params[:id])
-    @sp = Sp.find_by_user_id(@user.id)
-
-    if @sp.nil?
-      @sp = Sp.create(user_id: @user.id, d: 0.0, dhot: 0.0, dother: 0.0, dall: 0.0, g: 0.0, ghot: 0.0, gother: 0.0, gall: 0.0) 
-    end
 
     @hot= @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 712 AND 900) AND (s.kind BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 4 AND 11)) ', @user.id]  )
     @other = @user.skills.find_by_sql( ['SELECT s.* FROM skills AS s WHERE s.user_id = ? AND (s.music_id BETWEEN 1 AND 711) AND (s.kind BETWEEN 4 AND 11) AND NOT EXISTS ( SELECT 1 FROM skills AS t WHERE s.music_id = t.music_id AND s.user_id = t.user_id AND s.sp < t.sp AND (t.kind BETWEEN 4 AND 11)) ', @user.id]  )
@@ -131,12 +116,7 @@ class UsersController < ApplicationController
 
     #all sp round
     @all_sp = @all_sp.round(2)
-
-    @sp.g = @skill_sp
-    @sp.ghot = @hot_sp
-    @sp.gother = @other_sp
-    @sp.gall = @all_sp
-    @sp.save
+    @user.update_attributes(g: @skill_sp, ghot: @hot_sp, gother: @other_sp, gall: @all_sp) 
    end
 
   def new
@@ -175,7 +155,7 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation, :g_comment, :d_comment, :place)
+                                   :password_confirmation, :g_comment, :d_comment, :g, :ghot, :gohter, :gall, :d, :dhot, :dother, :dall, :place)
     end
 
     # Before actions

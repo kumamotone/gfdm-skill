@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :confirmable, :recoverable, :rememberable, :trackable, :validatable
   #before_save { self.email = email.downcase }
   before_create :create_remember_token
-  has_one :sps, dependent: :destroy
+  #has_one :sps, dependent: :destroy
   has_many :skills, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 50 } 
