@@ -15,7 +15,8 @@
     <tr>
       <td><%= user.id %></td>
       <td><%= link_to user.name, user %> </td>
-    <td><%= fetch_sp_d(user.id) %></td>
+      <td>
+        <%= fetch_sp_d(user.id) %></td>
     <td><%= fetch_sp_g(user.id) %></td>
     </tr>
   <% end %>

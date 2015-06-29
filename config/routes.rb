@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  devise_for :users,
+    controllers: { registratoins: 'registratoins' }
   resources :skills, except: [:index, :show] 
   resources :musics do
     collection do
@@ -17,9 +19,16 @@ SampleApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   root  'static_pages#home'
   match '/update_maxuser',  to: 'skills#update_maxuser',            via: 'get'
-  match '/signup',  to: 'users#new',            via: 'get'
-  match '/signin',  to: 'sessions#new',         via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'delete'
+  #match '/signup',  to: 'users#new',            via: 'get'
+  #match '/signin',  to: 'sessions#new',         via: 'get'
+  #match '/signout', to: 'sessions#destroy',     via: 'delete'
+  #post ':controller(/:action(/:id(.:format)))'
+  #get ':controller(/:action(/:id(.:format)))'
+  devise_scope :user do 
+    match '/sessions/new.user', to: 'devise/sessions#new', via: :get
+    match '/sessions/user', to: 'devise/sessions#create', via: :post
+  end
+
   # match '/help',    to: 'static_pages#help',    via: 'get'
   # match '/about',   to: 'static_pages#about',   via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.

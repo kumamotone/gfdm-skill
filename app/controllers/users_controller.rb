@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user, only: [:edit, :update, :destroy, :manage, :import]
-  before_action :correct_user,   only: [:edit, :update, :manage, :import]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy, :manage, :import]
+  # before_action :correct_user,   only: [:edit, :update, :manage, :import]
   before_action :admin_user,     only: :destroy
 
   def index

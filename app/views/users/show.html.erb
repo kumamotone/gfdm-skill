@@ -3,7 +3,7 @@
   <%= @user.name %> 
 </h1>
 
-<% if current_user?(@user) %>
+<% if current_user %>
 <div class="well">
   公開用URLは http://tri.gfdm-skill.net<%= drum_user_path %> (Drummania) と http://tri.gfdm-skill.net<%= guitar_user_path %> (GuitarFreaks) です．
 </div>

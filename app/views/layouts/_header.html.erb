@@ -22,14 +22,14 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">アカウント<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><%= link_to "インポート/エクスポート", manage_user_path(current_user) %></li>
-                <li><%= link_to "設定", edit_user_path(current_user) %></li>
+                <li><%= link_to "設定", edit_user_registration_path %></li>
                 <li class="divider"></li>
-                <li><%= link_to "ログアウト", signout_path, method: "delete" %></li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, method: "delete" %></li>
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "ログイン", signin_path %></li>
-            <li><%= link_to "新規登録", signup_path %></li>
+            <li><%= link_to "ログイン", new_user_session_path %></li>
+            <li><%= link_to "新規登録", new_user_registration_path %></li>
           <% end %>
         </ul>
     </div>
