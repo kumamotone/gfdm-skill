@@ -1,5 +1,6 @@
 class MusicsController < ApplicationController
-  before_action :signed_in_user,     only: [:edit, :update, :create, :destroy]
+  #before_action :signed_in_user,     only: [:edit, :update, :create, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :create, :destroy]
   before_action :admin_user,     only: [:edit, :update, :create, :destroy]
 
   # GET /musics

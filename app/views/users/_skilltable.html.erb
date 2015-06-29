@@ -18,7 +18,7 @@
       <tr class=<%= show_color(skill.kind)  %>>
       <td></td>
       <td>
-          <% if current_user?(@user) %>
+          <% if current_user == @user %>
             <%= link_to skill.music.name, edit_skill_path(skill) %>
           <% else %>
             <%= skill.music.name %>
@@ -52,7 +52,7 @@
       <tr class=<%= show_color(skill.kind)  %>>
       <td></td>
       <td>
-          <% if current_user?(@user) %>
+          <% if current_user == @user %>
             <%= link_to skill.music.name, edit_skill_path(skill) %>
           <% else %>
             <%= skill.music.name %>
