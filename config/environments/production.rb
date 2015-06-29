@@ -85,6 +85,7 @@ SampleApp::Application.configure do
     :port => 587,
     :user_name => ENV['GMAIL_ID'],  
     :password => ENV['GMAIL_PASS'],
+    :domain 'tri.gfdm-skill.net',
     :authentication => 'plain',
     :enable_starttls_auto => true,
   }
