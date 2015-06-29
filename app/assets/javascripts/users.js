@@ -1,6 +1,23 @@
 $(document).ready(function() {
   return $('#sTable').dataTable({
-    'pagingType': 'full_numbers'
+    'pagingType': 'full_numbers',
+    'lengthMenu': [[50, 100, -1], [50,100, "All"]],
+     "language" : {
+         "sProcessing":   "処理中...",
+         "sLengthMenu":   "_MENU_ 件表示",
+         "sZeroRecords":  "データはありません。",
+         "sInfo":         "_START_件～_END_件を表示（全_TOTAL_ 件中）",
+         "sInfoEmpty":    " 0 件中 0 から 0 まで表示",
+         "sInfoFiltered": "（全 _MAX_ 件より抽出）",
+         "sInfoPostFix":  "",
+         "sSearch":       "検索フィルター:",
+         "sUrl":          "",
+         "oPaginate": {
+             "sFirst":    "先頭",
+             "sPrevious": "前ページ",
+             "sNext":     "次ページ",
+             "sLast":     "最終"
+         }}
   });
 });
 
@@ -9,8 +26,7 @@ $(document).ready(function() {
   t = $('#sortableTable').DataTable({
         "bPaginate": false,  
         "bInfo": false,  
-        "bFilter": false,
-        "bAutoWidth": false,
+        "bFilter": true,
         "aoColumns" : [
             { sWidth: '50px' },
             { sWidth: '200px' },
@@ -22,12 +38,22 @@ $(document).ready(function() {
         ],
     'lengthMenu': [[25, 50, -1], [25, 50, "All"]],
     'order': [[4, 'desc']],
-    'language': {
-      'lengthMenu': '表示件数 _MENU_',
-      'zeroRecords': 'データが見つかりませんでした．',
-      'info': '_PAGE_ / _PAGES_',
-      'infoEmpty': '結果なし'
-    }
+     "language" : {
+         "sProcessing":   "処理中...",
+         "sLengthMenu":   "_MENU_ 件表示",
+         "sZeroRecords":  "データはありません。",
+         "sInfo":         "_START_件～_END_件を表示（全_TOTAL_ 件中）",
+         "sInfoEmpty":    " 0 件中 0 から 0 まで表示",
+         "sInfoFiltered": "（全 _MAX_ 件より抽出）",
+         "sInfoPostFix":  "",
+         "sSearch":       "検索フィルター:",
+         "sUrl":          "",
+         "oPaginate": {
+             "sFirst":    "先頭",
+             "sPrevious": "前ページ",
+             "sNext":     "次ページ",
+             "sLast":     "最終"
+         }}
   });
   return t.on('order.dt search.dt', function() {
     t.column(0, {
@@ -44,15 +70,25 @@ $(document).ready(function() {
   t = $('#sortableTable2').DataTable({
         "bPaginate": false,  
         "bInfo": false,  
-        "bFilter": false,
+        "bFilter": true,
     'lengthMenu': [[25, 50, -1], [25, 50, "All"]],
     'order': [[4, 'desc']],
-    'language': {
-      'lengthMenu': '表示件数 _MENU_',
-      'zeroRecords': 'データが見つかりませんでした．',
-      'info': '_PAGE_ / _PAGES_',
-      'infoEmpty': '結果なし'
-    }
+     "language" : {
+         "sProcessing":   "処理中...",
+         "sLengthMenu":   "_MENU_ 件表示",
+         "sZeroRecords":  "データはありません。",
+         "sInfo":         "_START_件～_END_件を表示（全_TOTAL_ 件中）",
+         "sInfoEmpty":    " 0 件中 0 から 0 まで表示",
+         "sInfoFiltered": "（全 _MAX_ 件より抽出）",
+         "sInfoPostFix":  "",
+         "sSearch":       "検索フィルター:",
+         "sUrl":          "",
+         "oPaginate": {
+             "sFirst":    "先頭",
+             "sPrevious": "前ページ",
+             "sNext":     "次ページ",
+             "sLast":     "最終"
+         }}
   });
   return t.on('order.dt search.dt', function() {
     t.column(0, {
