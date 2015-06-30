@@ -7,22 +7,22 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
       <div class="form-group">
-        <%= f.label :email, "メールアドレス", :class => "col-sm-3 control-label"  %>
-        <div class="col-sm-6">
+        <%= f.label :email, "メールアドレス", :class => "col-xs-offset-1 control-label"  %>
+        <div class="col-xs-offset-1 col-xs-10">
         <%= f.text_field :email, class: "form-control", autofocus: true   %>
        </div>
       </div>
 
       <div class="form-group">
-        <%= f.label :password, "パスワード", :class => "col-sm-3 control-label"  %> 
-        <div class="col-sm-6">
+        <%= f.label :password, "パスワード", :class => "col-xs-offset-1 control-label"  %> 
+        <div class="col-xs-offset-1 col-xs-10">
         <%= f.password_field :password, class: "form-control" %>
         </div>
      </div>
  
      <div class="form-group">
       <% if devise_mapping.rememberable? -%>
-      <div class="col-sm-offset-3 col-sm-6">
+      <div class=" col-xs-offset-1 col-xs-10">
           <%= f.check_box :remember_me, {checked: true} %>
           <%= f.label :remember_me, "ログイン状態を保持する" %>
         </div>
@@ -30,7 +30,7 @@
       </div>
 
       <div class="form-group">
-      <div class="col-sm-offset-3 col-sm-6">
+      <div class=" col-xs-offset-1 col-xs-10">
       <%= f.submit "ログイン", class: "btn btn-large btn-primary" %>
       </div>
       </div>

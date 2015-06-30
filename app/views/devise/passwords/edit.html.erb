@@ -8,25 +8,27 @@
     <%= f.hidden_field :reset_password_token %>
 
     <div class="form-group">
-      <%= f.label :password, "新しいパスワード", :class => "col-sm-3 control-label" %>
-        <div class="col-sm-6">
+      <%= f.label :password, "新しいパスワード", :class => "col-xs-offset-1 control-label" %>
+        <div class="col-xs-offset-1 col-xs-10">
       <%= f.password_field :password,class: "form-control", autofocus: true, autocomplete: "off" %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :password_confirmation, "新しいパスワード (確認)", :class => "col-sm-3 control-label" %>
-     <div class="col-sm-6">
+    <%= f.label :password_confirmation, "新しいパスワード (確認)", :class => "col-xs-offset-1 control-label" %>
+     <div class="col-xs-offset-1 col-xs-10">
     <%= f.password_field :password_confirmation, class: "form-control",autocomplete: "off" %>
     </div>
   </div>
 
     <div class="form-group">
-      <div class="col-sm-offset-3 col-sm-6">
+      <div class=" col-xs-offset-1 col-xs-10">
     <%= f.submit "パスワードを変更", class: "btn btn-large btn-primary" %>
   </div>
   </div>
 <% end %>
 </div>
-<%= render "devise/shared/links" %>
+    <div class="col-xs-offset-1">
+    <%= render "devise/shared/links" %>
+    </div>  
 </div>

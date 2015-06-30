@@ -46,7 +46,7 @@ ja:
       updated_not_active: "パスワードを変更しました。"
     registrations:
       destroyed: "アカウントを削除しました。ぜひまたのご利用をお待ちしております！"
-      signed_up: "ようこそ！アカウント登録を受け付けました。"
+      signed_up: "ようこそ！アカウントを作成しました。"
       signed_up_but_inactive: "アカウントは登録されていますが、有効になっていないため利用できません。"
       signed_up_but_locked: "アカウントは登録されていますが、ロックされているため利用できません。"
       signed_up_but_unconfirmed: "確認メールを、登録したメールアドレス宛に送信しました。メールに記載されたリンクを開いてアカウントを有効にして下さい。"

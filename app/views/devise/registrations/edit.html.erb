@@ -11,64 +11,65 @@
       <% end %>
 
       <div class="form-group">
-        <%= f.label :name, "名前", :class => "col-sm-3 control-label" %>
-        <div class="col-sm-6">
+        <%= f.label :name, "名前", :class => "col-xs-offset-1 control-label" %>
+        <div class="col-xs-offset-1 col-xs-10">
         <%= f.text_field :name, class: "form-control" %>
         </div>
       </div>
 
       <div class="form-group">
-        <%= f.label :email, "メールアドレス", :class => "col-sm-3 control-label"  %>
-        <div class="col-sm-6">
+        <%= f.label :email, "メールアドレス", :class => "col-xs-offset-1 control-label"  %>
+        <div class="col-xs-offset-1 col-xs-10">
         <%= f.text_field :email, placeholder: "ログインの際に必要になります．", class: "form-control"  %>
        </div>
       </div>
 
       <div class="form-group">
-        <%= f.label :d_comment, "コメント (Drummania用)", :class => "col-sm-3 control-label"  %>
-        <div class="col-sm-6">
+        <%= f.label :d_comment, "コメント (Drummania用)", :class => "col-xs-offset-1 control-label"  %>
+        <div class="col-xs-offset-1 col-xs-10">
         <%= f.text_area :d_comment, placeholder: "プロフィール画面に表示されます．(任意)", class: "form-control"  %>
         </div>
       </div>      
       
       <div class="form-group">
-        <%= f.label :g_comment, "コメント (GuitarFreaks用)", :class => "col-sm-3 control-label"  %>
-        <div class="col-sm-6">
+        <%= f.label :g_comment, "コメント (GuitarFreaks用)", :class => "col-xs-offset-1 control-label"  %>
+        <div class="col-xs-offset-1 col-xs-10">
         <%= f.text_area :g_comment, placeholder: "プロフィール画面に表示されます．(任意)",class: "form-control"  %>
         </div>
       </div>
 
       <div class="form-group">
-        <%= f.label :current_password, "現在のパスワード を入力してください", :class => "col-sm-3 control-label"  %> 
-        <div class="col-sm-6">
+        <%= f.label :current_password, "現在のパスワード を入力してください", :class => "col-xs-offset-1 control-label"  %> 
+        <div class="col-xs-offset-1 col-xs-10">
         <%= f.password_field :current_password, class: "form-control",autocomplete: "off"  %>
         </div>
      </div>
 
       <div class="form-group">
-        <%= f.label :password, "新しいパスワード (変更しない場合は空にしてください)", :class => "col-sm-3 control-label"  %> 
-        <div class="col-sm-6">
+        <%= f.label :password, "新しいパスワード (変更しない場合は空にしてください)", :class => "col-xs-offset-1 control-label"  %> 
+        <div class="col-xs-offset-1 col-xs-10">
         <%= f.password_field :password, class: "form-control",autocomplete: "off"  %>
         </div>
      </div>
 
       <div class="form-group">
-        <%= f.label :password_confirmation, "新しいパスワード (確認)", :class => "col-sm-3 control-label"  %>
-        <div class="col-sm-6">
+        <%= f.label :password_confirmation, "新しいパスワード (確認)", :class => "col-xs-offset-1 control-label"  %>
+        <div class="col-xs-offset-1 col-xs-10">
         <%= f.password_field :password_confirmation, class: "form-control" ,autocomplete: "off" %>
       </div>
      </div>
 
       </div>
       <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class=" col-xs-offset-1">
         <%= f.submit "編集", class: "btn btn-large btn-primary" %>
         </div>
       </div>
     <% end %>
     </div>
-
-<%= render "devise/shared/links" %>
+    <div class="col-xs-offset-1">
+    <%= render "devise/shared/links" %>
+    </div>  
 
 </div>
 
