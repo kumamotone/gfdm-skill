@@ -64,6 +64,8 @@ class SkillsController < ApplicationController
   def update
     @skill.sp = calc_sp(@skill) 
     if @skill.update_attributes(skill_params)
+    @skill.sp = calc_sp(@skill) 
+      @skill.update_attributes(skill_params)
       flash[:success] = "スキルを更新しました．"
        if (@skill.kind.between?(0,3))
         redirect_to drum_user_path(@skill.user_id)
