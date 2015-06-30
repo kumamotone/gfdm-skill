@@ -61,6 +61,7 @@ html {
 
 body {
   //padding-top: 60px;
+  padding-bottom: 20px;
 }
 
 section {
@@ -69,6 +70,12 @@ section {
 
 textarea {
   resize: vertical;
+}
+
+footer{
+    height:20px;
+    position:absolute;
+    bottom:0;
 }
 
 .center {
