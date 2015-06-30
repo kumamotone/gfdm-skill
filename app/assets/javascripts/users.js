@@ -1,5 +1,6 @@
 $(document).ready(function() {
   return $('#sTable').dataTable({
+    'bDeferRender': true,
     'pagingType': 'full_numbers',
     'lengthMenu': [[50, 100, -1], [50,100, "All"]],
      "language" : {
@@ -24,18 +25,20 @@ $(document).ready(function() {
 $(document).ready(function() {
   var t;
   t = $('#sortableTable').DataTable({
+        "bJQueryUI": false,
+        "bScrollCollapse": true,
         "bPaginate": false,  
         "bInfo": false,  
         "bFilter": true,
-        "aoColumns" : [
-            { sWidth: '50px' },
-            { sWidth: '200px' },
-            { sWidth: '120px' },
-            { sWidth: '100px' },
-            { sWidth: '100px' },
-            { sWidth: '100px' },
-            { sWidth: '300px' }
-        ],
+//        "aoColumns" : [
+//            { sWidth: '50px' },
+//            { sWidth: '200px' },
+//            { sWidth: '120px' },
+//            { sWidth: '100px' },
+//            { sWidth: '100px' },
+//            { sWidth: '100px' },
+//            { sWidth: '300px' }
+//        ],
     'lengthMenu': [[25, 50, -1], [25, 50, "All"]],
     'order': [[4, 'desc']],
      "language" : {
@@ -68,6 +71,8 @@ $(document).ready(function() {
 $(document).ready(function() {
   var t;
   t = $('#sortableTable2').DataTable({
+        "bJQueryUI": false,
+        "bScrollCollapse": true,
         "bPaginate": false,  
         "bInfo": false,  
         "bFilter": true,
