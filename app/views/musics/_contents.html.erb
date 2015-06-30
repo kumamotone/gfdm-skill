@@ -25,7 +25,7 @@
 
   <tbody>
   <% @musics.each do |music| %>
-    <tr>
+    <tr data-music_id="<%= music.id %>">
     <td><%= music.name %></td>
     <td><%= if music.d_bsc != 0.0
               number_with_precision music.d_bsc, precision: 2
