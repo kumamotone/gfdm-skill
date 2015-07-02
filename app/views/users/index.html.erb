@@ -15,9 +15,9 @@
   <% @users.each do |user| %>
     <tr>
       <td><%= user.id %></td>
-      <td><%= link_to user.name, user %> </td>
-      <td><%= link_to user.d, drum_user_path(user.id) %></td>
-      <td><%= link_to user.g, guitar_user_path(user.id) %></td>
+      <td><%= link_to user.name, user , :target=>["_blank"] %> </td>
+      <td><%= link_to user.d, drum_user_path(user.id) , :target=>["_blank"] %></td>
+      <td><%= link_to user.g, guitar_user_path(user.id) , :target=>["_blank"] %></td>
       <td><%= user.updated_at %></td>
     </tr>
   <% end %>

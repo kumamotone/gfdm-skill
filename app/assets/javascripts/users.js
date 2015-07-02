@@ -2,7 +2,8 @@ $(document).ready(function() {
   return $('#sTable').dataTable({
     'bDeferRender': true,
     'pagingType': 'full_numbers',
-    'lengthMenu': [[50, 100, -1], [50,100, "All"]],
+    'lengthMenu': [[100,200,500, -1], [100,200,500 "All"]],
+    'order': [[4, 'desc']],
      "language" : {
          "sProcessing":   "処理中...",
          "sLengthMenu":   "_MENU_ 件表示",
