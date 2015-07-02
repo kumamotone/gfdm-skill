@@ -30,6 +30,7 @@ $(document).ready(function() {
         "bPaginate": false,  
         "bInfo": false,  
         "bFilter": true,
+        "bSortClasses": false,// ソート行を強調（cssクラスを指定）するかを設定
 //        "aoColumns" : [
 //            { sWidth: '50px' },
 //            { sWidth: '200px' },
@@ -76,6 +77,7 @@ $(document).ready(function() {
         "bPaginate": false,  
         "bInfo": false,  
         "bFilter": true,
+        "bSortClasses": false,// ソート行を強調（cssクラスを指定）するかを設定
     'lengthMenu': [[25, 50, -1], [25, 50, "All"]],
     'order': [[4, 'desc']],
      "language" : {
