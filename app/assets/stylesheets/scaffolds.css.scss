@@ -18,12 +18,26 @@ pre {
   font-size: 11px;
 }
 
-table.dataTable {
-  font-size: 9px 
+@media screen and (max-width: 750px) {
+  table.dataTable {
+    font-size: 9px 
+  }
+
+  table.dataTable tbody td {
+    font-size: 9px
+  }
 }
-table.dataTable tbody td {
-  font-size: 9px
+
+@media screen and (min-width: 750px) {
+  table.dataTable {
+    font-size: 13px 
+  }
+
+  table.dataTable tbody td {
+    font-size: 13px
+  }
 }
+
 
 /*
 a {
