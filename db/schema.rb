@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150629062804) do
+ActiveRecord::Schema.define(version: 20150703143414) do
 
   create_table "musics", force: true do |t|
     t.string   "name",       null: false
@@ -52,20 +52,20 @@ ActiveRecord::Schema.define(version: 20150629062804) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.boolean  "admin",                  default: false
+    t.boolean  "admin",                              default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
     t.string   "remember_token"
     t.string   "profile"
-    t.string   "d_comment"
-    t.string   "g_comment"
+    t.text     "d_comment",              limit: 255
+    t.text     "g_comment",              limit: 255
     t.string   "place"
-    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "encrypted_password",                 default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer  "sign_in_count",                      default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -74,14 +74,14 @@ ActiveRecord::Schema.define(version: 20150629062804) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
-    t.float    "d",                      default: 0.0
-    t.float    "dhot",                   default: 0.0
-    t.float    "dother",                 default: 0.0
-    t.float    "dall",                   default: 0.0
-    t.float    "g",                      default: 0.0
-    t.float    "ghot",                   default: 0.0
-    t.float    "gother",                 default: 0.0
-    t.float    "gall",                   default: 0.0
+    t.float    "d",                                  default: 0.0
+    t.float    "dhot",                               default: 0.0
+    t.float    "dother",                             default: 0.0
+    t.float    "dall",                               default: 0.0
+    t.float    "g",                                  default: 0.0
+    t.float    "ghot",                               default: 0.0
+    t.float    "gother",                             default: 0.0
+    t.float    "gall",                               default: 0.0
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
