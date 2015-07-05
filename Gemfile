@@ -13,6 +13,8 @@ gem 'jquery-datatables-rails'
 gem 'google-analytics-turbolinks'
 gem 'devise'
 gem 'rails_admin'
+gem 'nprogress-rails'
+
 
 group :development, :test do
   gem 'debug_inspector', '0.0.2'

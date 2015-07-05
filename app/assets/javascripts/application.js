@@ -18,4 +18,6 @@
 //= require bootstrap
 //= require dataTables/jquery.dataTables
 //= require google-analytics-turbolinks
+//= require nprogress
+//= require nprogress-turbolinks
 //= require_tree .

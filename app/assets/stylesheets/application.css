@@ -13,4 +13,6 @@
  *= require dataTables/jquery.dataTables
  *= require select2
  *= require select2-bootstrap
+ *= require nprogress
+ *= require nprogress-bootstrap
  */
