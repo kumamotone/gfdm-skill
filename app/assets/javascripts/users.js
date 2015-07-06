@@ -55,7 +55,9 @@ $(".8500").pxgradient({ // any jQuery selector
 
 $(document).ready(function() {
   return $('#sTable').dataTable({
-    'bDeferRender': true,
+    //'bDeferRender': true,
+    "bProcessing": true,
+    "bServerSide": true,
     'pagingType': 'full_numbers',
     "bSortClasses": false,// ソート行を強調（cssクラスを指定）するかを設定
     'lengthMenu': [[100,200,500, -1], [100,200,500, "All"]],
