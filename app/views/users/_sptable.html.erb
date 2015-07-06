@@ -1,0 +1,20 @@
+ <table class="table">
+    <thead>
+      <tr class="gray">
+        <th>Skill</th>
+        <th>Hot</th>
+        <th>Other</th>
+        <th>All</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr class="black">
+      <% skillcolor = get_skillcolor(sp) %>
+      <td><div class=<%= skillcolor %>><%= number_with_precision sp, precision: 2 %></div></td>
+      <td><div class=<%= skillcolor %>><%= number_with_precision hot, precision: 2 %></div></td>
+      <td><div class=<%= skillcolor %>><%= number_with_precision other, precision: 2 %></div></td>
+      <td><div class=<%= skillcolor %>><%= number_with_precision all, precision: 2 %></div></td>
+    </tr>
+  </table>
+
+

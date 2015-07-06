@@ -9,5 +9,5 @@
     <%= simple_format @user.g_comment %>
   </div>
   
-  <%= render 'sptableguitar' %>
+  <%= render partial: 'sptable', locals: { sp: @user.g, hot: @user.ghot, other: @user.gother, all: @user.gall } %>
   <%= render 'skilltable' %>

@@ -8,6 +8,43 @@ module ApplicationHelper
     end
   end
 
+  def get_skillcolor(sp)
+    case sp
+    when 0..999.99
+      "0"
+    when 1000..1999.99
+      "1000"
+    when 2000..2499.99
+      "2000"
+    when 2500..2999.99
+      "2500"
+    when 3000..3499.99
+      "3000"
+    when 3500..3999.99
+      "3500"
+    when 4000..4499.99
+      "4000"
+    when 4500..4999.99
+      "4500"
+    when 5000..5499.99
+      "5000"
+    when 5500..5999.99
+      "5500"
+    when 6000..6499.99
+      "6000"
+    when 6500..6999.99
+      "6500"
+    when 7000..7499.99
+      "7000"
+    when 7500..7999.99
+      "7500"
+    when 8000..8499.99
+      "8000"
+    when 8500..9999.99
+      "8500"
+    end
+  end
+
   def calc_sp(skill)
     rate = skill.rate
     level = ApplicationController.helpers.fetch_level_by_skill(skill)

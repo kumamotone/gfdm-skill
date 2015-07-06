@@ -9,5 +9,5 @@
   <div class="well">
     <%= simple_format @user.d_comment %>
   </div>
-  <%= render 'sptabledrum' %>
+  <%= render partial: 'sptable', locals: { sp: @user.d, hot: @user.dhot, other: @user.dother, all: @user.dall } %>
   <%= render 'skilltable' %>

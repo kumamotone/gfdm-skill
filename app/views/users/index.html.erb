@@ -1,9 +1,9 @@
 <% provide(:title, 'ユーザ一覧') %>
 <h1>ユーザ一覧</h1>
 
-<table id="sTable" class="table table-striped table-bordered table-hover table-condensed display compact">
+<table id="sTable" class="table table-bordered table-hover table-condensed display compact">
    <thead>
-      <tr>
+      <tr class="gray">
         <th>ユーザID</th>
         <th>ユーザ名</th>
         <th>DM スキル</th>
@@ -13,11 +13,14 @@
     </thead>
   <tbody>
   <% @users.each do |user| %>
-    <tr>
+    <tr class="black">
+      <% skillcolor_d = get_skillcolor(user.d) %>
+      <% skillcolor_g = get_skillcolor(user.g) %>
+      <% skillcolor = (user.d > user.g) ? skillcolor_d : skillcolor_g %>
       <td><%= user.id %></td>
-      <td><%= link_to user.name, user , :target=>["_blank"] %> </td>
-      <td><%= link_to user.d, drum_user_path(user.id) , :target=>["_blank"] %></td>
-      <td><%= link_to user.g, guitar_user_path(user.id) , :target=>["_blank"] %></td>
+      <td><div class=<%= skillcolor %>><%= link_to user.name, user , :target=>["_blank"] %></div></td>
+      <td><div class=<%= skillcolor_d %>><%= (link_to user.d, drum_user_path(user.id) , :target=>["_blank"]) if user.d > 0.0 %></div></td>
+      <td><div class=<%= skillcolor_g %>><%= (link_to user.g, guitar_user_path(user.id) , :target=>["_blank"]) if user.g > 0.0  %></div></td>
       <td><%= user.updated_at %></td>
     </tr>
   <% end %>

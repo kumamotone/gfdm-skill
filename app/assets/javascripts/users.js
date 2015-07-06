@@ -1,7 +1,63 @@
+$(function(){
+$(".1000").css("color","#ff9");
+$(".2000").css("color","#ff0");
+$(".2500").pxgradient({ // any jQuery selector
+     step: 2,
+     colors: ["#ff0","#fff"],
+     dir: "y" // direction. x or y
+ });
+$(".3000").css("color","#3f0");
+$(".3500").pxgradient({ // any jQuery selector
+     step: 2,
+     colors: ["#3f0","#fff"],
+     dir: "y" // direction. x or y
+ });
+$(".4000").css("color","#36f");
+$(".4500").pxgradient({ // any jQuery selector
+     step: 2,
+     colors: ["#36f","#fff"],
+     dir: "y" // direction. x or y
+ });
+$(".5000").css("color","#f0f");
+$(".5500").pxgradient({ // any jQuery selector
+     step: 2,
+     colors: ["#f0f","#fff"],
+     dir: "y" // direction. x or y
+ });
+
+$(".6000").css("color","#f00");
+$(".6500").pxgradient({ // any jQuery selector
+     step: 2,
+     colors: ["#f00","#fff"],
+     dir: "y" // direction. x or y
+ });
+$(".7000").pxgradient({ // any jQuery selector
+     step: 2,
+     colors: ["#d84","#fff"],
+     dir: "y" // direction. x or y
+ });
+$(".7500").pxgradient({ // any jQuery selector
+     step: 2,
+     colors: ["#c0c0c0","#fff"],
+     dir: "y" // direction. x or y
+ });
+$(".8000").pxgradient({ // any jQuery selector
+     step: 2,
+     colors: ["#ffd700","#fff"],
+     dir: "y" // direction. x or y
+ });
+$(".8500").pxgradient({ // any jQuery selector
+     step: 2,
+     colors: ["#fc0","#0fc","#00f"], // hex (#4fc05a or #333)
+     dir: "y" // direction. x or y
+ });
+});
+
 $(document).ready(function() {
   return $('#sTable').dataTable({
     'bDeferRender': true,
     'pagingType': 'full_numbers',
+    "bSortClasses": false,// ソート行を強調（cssクラスを指定）するかを設定
     'lengthMenu': [[100,200,500, -1], [100,200,500, "All"]],
     'order': [[4, 'desc']],
      "language" : {
