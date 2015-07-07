@@ -1,0 +1,4006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<url>
+  <loc>http://tri.gfdm-skill.net/</loc>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/musics</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/sign_in</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/sign_up</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/1/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/1/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/3/drum</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/3/guitar</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users</loc>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/musics/hot</loc>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/musics/other</loc>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/password/new</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/sessions/new.user</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/1</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/2</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/2/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/3</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/4</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/4/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/5</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/5/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/6</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/6/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/7</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/7/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/8</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/9</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/9/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/10</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/10/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/10/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/11</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/11/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/12</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/12/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/12/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/13</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/14</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/15</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/15/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/16</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/18</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/18/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/19</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/19/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/19/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/20</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/20/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/21</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/21/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/21/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/22</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/22/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/22/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/23</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/24</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/25</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/25/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/26</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/26/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/27</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/27/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/28</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/28/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/29</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/29/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/29/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/30</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/30/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/31</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/31/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/32</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/33</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/33/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/34</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/34/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/35</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/35/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/35/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/36</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/37</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/38</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/38/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/40</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/40/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/41</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/41/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/42</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/43</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/43/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/44</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/44/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/44/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/45</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/45/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/46</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/47</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/47/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/47/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/48</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/48/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/49</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/51</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/51/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/52</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/52/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/53</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/53/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/53/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/54</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/55</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/55/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/352</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/352/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/353</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/353/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/354</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/354/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/354/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/355</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/355/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/356</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/357</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/357/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/358</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/358/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/358/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/359</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/359/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/360</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/360/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/360/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/361</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/361/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/361/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/362</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/362/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/363</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/363/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/364</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/364/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/364/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/365</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/365/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/366</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/366/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/367</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/368</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/368/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/368/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/369</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/370</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/370/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/371</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/372</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/373</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/373/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/374</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/375</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/375/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/376</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/376/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/377</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/377/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/377/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/378</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/378/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/378/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/379</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/379/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/380</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/380/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/381</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/381/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/382</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/382/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/382/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/383</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/383/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/384</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/384/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/384/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/385</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/385/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/386</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/387</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/387/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/388</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/388/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/389</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/390</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/390/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/391</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/391/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/392</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/392/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/393</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/393/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/394</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/394/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/395</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/395/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/396</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/396/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/397</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/397/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/397/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/398</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/398/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/399</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/400</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/400/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/401</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/401/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/402</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/402/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/403</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/403/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/403/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/404</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/404/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/404/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/405</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/405/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/406</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/406/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/407</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/407/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/408</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/408/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/409</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/409/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/410</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/410/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/411</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/412</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/412/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/412/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/413</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/413/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/414</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/414/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/415</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/415/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/416</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/416/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/417</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/417/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/417/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/418</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/419</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/419/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/420</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/420/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/420/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/421</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/421/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/422</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/422/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/422/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/423</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/424</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/425</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/425/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/426</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/426/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/427</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/427/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/428</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/428/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/428/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/429</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/429/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/429/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/430</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/431</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/431/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/432</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/432/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/433</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/433/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/433/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/434</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/434/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/435</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/435/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/435/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/436</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/436/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/436/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/437</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/437/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/438</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/438/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/439</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/439/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/439/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/440</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/440/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/441</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/441/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/442</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/442/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/443</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/443/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/444</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/444/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/445</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/445/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/445/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/446</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/446/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/447</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/447/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/448</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/449</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/450</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/450/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/451</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/451/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/452</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/452/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/452/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/453</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/453/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/453/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/454</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/454/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/455</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/455/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/456</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/456/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/457</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/458</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/458/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/458/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/459</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/459/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/460</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/460/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/460/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/461</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/461/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/462</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/463</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/463/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/463/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/464</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/464/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/465</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/465/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/466</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/466/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/467</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/467/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/467/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/468</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/468/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/469</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/469/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/470</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/470/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/471</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/472</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/472/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/473</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/474</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/474/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/475</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/475/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/476</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/476/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/477</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/477/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/477/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/478</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/478/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/479</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/479/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/480</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/480/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/481</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/481/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/482</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/482/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/483</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/483/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/483/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/484</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/484/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/485</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/485/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/486</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/486/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/486/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/487</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/487/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/488</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/488/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/488/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/489</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/489/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/490</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/490/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/490/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/491</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/491/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/492</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/492/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/493</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/493/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/494</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/494/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/494/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/495</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/495/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/496</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/496/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/497</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/497/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/498</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/498/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/499</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/499/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/499/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/500</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/501</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/501/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/502</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/502/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/503</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/503/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/504</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/505</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/505/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/506</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/506/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/507</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/507/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/508</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/508/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/509</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/509/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/510</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/511</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/512</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/512/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/513</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/513/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/514</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/515</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/515/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/516</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/516/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/516/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/517</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/517/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/518</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/519</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/519/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/520</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/521</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/521/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/521/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/522</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/522/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/523</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/523/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/523/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/524</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/524/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/525</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/526</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/526/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/527</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/527/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/527/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/528</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/528/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/529</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/529/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/530</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/530/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/531</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/531/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/532</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/533</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/533/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/534</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/535</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/535/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/535/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/536</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/536/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/537</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/537/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/537/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/538</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/538/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/539</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/539/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/539/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/540</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/540/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/541</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/542</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/543</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/543/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/544</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/544/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/545</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/545/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/546</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/547</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/548</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/549</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/549/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/550</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/550/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/551</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/551/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/552</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/553</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/553/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/554</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/555</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/555/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/556</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/557</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/557/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/557/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/558</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/559</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/559/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/559/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/560</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/561</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/561/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/561/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/562</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/562/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/563</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/563/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/563/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/564</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/564/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/564/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/565</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/566</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/566/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/566/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/567</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/567/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/568</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/568/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/569</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/569/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/570</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/570/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/570/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/571</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/572</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/572/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/572/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/573</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/574</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/575</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/576</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/577</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/577/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/578</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/578/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/579</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/580</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/580/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/581</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/582</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/582/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/582/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/583</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/583/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/584</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/584/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/585</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/586</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/586/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/587</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/587/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/588</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/588/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/589</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/589/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/590</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/590/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/591</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/592</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/592/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/593</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/593/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/594</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/594/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/595</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/595/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/596</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/597</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/597/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/598</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/598/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/599</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/599/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/600</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/601</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/601/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/602</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/603</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/603/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/604</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/604/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/605</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/606</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/606/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/606/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/607</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/607/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/608</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/608/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/609</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/609/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/610</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/611</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/612</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/613</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/613/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/613/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/614</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/615</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/615/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/616</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/617</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/617/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/618</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/618/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/618/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/619</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/619/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/620</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/620/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/621</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/622</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/622/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/623</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/624</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/625</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/625/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/626</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/627</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/627/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/628</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/628/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/628/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/629</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/630</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/631</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/632</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/633</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/633/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/633/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/634</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/634/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/635</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/635/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/636</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/636/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/636/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/637</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/638</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/638/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/639</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/639/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/639/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/640</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/640/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/640/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/641</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/641/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/641/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/642</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/642/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/643</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/643/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/644</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/645</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/646</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/646/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/647</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/648</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/648/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/649</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/649/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/650</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/651</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/652</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/652/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/653</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/653/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/654</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/654/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/655</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/655/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/656</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/657</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/657/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/658</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/658/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/659</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/659/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/660</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/660/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/661</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/661/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/662</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/662/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/663</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/663/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/664</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/664/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/665</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/665/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/666</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/666/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/666/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/667</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/668</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/669</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/670</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/670/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/671</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/671/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/672</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/672/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/672/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/673</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/673/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/674</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/675</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/675/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/676</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/677</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/677/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/678</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/678/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/679</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/680</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/680/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/681</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/681/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/682</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/682/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/683</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/683/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/683/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/684</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/684/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/685</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/685/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/686</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/686/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/687</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/687/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/688</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/688/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/689</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/689/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/690</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/691</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/691/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/692</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/692/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/693</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/693/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/694</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/694/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/695</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/696</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/696/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/697</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/697/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/698</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/699</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/699/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/700</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/700/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/701</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/701/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/702</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/702/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/703</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/703/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/704</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/704/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/704/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/705</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/706</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/706/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/707</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/708</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/708/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/709</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/709/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/710</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/710/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/711</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/711/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/712</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/712/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/712/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/713</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/713/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/714</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/715</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/715/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/716</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/716/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/717</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/717/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/718</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/719</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/720</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/721</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/721/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/722</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/722/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/723</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/724</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/725</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/726</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/726/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/727</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/728</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/728/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/729</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/729/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/729/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/730</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/731</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/731/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/732</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/732/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/732/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/733</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/733/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/734</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/734/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/734/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/735</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/735/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/736</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/736/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/737</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/737/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/738</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/738/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/739</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/740</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/740/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/740/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/741</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/741/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/742</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/742/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/743</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/743/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/744</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/744/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/744/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/745</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/745/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/746</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/746/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/747</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/747/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/748</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/748/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/749</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/749/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/750</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/751</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/751/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/752</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/753</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/753/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/754</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/754/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/755</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/756</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/756/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/757</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/757/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/758</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/758/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/759</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/759/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/759/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/760</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/761</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/761/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/762</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/762/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/763</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/764</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/764/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/765</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/765/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/766</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/767</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/767/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/768</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/768/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/769</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/769/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/770</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/770/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/771</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/771/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/772</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/773</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/773/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/774</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/774/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/775</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/776</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/776/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/777</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/777/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/778</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/778/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/779</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/779/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/780</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/780/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/781</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/782</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/782/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/782/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/783</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/783/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/784</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/784/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/785</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/785/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/786</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/786/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/787</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/787/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/788</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/789</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/789/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/790</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/790/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/790/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/791</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/791/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/792</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/792/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/793</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/794</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/794/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/795</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/795/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/795/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/796</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/797</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/797/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/798</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/798/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/799</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/799/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/800</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/801</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/2/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/4/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/5/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/6/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/7/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/8/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/8/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/9/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/11/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/13/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/13/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/14/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/14/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/15/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/16/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/16/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/18/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/20/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/23/drum</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/23/guitar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://tri.gfdm-skill.net/users/24/drum</loc>
+  <priority>0.7</priority>
+</url>
+
+</urlset>
