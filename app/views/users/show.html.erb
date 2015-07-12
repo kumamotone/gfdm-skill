@@ -1,6 +1,6 @@
-<% provide(:title, @user.name ) %>
+<% provide(:title, "#{@user.name} さんのスキル" ) %>
 <h1>
-  <%= @user.name %> 
+  <%= @user.name %> さんのスキル 
 </h1>
 
 <% if current_user == @user %>
