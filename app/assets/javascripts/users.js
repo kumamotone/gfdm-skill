@@ -110,6 +110,7 @@ $(document).ready(function() {
         "bInfo": false,  
         "bFilter": true,
         "bSortClasses": false,// ソート行を強調（cssクラスを指定）するかを設定
+        "columnDefs": [ {"type":"currency", "targets": 3} ],
 //        "aoColumns" : [
 //            { sWidth: '50px' },
 //            { sWidth: '200px' },
@@ -143,8 +144,12 @@ $(document).ready(function() {
       search: 'applied',
       order: 'applied'
     }).nodes().each(function(cell, i) {
-      cell.innerHTML = i + 1;
-    });
+      if(i < 25){
+        cell.innerHTML = "<span style=color:red;font-weight:bold>" + (i + 1) + "</span>";
+      }else{
+        cell.innerHTML = i + 1;
+      }
+      });
   }).draw();
 });
 
@@ -157,6 +162,7 @@ $(document).ready(function() {
         "bInfo": false,  
         "bFilter": true,
         "bSortClasses": false,// ソート行を強調（cssクラスを指定）するかを設定
+        "columnDefs": [ {"type":"currency", "targets": 3} ],
     'lengthMenu': [[25, 50, -1], [25, 50, "All"]],
     'order': [[4, 'desc']],
      "language" : {
@@ -181,7 +187,11 @@ $(document).ready(function() {
       search: 'applied',
       order: 'applied'
     }).nodes().each(function(cell, i) {
-      cell.innerHTML = i + 1;
+      if(i < 25){
+        cell.innerHTML = "<span style=color:red;font-weight:bold>" + (i + 1) + "</span>";
+      }else{
+        cell.innerHTML = i + 1;
+      }
     });
   }).draw();
 });
