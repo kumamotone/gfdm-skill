@@ -14,10 +14,13 @@
   <tbody>
   <% @users.each do |user| %>
     <tr class="black">
+      <% skillcolor_d = get_skillcolor_light(user.d) %>
+      <% skillcolor_g = get_skillcolor_light(user.g) %>
+      <% skillcolor = (user.d > user.g) ? skillcolor_d : skillcolor_g %>
       <td><%= user.id %></td>
-      <td><%= link_to user.name, user , :target=>["_blank"] %></td>
-      <td><%= (link_to user.d, drum_user_path(user.id) , :target=>["_blank"]) if user.d > 0.0 %></td>
-      <td><%= (link_to user.g, guitar_user_path(user.id) , :target=>["_blank"]) if user.g > 0.0  %></td>
+      <td><div class=<%= skillcolor %>><%= link_to user.name, user , :target=>["_blank"] %></div></td>
+      <td><div class=<%= skillcolor_d %>><%= (link_to user.d, drum_user_path(user.id) , :target=>["_blank"]) if user.d > 0.0 %></div></td>
+      <td><div class=<%= skillcolor_g %>><%= (link_to user.g, guitar_user_path(user.id) , :target=>["_blank"]) if user.g > 0.0  %></div></td>
       <td><%= user.updated_at %></td>
     </tr>
   <% end %>

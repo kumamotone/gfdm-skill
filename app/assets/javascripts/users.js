@@ -1,3 +1,4 @@
+
 $(function(){
 $(".1000").css("color","#ff9");
 $(".2000").css("color","#ff0");
@@ -46,11 +47,30 @@ $(".8000").pxgradient({ // any jQuery selector
      colors: ["#ffd700","#fff"],
      dir: "y" // direction. x or y
  });
-$(".8500").pxgradient({ // any jQuery selector
+
+ $(".8500").pxgradient({ // any jQuery selector
      step: 2,
      colors: ["#fc0","#0fc","#00f"], // hex (#4fc05a or #333)
      dir: "y" // direction. x or y
  });
+});
+
+$(function(){
+$(".c1000").css("color","#ff9");
+$(".c2000").css("color","#ff0");
+$(".c2500").css("color","#ff8");
+$(".c3000").css("color","#3f0");
+$(".c3500").css("color","#3f8");
+$(".c4000").css("color","#36f");
+$(".c4500").css("color","#6bf");
+$(".c5000").css("color","#f0f");
+$(".c5500").css("color","#f8f");
+$(".c6000").css("color","#f00");
+$(".c6500").css("color","#f88");
+$(".c7000").css("color","#d84");
+$(".c7500").css("color","#c0c0c0");
+$(".c8000").css("color","#ffd700");
+$(".c8500").css("color","#0ff");
 });
 
 $(document).ready(function() {
