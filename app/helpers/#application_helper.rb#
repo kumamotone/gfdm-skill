@@ -1,6 +1,6 @@
 module ApplicationHelper
   def full_title(page_title)
-    base_title = "GITADORA Tri-boost ã‚¹ã‚­ãƒ«ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿"
+    base_title = "GITADORA Tri-boost ’¥¹’¥­’¥ë’¥·’¥ß’¥å’¥ì’¡¼’¥¿"
     if page_title.empty?
       base_title
     else
@@ -85,7 +85,7 @@ module ApplicationHelper
   def calc_sp(skill)
     rate = skill.rate
     level = ApplicationController.helpers.fetch_level_by_skill(skill)
-    return ((rate * level * 20) * 0.01).to_s.to_d.floor(2).to_f
+    return ((rate * level * 20) * 0.01).to_d.floor(2).to_f
   end
 
   def show_kind (kind)
