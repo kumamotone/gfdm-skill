@@ -372,10 +372,11 @@ class SkillsController < ApplicationController
     end 
   end
 
+  # これの実装が複数あるのはさすがにヤバすぎ
   def calc_sp(skill)
     rate = skill.rate
     level = ApplicationController.helpers.fetch_level_by_skill(skill)
-    return ((rate * level * 20) * 0.01).to_d.floor(2).to_f
+    return ((rate * level * 20) * 0.01).to_s.to_d.floor(2).to_f
   end
 
   private  
