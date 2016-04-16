@@ -66,11 +66,14 @@ class SkillsController < ApplicationController
     if @skill.update_attributes(skill_params)
     @skill.sp = calc_sp(@skill) 
       @skill.update_attributes(skill_params)
+
       flash[:success] = "スキルを更新しました．"
        if (@skill.kind.between?(0,3))
+         ApplicationController.helpers.updatedrum(@skill.user_id)
         redirect_to drum_user_path(@skill.user_id)
-      else
-        redirect_to guitar_user_path(@skill.user_id)
+       else
+         ApplicationController.helpers.updateguitar(@skill.user_id)
+         redirect_to guitar_user_path(@skill.user_id)
       end
     else
       render 'edit'
@@ -82,8 +85,10 @@ class SkillsController < ApplicationController
   def destroy
    @skill.destroy
       if (@skill.kind.between?(0,3))
+        ApplicationController.helpers.updatedrum(@skill.user_id)
         redirect_to drum_user_path(@skill.user_id), :flash => { :success => "スキルを削除しました．" }
       else
+        ApplicationController.helpers.updateguitar(@skill.user_id)
         redirect_to guitar_user_path(@skill.user_id), :flash => { :success => "スキルを削除しました．" }
       end
   end
@@ -95,7 +100,10 @@ class SkillsController < ApplicationController
    create_max_drum(true) 
    create_max_drum(false) 
    create_max_guitar(true) 
-   create_max_guitar(false) 
+   create_max_guitar(false)
+
+   ApplicationController.helpers.updatedrum(max_id)
+   ApplicationController.helpers.updateguitar(max_id)
   end
 
   def create_max_guitar(ih)
