@@ -60,40 +60,11 @@ class UsersController < ApplicationController
     #@hot = @user.skills.where(music_id: 712..900, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")
     #@other = @user.skills.where(music_id: 1..711, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")# 終端位置変更の必要あり
 
-    # hot計算
-    @hot_sp = 0.0
-    @hot.first(25).each do |h|
-      @hot_sp = @hot_sp + h.sp
-    end
-    
-    # other計算
-    @other_sp = 0.0
-    @other.first(25).each do |o|
-      @other_sp = @other_sp + o.sp
-    end
-  
-    # hot_sp, other_sp round
-    @hot_sp = @hot_sp.round(2)
-    @other_sp = @other_sp.round(2)
-
-    # sp計算
-    @skill_sp = (@hot_sp + @other_sp).round(2)
-    
-    # all計算
-    @all_sp = 0.0
-    @hot.each do |h|
-      @all_sp = @all_sp + h.sp
-    end
-    @other.each do |o|
-      @all_sp = @all_sp + o.sp
-    end
-
-    # all sp round
-    @all_sp = @all_sp.round(2)
-
-    # DBに保存
-   
-    @user.update_attributes(d: @skill_sp, dhot: @hot_sp, dother: @other_sp, dall: @all_sp)
+    # 必要な情報をフェッチ
+    @hot_sp = @user.dhot
+    @other_sp = @user.dother
+    @skill_sp = @user.d
+    @all_sp = @user.dall
   end
 
   def guitar
@@ -128,37 +99,11 @@ class UsersController < ApplicationController
     #@hot = @user.skills.where(music_id: 712..900, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC")
     #@other = @user.skills.where(music_id: 1..711, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC") # 終端位置変更の必要あり
     
-    # hot計算
-    @hot_sp = 0.0
-    @hot.first(25).each do |h|
-      @hot_sp = @hot_sp + h.sp
-    end
-    
-    # other計算
-    @other_sp = 0.0
-    @other.first(25).each do |o|
-      @other_sp = @other_sp + o.sp
-    end
-   
-    # hot_sp, other_sp round
-    @hot_sp = @hot_sp.round(2)
-    @other_sp = @other_sp.round(2)
-
-    # sp計算
-    @skill_sp = (@hot_sp + @other_sp).round(2)
-    
-    # all計算
-    @all_sp = 0.0
-    @hot.each do |h|
-      @all_sp = @all_sp + h.sp
-    end
-    @other.each do |o|
-      @all_sp = @all_sp + o.sp
-    end
-
-    #all sp round
-    @all_sp = @all_sp.round(2)
-    @user.update_attributes(g: @skill_sp, ghot: @hot_sp, gother: @other_sp, gall: @all_sp) 
+    # 必要な情報をフェッチ
+    @hot_sp = @user.ghot
+    @other_sp = @user.gother
+    @skill_sp = @user.g
+    @all_sp = @user.gall
    end
 
   def new
