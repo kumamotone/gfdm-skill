@@ -34,8 +34,9 @@ class SkillsController < ApplicationController
   # POST /skills
   # POST /skills.json
   def create
-    @skill = current_user.skills.build(skill_params) 
-    @skill.sp = calc_sp(@skill) 
+    @skill = current_user.skills.build(skill_params)
+    @skill.sp = calc_sp(@skill)
+
     if @skill.save
       if @skill.kind.between?(0,3) 
         ApplicationController.helpers.updatedrum(@skill.user_id)
@@ -377,7 +378,7 @@ class SkillsController < ApplicationController
           skill.save
         end
         ext_cnt = ext_cnt + 1;
-    end 
+    end
   end
 
   # これの実装が複数あるのはさすがにヤバすぎ

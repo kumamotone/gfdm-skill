@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   #before_save { self.email = email.downcase }
   before_create :create_remember_token
+  before_create :set_updatedat_to_now
   #has_one :sps, dependent: :destroy
   has_many :skills, dependent: :destroy
 
@@ -27,5 +28,9 @@ class User < ActiveRecord::Base
   private
     def create_remember_token
       self.remember_token = User.encrypt(User.new_remember_token)
+    end
+
+    def set_updatedat_to_now
+      self.skill_updated_at = Time.now
     end
 end

@@ -8,7 +8,8 @@
         <th>ユーザ名</th>
         <th>DM スキル</th>
         <th>GF スキル</th>
-        <th>最終更新</th>
+        <th>最終更新時刻(DM)</th>
+        <th>最終更新時刻(GF)</th>
       </tr>
     </thead>
   <tbody>
@@ -21,7 +22,8 @@
       <td><div class=<%= skillcolor %>><%= link_to user.name, user , :target=>["_blank"] %></div></td>
       <td><div class=<%= skillcolor_d %>><%= (link_to user.d, drum_user_path(user.id) , :target=>["_blank"]) if user.d > 0.0 %></div></td>
       <td><div class=<%= skillcolor_g %>><%= (link_to user.g, guitar_user_path(user.id) , :target=>["_blank"]) if user.g > 0.0  %></div></td>
-      <td><%= user.updated_at %></td>
+      <td><%= user.skill_updated_at_d %></td>
+      <td><%= user.skill_updated_at_g %></td>
     </tr>
   <% end %>
   </tbody>

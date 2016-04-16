@@ -11,8 +11,8 @@
 
 <h2><%= link_to "Drummania のスキル表へ", drum_user_path %></h2>
 
-  <%= render partial: 'sptable', locals: { sp: @user.d, hot: @user.dhot, other: @user.dother, all: @user.dall } %>
+  <%= render partial: 'sptable', locals: { sp: @user.d, hot: @user.dhot, other: @user.dother, all: @user.dall, updated_at: @user.skill_updated_at_d } %>
 
 <h2><%= link_to "GuitarFreaks のスキル表へ", guitar_user_path %></h2>
 
-  <%= render partial: 'sptable', locals: { sp: @user.g, hot: @user.ghot, other: @user.gother, all: @user.gall } %>
+  <%= render partial: 'sptable', locals: { sp: @user.g, hot: @user.ghot, other: @user.gother, all: @user.gall, updated_at: @user.skill_updated_at_g } %>

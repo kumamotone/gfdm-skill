@@ -61,7 +61,7 @@ module SkillsHelper
     @all_sp = @all_sp.round(2)
 
     # DBに保存
-    @user.update_attributes(d: @skill_sp, dhot: @hot_sp, dother: @other_sp, dall: @all_sp)
+    @user.update_attributes(d: @skill_sp, dhot: @hot_sp, dother: @other_sp, dall: @all_sp, skill_updated_at_d: Time.now)
   end
 
   def updateguitar (id)
@@ -123,7 +123,7 @@ module SkillsHelper
 
     #all sp round
     @all_sp = @all_sp.round(2)
-    @user.update_attributes(g: @skill_sp, ghot: @hot_sp, gother: @other_sp, gall: @all_sp) 
+    @user.update_attributes(g: @skill_sp, ghot: @hot_sp, gother: @other_sp, gall: @all_sp, skill_updated_at_g: Time.now)
   end
  
   def fetch_level_by_skill(skill)
