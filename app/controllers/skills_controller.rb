@@ -100,10 +100,10 @@ class SkillsController < ApplicationController
 
   def create_max_guitar(ih)
     user = User.find(3)
-    hm_gmas = Music.all.where(ishot: ih).order("g_mas DESC").limit(40);
-    hm_gext = Music.all.where(ishot: ih).order("g_ext DESC").limit(40);
-    hm_bmas = Music.all.where(ishot: ih).order("b_mas DESC").limit(40);
-    hm_bext = Music.all.where(ishot: ih).order("b_ext DESC").limit(40);
+    hm_gmas = Music.all.where(ishot: ih).where("name not like ?", "汎用 %").order("g_mas DESC").limit(40);
+    hm_gext = Music.all.where(ishot: ih).where("name not like ?", "汎用 %").order("g_ext DESC").limit(40);
+    hm_bmas = Music.all.where(ishot: ih).where("name not like ?", "汎用 %").order("b_mas DESC").limit(40);
+    hm_bext = Music.all.where(ishot: ih).where("name not like ?", "汎用 %").order("b_ext DESC").limit(40);
 
     gmas_cnt = 0
     gext_cnt = 0
@@ -276,13 +276,13 @@ class SkillsController < ApplicationController
           skill.save
         end
         bext_cnt += 1;
-    end 
+    end
   end
 
   def create_max_drum(ih)
     user = User.find(3)
-    hm_mas = Music.all.where(ishot: ih).order("d_mas DESC").limit(40);
-    hm_ext = Music.all.where(ishot: ih).order("d_ext DESC").limit(40);
+    hm_mas = Music.all.where(ishot: ih).where("name not like ?", "汎用 %").order("d_mas DESC").limit(40);
+    hm_ext = Music.all.where(ishot: ih).where("name not like ?", "汎用 %").order("d_ext DESC").limit(40);
 
     mas_cnt = 0
     ext_cnt = 0
