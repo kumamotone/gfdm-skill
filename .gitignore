@@ -18,3 +18,4 @@ doc/
 .idea
 .secret
 .env
+config/database.yml
