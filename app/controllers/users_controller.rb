@@ -72,7 +72,7 @@ class UsersController < ApplicationController
     @hot= @user.skills.find_by_sql( ['SELECT s.* 
                                      FROM skills AS s
                                      WHERE s.user_id = ? AND
-                                          (s.music_id BETWEEN 712 AND 900) AND
+                                          (s.music_id >= 712) AND
                                           (s.kind BETWEEN 4 AND 11)
                                      AND NOT EXISTS
                                         ( SELECT 1 FROM skills AS t
