@@ -2,57 +2,57 @@
 <h1>スキル登録</h1>
 
 <div class="row">
-    <div class="form-horizontal" role="form">
+  <div class="form-horizontal" role="form">
     <%= form_for(@skill) do |s| %>
-      <%= render 'shared/error_messages', object: s.object %>
+        <%= render 'shared/error_messages', object: s.object %>
 
-      <div class="form-group">
-        <%= s.label :name, "曲名", :class => "col-xs-offset-1 control-label"  %>
-        <div class="col-xs-offset-1 col-xs-10">
-          <%= s.collection_select :music_id, Music.all.order("name ASC"), :id, :name, {}, {:class => 'searchable form-control', autofocus: true} %>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <%= s.label :kind, "難易度", :class => "col-xs-offset-1 control-label"  %>
-        <div class="col-xs-offset-1 col-xs-10">
-          <%= s.select :kind, kind_choices, {},{:class => "form-control"} %>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <%= s.label :rate, "達成率", :class => "col-xs-offset-1 control-label"  %>
-        <div class="col-xs-offset-1 col-xs-10">
-          <%= s.text_field :rate, placeholder: "例: 86.79", class: "form-control"  %>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <%= s.label :comment, "コメント" ,:class => "col-xs-offset-1 control-label" %>
-        <div class="col-xs-offset-1 col-xs-10">
-          <%= s.text_field :comment, placeholder: "省略可", class: "form-control" %>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div class=" col-xs-offset-1 col-xs-10">
-          <%= s.check_box :isfc %>
-          <%= s.label :isfc, "FULL COMBO", :class => "control-label" %>
+        <div class="form-group">
+          <%= s.label :name, "曲名", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= s.collection_select :music_id, Music.all.order("name ASC"), :id, :name, {}, {:class => 'searchable form-control', autofocus: true} %>
+          </div>
         </div>
 
-      </div>
-
-      <div class="form-group">
-        <div class="col-xs-10 col-xs-offset-1">
-        <%= s.submit "登録", class: "btn btn-large btn-primary" %>
+        <div class="form-group">
+          <%= s.label :kind, "難易度", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= s.select :kind, kind_choices, {}, {:class => "form-control"} %>
+          </div>
         </div>
-      </div>
+
+        <div class="form-group">
+          <%= s.label :rate, "達成率", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= s.text_field :rate, placeholder: "例: 86.79", class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= s.label :comment, "コメント", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= s.text_field :comment, placeholder: "省略可", class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class=" col-xs-offset-1 col-xs-10">
+            <%= s.check_box :isfc %>
+            <%= s.label :isfc, "FULL COMBO", :class => "control-label" %>
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-10 col-xs-offset-1">
+            <%= s.submit "登録", class: "btn btn-large btn-primary" %>
+          </div>
+        </div>
     <% end %>
   </div>
 </div>
 <div class="row">
-<div class="col-xs-10 col-xs-offset-1">
-<p>(※ 日本語の曲名を入力する際は Enter を押してから入力するとスムーズです．)</p>
-<p>(※存在しない難易度も選択肢に含まれてしまっています．「Spは0より大きい値にしてください。」とエラーが出る場合は，存在する難易度かどうか確認してください．)</p>
-</div>
+  <div class="col-xs-10 col-xs-offset-1">
+    <p>(※ 日本語の曲名を入力する際は Enter を押してから入力するとスムーズです．)</p>
+    <p>(※存在しない難易度も選択肢に含まれてしまっています．「Spは0より大きい値にしてください。」とエラーが出る場合は，存在する難易度かどうか確認してください．)</p>
+  </div>
 </div>

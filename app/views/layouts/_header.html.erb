@@ -1,5 +1,5 @@
 <nav class="navbar navbar-top navbar-inverse">
-    <div class="container-fluid">
+  <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-1">
         <span class="sr-only">Toggle navigation</span>
@@ -8,13 +8,13 @@
         <span class="icon-bar"></span>
       </button>
       <!-- タイトルなどのテキスト -->
-      <%= link_to "ギタドラ スキルシミュ",root_path	, class: "navbar-brand" %>
+      <%= link_to "ギタドラ スキルシミュ", root_path, class: "navbar-brand" %>
     </div>
 
     <div class="collapse navbar-collapse" id="nav-menu-1">
       <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "曲一覧", musics_path %></li>
-          <% if signed_in? %>
+        <li><%= link_to "曲一覧", musics_path %></li>
+        <% if signed_in? %>
             <li><%= link_to "スキル表 (Drum)", drum_user_path(current_user.id) %></li>
             <li><%= link_to "スキル表 (Guitar)", guitar_user_path(current_user.id) %></li>
             <li><%= link_to "スキル登録", new_skill_path %></li>
@@ -27,11 +27,11 @@
                 <li><%= link_to "ログアウト", destroy_user_session_path, method: "delete" %></li>
               </ul>
             </li>
-          <% else %>
+        <% else %>
             <li><%= link_to "ログイン", new_user_session_path %></li>
             <li><%= link_to "新規登録", new_user_registration_path %></li>
-          <% end %>
-        </ul>
+        <% end %>
+      </ul>
     </div>
-    </div>
+  </div>
 </nav>

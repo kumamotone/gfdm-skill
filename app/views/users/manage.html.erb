@@ -1,10 +1,10 @@
 <h1>スキルを読み込む</h1>
 
 <%= form_tag(import_user_path, :method => :post, multipart: true) do %>
-  <div class="form-group">
-  <%= file_field_tag :csv_file %>
-</div>
-<%= submit_tag "CSVインポート", :class => "btn btn-primary" %>
+    <div class="form-group">
+      <%= file_field_tag :csv_file %>
+    </div>
+    <%= submit_tag "CSVインポート", :class => "btn btn-primary" %>
 <% end %>
 
 <h1>スキルを書き出す</h1>
