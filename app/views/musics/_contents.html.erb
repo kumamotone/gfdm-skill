@@ -25,6 +25,7 @@
 
   <tbody>
   <% @musics.each do |music| %>
+      <% unless music.name.include?("汎用") %>
       <tr data-music_id="<%= music.id %>">
         <td><%= music.name %></td>
         <td><%= if music.d_bsc != 0.0
