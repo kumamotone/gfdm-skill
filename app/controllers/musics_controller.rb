@@ -48,6 +48,11 @@ class MusicsController < ApplicationController
       client = ApplicationController.helpers.get_twitter_client
       client.update("曲情報が変更されました。(by @#{current_user.twitterid}) \n\n#{@music.name} \n#{@music.d_bsc} #{@music.d_adv} #{@music.d_ext} #{@music.d_mas} \n#{@music.g_bsc} #{@music.g_adv} #{@music.g_ext} #{@music.g_mas} \n#{@music.b_bsc} #{@music.b_adv} #{@music.b_ext} #{@music.b_mas}")
 
+      # スクリーンネームは最大15文字なので、曲名は39文字に削る
+      # (一番長いと思われる 轟け!恋のビーンボール!! ～96バット砲炸裂!GITADORAシリーズMVP弾!～ で42文字なので稀に切れるはず)
+      tweet_text = "曲情報が変更されました。(by @%s) \n\n%.39s\nD %.2f %.2f %.2f %.2f\nG %.2f %.2f %.2f %.2f\nB %.2f %.2f %.2f %.2f" % [current_user.twitterid , @music.name, @music.d_bsc, @music.d_adv, @music.d_ext, @music.d_mas, @music.g_bsc, @music.g_adv, @music.g_ext, @music.g_mas, @music.b_bsc, @music.b_adv, @music.b_ext, @music.b_mas]
+      client.update(tweet_text)
+
       ApplicationController.helpers.create_max
 
       flash[:success] = "曲情報を更新しました．"
@@ -61,7 +66,10 @@ class MusicsController < ApplicationController
     @music = Music.new(music_params)
     if @music.save
       client = ApplicationController.helpers.get_twitter_client
-      client.update("曲情報が追加されました。(by @#{current_user.twitterid}) \n\n#{@music.name} \n#{@music.d_bsc} #{@music.d_adv} #{@music.d_ext} #{@music.d_mas} \n#{@music.g_bsc} #{@music.g_adv} #{@music.g_ext} #{@music.g_mas} \n#{@music.b_bsc} #{@music.b_adv} #{@music.b_ext} #{@music.b_mas}")
+      # スクリーンネームは最大15文字なので、曲名は39文字に削る
+      # (一番長いと思われる 轟け!恋のビーンボール!! ～96バット砲炸裂!GITADORAシリーズMVP弾!～ で42文字なので稀に切れるはず)
+      tweet_text = "曲情報が追加されました。(by @%s) \n\n%.39s\nD %.2f %.2f %.2f %.2f\nG %.2f %.2f %.2f %.2f\nB %.2f %.2f %.2f %.2f" % [current_user.twitterid , @music.name, @music.d_bsc, @music.d_adv, @music.d_ext, @music.d_mas, @music.g_bsc, @music.g_adv, @music.g_ext, @music.g_mas, @music.b_bsc, @music.b_adv, @music.b_ext, @music.b_mas]
+      client.update(tweet_text)
 
       ApplicationController.helpers.create_max
       flash[:success] = "曲情報が追加されました！"
