@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160416093326) do
+ActiveRecord::Schema.define(version: 20160815083116) do
 
   create_table "musics", force: true do |t|
     t.string   "name",                  null: false
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20160416093326) do
     t.float    "gall",                   limit: 24, default: 0.0
     t.datetime "skill_updated_at_d"
     t.datetime "skill_updated_at_g"
+    t.boolean  "subadmin",                          default: false, null: false
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
