@@ -11,13 +11,13 @@ gem "jquery-turbolinks" # Turbolinksで遷移したときもjQuery.ready()を呼
 gem "select2-rails"
 gem 'jquery-datatables-rails'
 gem 'google-analytics-turbolinks'
-gem 'devise'
-gem 'rails_admin'
+gem 'devise', '3.5.1'
+gem 'rails_admin', '0.8.1'
 gem 'nprogress-rails'
 
+gem 'mysql2', '0.3.21'
 
 group :development, :test do
-  gem 'mysql2'
   #gem 'sqlite3', '1.3.8'
   gem 'debug_inspector', '0.0.2'
   gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
@@ -72,5 +72,5 @@ group :production do
   #gem 'rails_12factor', '0.0.2'
 
   # sqale
-  gem 'mysql2'
+  # gem 'mysql2', '0.3.20'
 end
