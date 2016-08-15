@@ -31,6 +31,12 @@ group :development, :test do
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.6'
   gem 'dotenv-rails'
+  gem 'better_errors'    # エラー画面がいい感じになるらしい
+  gem 'binding_of_caller'# better_errorsの画面上にirb/pry(PERL)を表示する
+  gem 'rails_best_practices' # Rails のベストプラクティスに従っているかチェック
+  
+  # gem 'annotate'         # スキーマ情報をモデルに書いてくれるらしい
+  # gem 'bullet'              # n+1問題を発見してくれるらしい
 end
 
 group :test do
