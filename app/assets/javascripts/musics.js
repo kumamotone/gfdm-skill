@@ -14,7 +14,7 @@ $(function () {
     });
     $( '#benrybtn' ).click( function ( e ) {
         // preventDefault();
-        var str = $('#benry').val();
+        var str = $('#benry').val().trim();
         var splits = str.split(/\s+/, 12);
         $('#music_d_bsc').val(splits[0]);
         $('#music_d_adv').val(splits[1]);
@@ -28,6 +28,7 @@ $(function () {
         $('#music_b_adv').val(splits[9]);
         $('#music_b_ext').val(splits[10]);
         $('#music_b_mas').val(splits[11]);
+        $('#benry').val("");
         return false;
     });
 });
