@@ -42,6 +42,7 @@ class MusicsController < ApplicationController
 
   def update
     @music = Music.find(params[:id])
+    @music.name.strip! unless @music.name.nil?
 
     # 本当はここでこれを登録しているスキルのSPを更新するとかしたほうがいい
     if @music.update_attributes(music_params)
@@ -64,6 +65,7 @@ class MusicsController < ApplicationController
 
   def create
     @music = Music.new(music_params)
+    @music.name.strip! unless @music.name.nil?
     if @music.save
       client = ApplicationController.helpers.get_twitter_client
       # スクリーンネームは最大15文字なので、曲名は39文字に削る
