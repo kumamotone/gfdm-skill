@@ -29,7 +29,13 @@ class MusicsController < ApplicationController
   end
 
   def destroy
-    Music.find(params[:id]).destroy
+    entry = Music.find(params[:id])
+    client = ApplicationController.helpers.get_twitter_client
+
+    client.update("曲情報が削除されました。(by @#{current_user.twitterid}) \n\n削除曲: #{entry.name}")
+    entry.destroy
+
+    ApplicationController.helpers.create_max
     flash[:success] = "曲情報を削除しました．"
     redirect_to root_path
   end
@@ -39,6 +45,11 @@ class MusicsController < ApplicationController
 
     # 本当はここでこれを登録しているスキルのSPを更新するとかしたほうがいい
     if @music.update_attributes(music_params)
+      client = ApplicationController.helpers.get_twitter_client
+      client.update("曲情報が変更されました。(by @#{current_user.twitterid}) \n\n#{@music.name} \n#{@music.d_bsc} #{@music.d_adv} #{@music.d_ext} #{@music.d_mas} \n#{@music.g_bsc} #{@music.g_adv} #{@music.g_ext} #{@music.g_mas} \n#{@music.b_bsc} #{@music.b_adv} #{@music.b_ext} #{@music.b_mas}")
+
+      ApplicationController.helpers.create_max
+
       flash[:success] = "曲情報を更新しました．"
       redirect_to root_path
     else
@@ -49,6 +60,10 @@ class MusicsController < ApplicationController
   def create
     @music = Music.new(music_params)
     if @music.save
+      client = ApplicationController.helpers.get_twitter_client
+      client.update("曲情報が追加されました。(by @#{current_user.twitterid}) \n\n#{@music.name} \n#{@music.d_bsc} #{@music.d_adv} #{@music.d_ext} #{@music.d_mas} \n#{@music.g_bsc} #{@music.g_adv} #{@music.g_ext} #{@music.g_mas} \n#{@music.b_bsc} #{@music.b_adv} #{@music.b_ext} #{@music.b_mas}")
+
+      ApplicationController.helpers.create_max
       flash[:success] = "曲情報が追加されました！"
       redirect_to root_path
     else
