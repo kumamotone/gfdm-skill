@@ -15,6 +15,13 @@ gem 'devise', '3.5.1'
 gem 'rails_admin', '0.8.1'
 gem 'nprogress-rails'
 
+gem 'sass-rails', '4.0.5'
+gem 'uglifier', '2.1.1'
+gem 'coffee-rails', '4.0.1'
+gem 'jquery-rails', '3.0.4'
+gem 'turbolinks', '1.1.1'
+gem 'jbuilder', '1.0.2'
+  
 gem 'mysql2', '0.3.21'
 
 group :development, :test do
@@ -24,13 +31,16 @@ group :development, :test do
   gem 'pry-doc'    # methodを表示
   gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
   gem 'pry-stack_explorer' # スタックをたどれる
+
   gem 'rspec-rails', '2.13.1'
   gem 'guard', '2.6.1'
   gem 'guard-rspec', '2.5.0'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
-  gem 'childprocess', '0.3.6'
-  gem 'dotenv-rails'
+  gem 'childprocess', '0.3.6'   # guard-spork を使うときに起こる問題を解決するものらしい
+
+  gem 'dotenv-rails'     # .env ファイルから設定を持ってくる(使ってない？)
+
   gem 'better_errors'    # エラー画面がいい感じになるらしい
   gem 'binding_of_caller'# better_errorsの画面上にirb/pry(PERL)を表示する
   gem 'rails_best_practices' # Rails のベストプラクティスに従っているかチェック
@@ -54,13 +64,6 @@ group :test do
   # gem 'rb-notifu', '0.0.4'
   # gem 'win32console', '1.3.2'
 end
-
-gem 'sass-rails', '4.0.5'
-gem 'uglifier', '2.1.1'
-gem 'coffee-rails', '4.0.1'
-gem 'jquery-rails', '3.0.4'
-gem 'turbolinks', '1.1.1'
-gem 'jbuilder', '1.0.2'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
