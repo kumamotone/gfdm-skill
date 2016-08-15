@@ -24,6 +24,8 @@ gem 'jbuilder', '1.0.2'
   
 gem 'mysql2', '0.3.21'
 
+gem 'twitter', '5.16.0'
+
 group :development, :test do
   #gem 'sqlite3', '1.3.8'
   gem 'debug_inspector', '0.0.2'
