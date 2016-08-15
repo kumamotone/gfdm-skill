@@ -32,7 +32,11 @@ class MusicsController < ApplicationController
     entry = Music.find(params[:id])
     client = ApplicationController.helpers.get_twitter_client
 
-    client.update("曲情報が削除されました。(by @#{current_user.twitterid}) \n\n削除曲: #{entry.name}")
+    tweet_text = "曲情報が削除されました。(by @#{current_user.twitterid}) \n\n削除曲: #{entry.name}"
+    if Rails.env == 'development'
+      tweet_text = tweet_text + "(開発テスト)"
+    end
+    client.update(tweet_text)
     entry.destroy
 
     ApplicationController.helpers.create_max
@@ -51,7 +55,11 @@ class MusicsController < ApplicationController
 
       # スクリーンネームは最大15文字なので、曲名は39文字に削る
       # (一番長いと思われる 轟け!恋のビーンボール!! ～96バット砲炸裂!GITADORAシリーズMVP弾!～ で42文字なので稀に切れるはず)
+      # Rails に truncate という便利ヘルパーがあるのでそれ使った方が良いかも
       tweet_text = "曲情報が変更されました。(by @%s) \n\n%.39s\nD %.2f %.2f %.2f %.2f\nG %.2f %.2f %.2f %.2f\nB %.2f %.2f %.2f %.2f" % [current_user.twitterid , @music.name, @music.d_bsc, @music.d_adv, @music.d_ext, @music.d_mas, @music.g_bsc, @music.g_adv, @music.g_ext, @music.g_mas, @music.b_bsc, @music.b_adv, @music.b_ext, @music.b_mas]
+      if Rails.env == 'development'
+        tweet_text = tweet_text + "(開発テスト)"
+      end
       client.update(tweet_text)
 
       ApplicationController.helpers.create_max
@@ -66,11 +74,16 @@ class MusicsController < ApplicationController
   def create
     @music = Music.new(music_params)
     @music.name.strip! unless @music.name.nil?
+
     if @music.save
       client = ApplicationController.helpers.get_twitter_client
       # スクリーンネームは最大15文字なので、曲名は39文字に削る
       # (一番長いと思われる 轟け!恋のビーンボール!! ～96バット砲炸裂!GITADORAシリーズMVP弾!～ で42文字なので稀に切れるはず)
+      # Rails に truncate という便利ヘルパーがあるのでそれ使った方が良いかも
       tweet_text = "曲情報が追加されました。(by @%s) \n\n%.39s\nD %.2f %.2f %.2f %.2f\nG %.2f %.2f %.2f %.2f\nB %.2f %.2f %.2f %.2f" % [current_user.twitterid , @music.name, @music.d_bsc, @music.d_adv, @music.d_ext, @music.d_mas, @music.g_bsc, @music.g_adv, @music.g_ext, @music.g_mas, @music.b_bsc, @music.b_adv, @music.b_ext, @music.b_mas]
+      if Rails.env == 'development'
+        tweet_text = tweet_text + "(開発テスト)"
+      end
       client.update(tweet_text)
 
       ApplicationController.helpers.create_max

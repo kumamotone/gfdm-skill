@@ -181,8 +181,11 @@ module SkillsHelper
 
     if old_d_sp != new_d_sp then
       client = ApplicationController.helpers.get_twitter_client
-      twitter_text = "ドラムの理論値が更新されました。 %.2f → %.2f http://tri.gfdm-skill.net/users/3/drum" % [old_d_sp, new_d_sp]
-      client.update(twitter_text)
+      tweet_text = "ドラムの理論値が更新されました。 %.2f → %.2f http://tri.gfdm-skill.net/users/3/drum" % [old_d_sp, new_d_sp]
+      if Rails.env == 'development'
+        tweet_text = tweet_text + "(開発テスト)"
+      end
+      client.update(tweet_text)
     end
 
     # guitar の理論値ユーザの更新
@@ -194,8 +197,11 @@ module SkillsHelper
 
     if old_g_sp != new_g_sp then
       client = ApplicationController.helpers.get_twitter_client
-      twitter_text = "ギターの理論値が更新されました。 %.2f → %.2f http://tri.gfdm-skill.net/users/3/guitar" % [old_g_sp, new_g_sp]
-      client.update(twitter_text)
+      tweet_text = "ギターの理論値が更新されました。 %.2f → %.2f http://tri.gfdm-skill.net/users/3/guitar" % [old_g_sp, new_g_sp]
+      if Rails.env == 'development'
+        tweet_text = tweet_text + "(開発テスト)"
+      end
+      client.update(tweet_text)
     end
   end
 
