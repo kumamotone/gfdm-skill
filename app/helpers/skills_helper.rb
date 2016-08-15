@@ -191,7 +191,7 @@ module SkillsHelper
     user = User.find(max_id)  # 再取得する必要がある
     new_g_sp = (user.ghot + user.gother).round(2)
 
-    if old_d_sp != new_d_sp then
+    if old_g_sp != new_g_sp then
       client = ApplicationController.helpers.get_twitter_client
       client.update("ギターの理論値が更新されました。 #{old_g_sp} → #{new_g_sp} http://tri.gfdm-skill.net/users/3/guitar")
     end
