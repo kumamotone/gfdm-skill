@@ -1,6 +1,10 @@
 <% provide(:title, 'アカウント情報変更') %>
 <h1>アカウント情報変更</h1>
 
+<% if @user.admin? || @user.subadmin? then %>
+    <strong>曲情報登録権限があるアカウントです。</strong>
+<% end %>
+
 <div class="row">
   <div class="form-horizontal" role="form">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
