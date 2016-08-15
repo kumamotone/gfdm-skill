@@ -73,6 +73,7 @@ class MusicsController < ApplicationController
 
   def create
     @music = Music.new(music_params)
+    @music.id = Music.maximum(:id).next  # 最大の番号が削除済みの場合連番にならなくなってしまうので調整
     @music.name.strip! unless @music.name.nil?
 
     if @music.save

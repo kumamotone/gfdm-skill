@@ -132,6 +132,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.id = User.maximum(:id).next # 最大の番号が削除済みの場合連番にならなくなってしまうので調整
     if @user.save
       sign_in @user
       flash[:success] = "アカウントが作成されました！"
