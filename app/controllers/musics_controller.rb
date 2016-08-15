@@ -73,6 +73,11 @@ class MusicsController < ApplicationController
   #end
 
   def admin_user
-    redirect_to(root_path) unless current_user.admin?
+    if current_user.admin? || current_user.subadmin?
+      # pass
+    else
+      flash[:error] = "曲情報を変更する権限がありません。"
+      redirect_to(root_path)
+    end
   end
 end
