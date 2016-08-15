@@ -181,7 +181,8 @@ module SkillsHelper
 
     if old_d_sp != new_d_sp then
       client = ApplicationController.helpers.get_twitter_client
-      client.update("ドラムの理論値が更新されました。 #{old_d_sp} → #{new_d_sp} http://tri.gfdm-skill.net/users/3/drum")
+      twitter_text = "ドラムの理論値が更新されました。 %.2f → %.2f http://tri.gfdm-skill.net/users/3/drum" % [old_d_sp, new_d_sp]
+      client.update(twitter_text)
     end
 
     # guitar の理論値ユーザの更新
@@ -193,7 +194,8 @@ module SkillsHelper
 
     if old_g_sp != new_g_sp then
       client = ApplicationController.helpers.get_twitter_client
-      client.update("ギターの理論値が更新されました。 #{old_g_sp} → #{new_g_sp} http://tri.gfdm-skill.net/users/3/guitar")
+      twitter_text = "ギターの理論値が更新されました。 %.2f → %.2f http://tri.gfdm-skill.net/users/3/guitar" % [old_g_sp, new_g_sp]
+      client.update(twitter_text)
     end
   end
 
