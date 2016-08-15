@@ -5,7 +5,9 @@
     <th colspan="4">Drum</th>
     <th colspan="4">Guitar</th>
     <th colspan="4">Bass</th>
-    <th rowspan="2">id</th>
+    <% if !current_user.nil? && (current_user.admin? || current_user.subadmin?) then %>
+        <th rowspan="2">id</th>
+    <% end %>
   </tr>
   <tr>
     <th>BSC</th>
@@ -91,8 +93,11 @@
                 else
                   "-"
                 end %></td>
-        <td><%= music.id %></td>
+        <% if !current_user.nil? && (current_user.admin? || current_user.subadmin?) then %>
+          <td><%= link_to music.id, edit_music_path(music) %></td>
+        <% end %>
       </tr>
+      <% end %>
   <% end %>
   </tbody>
 </table>
