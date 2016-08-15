@@ -10,12 +10,24 @@
           </div>
         </div>
 
+        <!--<div class="form-group">-->
+          <!--<%= s.label :bpm, "BPM", :class => "col-sm-3 control-label" %>-->
+          <!--<div class="col-sm-6">-->
+            <!--<%= s.text_field :bpm, placeholder: "string (なくても登録できます)", class: "form-control" %>-->
+          <!--</div>-->
+        <!--</div>-->
+
+        <% if mode == "new" then %>
         <div class="form-group">
-          <%= s.label :bpm, "BPM", :class => "col-sm-3 control-label" %>
-          <div class="col-sm-6">
-            <%= s.text_field :bpm, placeholder: "string (optional)", class: "form-control" %>
+          <div class="col-sm-3 control-label">難易値簡単入力フォーム</div>
+          <div class="col-sm-4">
+            <input class="form-control" placeholder="12個のスペース区切りの数値を入力できます" type="text" id="benry">
+          </div>
+          <div class="col-sm-2">
+            <button type="button" id="benrybtn">値をセット</button>
           </div>
         </div>
+        <% end %>
 
         <div class="form-group">
           <%= s.label :d_bsc, "D_BSC", :class => "col-sm-3 control-label" %>
@@ -74,28 +86,28 @@
         </div>
 
         <div class="form-group">
-          <%= s.label :b_bsc, "B_BSC", :class => "col-sm-3 control-label" %>
+          <%= s.label :b_bsc, "B_BSC(ない場合は0を入力)", :class => "col-sm-3 control-label" %>
           <div class="col-sm-6">
             <%= s.text_field :b_bsc, placeholder: "float", class: "form-control" %>
           </div>
         </div>
 
         <div class="form-group">
-          <%= s.label :b_adv, "B_ADV", :class => "col-sm-3 control-label" %>
+          <%= s.label :b_adv, "B_ADV(ない場合は0を入力)", :class => "col-sm-3 control-label" %>
           <div class="col-sm-6">
             <%= s.text_field :b_adv, placeholder: "float", class: "form-control" %>
           </div>
         </div>
 
         <div class="form-group">
-          <%= s.label :b_ext, "B_EXT", :class => "col-sm-3 control-label" %>
+          <%= s.label :b_ext, "B_EXT(ない場合は0を入力)", :class => "col-sm-3 control-label" %>
           <div class="col-sm-6">
             <%= s.text_field :b_ext, placeholder: "float", class: "form-control" %>
           </div>
         </div>
 
         <div class="form-group">
-          <%= s.label :b_mas, "B_MAS", :class => "col-sm-3 control-label" %>
+          <%= s.label :b_mas, "B_MAS(ない場合は0を入力)", :class => "col-sm-3 control-label" %>
           <div class="col-sm-6">
             <%= s.text_field :b_mas, placeholder: "float", class: "form-control" %>
           </div>
@@ -105,14 +117,22 @@
           <%= s.label :ishot, "HOT?", :class => "col-sm-3 control-label" %>
           <div class="col-sm-offset-3 col-sm-6 col-xs-offset-1">
             <div class="checkbox">
-              <%= s.check_box :ishot %></div>
-          </div>
+              <% if mode == "edit" then %>
+                <%= s.check_box :ishot %></div>
+              <% elsif mode == "new" %>
+                <%= s.check_box :ishot, {:checked => true} %></div>
+              <% end %>
+        </div>
 
         </div>
 
         <div class="form-group">
           <div class="col-sm-offset-3 col-sm-6">
-            <%= s.submit "登録", class: "btn btn-large btn-primary" %>
+            <% if mode == "edit" then %>
+                <%= s.submit "編集(多少時間が掛かります)", class: "btn btn-large btn-primary" %>
+            <% elsif mode == "new" %>
+              <%= s.submit "登録(多少時間が掛かります)", class: "btn btn-large btn-primary" %>
+            <% end %>
           </div>
         </div>
     <% end %>
