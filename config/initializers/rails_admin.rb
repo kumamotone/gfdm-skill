@@ -12,10 +12,12 @@ RailsAdmin.config do |config|
     redirect_to main_app.root_path unless current_user.try(:admin?)
   end
 
-  # password_digest の更新でコケるため
   config.model User do
     update do
+      # password_digest の更新でコケるため
       exclude_fields :password_digest
+      # index_users_on_confirmation_token の更新でコケるため
+      exclude_fields :confirmation_token
     end
   end
 
