@@ -95,6 +95,15 @@ class MusicsController < ApplicationController
     end
   end
 
+  def musiclist
+    users = User.all
+    array = []
+    users.each {|user|
+      array.push([user.id, user.name, user.d, user.g, user.skill_updated_at_d, user.skill_updated_at_g])
+    }
+    render :json => { :users => array.as_json }
+  end
+
   private
 
   def music_params

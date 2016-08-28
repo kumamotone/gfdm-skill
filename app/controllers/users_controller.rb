@@ -142,6 +142,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def userlist
+    users = User.all
+    array = []
+    users.each {|user|
+      array.push([user.id, user.name, user.d, user.g, user.skill_updated_at_d, user.skill_updated_at_g])
+    }
+    render :json => { :users => array.as_json }
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :email, :password,

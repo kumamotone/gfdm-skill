@@ -81,7 +81,139 @@ $(document).ready(function() {
     'pagingType': 'full_numbers',
     "bSortClasses": false,// ソート行を強調（cssクラスを指定）するかを設定
     'lengthMenu': [[100,200,500, -1], [100,200,500, "All"]],
-    'order': [[4, 'desc']],
+      "bProcessing": true,
+      //"bServerSide": true,
+    "sAjaxSource":   "api/userlist",
+    "sServerMethod": "GET",
+    "sAjaxDataProp" : "users",
+    "fnServerData": function ( sSource, aoData, fnCallback ) {
+        $.getJSON( sSource, aoData, function (json) {
+            $(json.users).each(function(){
+                var fontColor = "#fff";
+                if (Math.max(this[2], this[3]) < 2000) {
+                    fontColor = "#ff9";
+                } else if (Math.max(this[2], this[3]) < 2500) {
+                    fontColor = "#ff0";
+                } else if (Math.max(this[2], this[3]) < 3000) {
+                    fontColor = "#ff8";
+                } else if (Math.max(this[2], this[3]) < 3500) {
+                    fontColor = "#3f0";
+                } else if (Math.max(this[2], this[3]) < 5000) {
+                    fontColor = "#3f8";
+                } else if (Math.max(this[2], this[3]) < 4500) {
+                    fontColor = "#36f";
+                } else if (Math.max(this[2], this[3]) < 5000) {
+                    fontColor = "#6bf";
+                } else if (Math.max(this[2], this[3]) < 5500) {
+                    fontColor = "#f8f";
+                } else if (Math.max(this[2], this[3]) < 6000) {
+                    fontColor = "#f00";
+                } else if (Math.max(this[2], this[3]) < 6500) {
+                    fontColor = "#ff0";
+                } else if (Math.max(this[2], this[3]) < 7000) {
+                    fontColor = "#f88";
+                } else if (Math.max(this[2], this[3]) < 7500) {
+                    fontColor = "#d84";
+                } else if (Math.max(this[2], this[3]) < 8000) {
+                    fontColor = "#c0c0c0";
+                } else if (Math.max(this[2], this[3]) < 8500) {
+                    fontColor = "#ffd700";
+                } else if (Math.max(this[2], this[3]) > 8500) {
+                    fontColor = "#0ff";
+                }
+
+                this[1] = '<a href="users/' +this[0]+ '" target="_blank" >'+this[1].fontcolor(fontColor)+'</a>'
+            });
+
+            $(json.users).each(function(){
+                var fontColor = "#fff";
+                if (this[2] < 2000) {
+                    fontColor = "#ff9";
+                } else if (this[2] < 2500) {
+                    fontColor = "#ff0";
+                } else if (this[2] < 3000) {
+                    fontColor = "#ff8";
+                } else if (this[2] < 3500) {
+                    fontColor = "#3f0";
+                } else if (this[2] < 5000) {
+                    fontColor = "#3f8";
+                } else if (this[2] < 4500) {
+                    fontColor = "#36f";
+                } else if (this[2] < 5000) {
+                    fontColor = "#6bf";
+                } else if (this[2] < 5500) {
+                    fontColor = "#f8f";
+                } else if (this[2] < 6000) {
+                    fontColor = "#f00";
+                } else if (this[2] < 6500) {
+                    fontColor = "#ff0";
+                } else if (this[2] < 7000) {
+                    fontColor = "#f88";
+                } else if (this[2] < 7500) {
+                    fontColor = "#d84";
+                } else if (this[2] < 8000) {
+                    fontColor = "#c0c0c0";
+                } else if (this[2] < 8500) {
+                    fontColor = "#ffd700";
+                } else if (this[2] > 8500) {
+                    fontColor = "#0ff";
+                }
+
+                if (this[2] != "0.00") {
+                    this[2] = '<a href="users/' + this[0] + '/drum" target="_blank" >' + this[2].toFixed(2).fontcolor(fontColor) + '</a>'
+                } else {
+                    this[2] = "";
+                }
+            });
+            $(json.users).each(function(){
+                var fontColor = "#fff";
+                if (this[3] < 2000) {
+                    fontColor = "#ff9";
+                } else if (this[3] < 2500) {
+                    fontColor = "#ff0";
+                } else if (this[3] < 3000) {
+                    fontColor = "#ff8";
+                } else if (this[3] < 3500) {
+                    fontColor = "#3f0";
+                } else if (this[3] < 5000) {
+                    fontColor = "#3f8";
+                } else if (this[3] < 4500) {
+                    fontColor = "#36f";
+                } else if (this[3] < 5000) {
+                    fontColor = "#6bf";
+                } else if (this[3] < 5500) {
+                    fontColor = "#f8f";
+                } else if (this[3] < 6000) {
+                    fontColor = "#f00";
+                } else if (this[3] < 6500) {
+                    fontColor = "#ff0";
+                } else if (this[3] < 7000) {
+                    fontColor = "#f88";
+                } else if (this[3] < 7500) {
+                    fontColor = "#d84";
+                } else if (this[3] < 8000) {
+                    fontColor = "#c0c0c0";
+                } else if (this[3] < 8500) {
+                    fontColor = "#ffd700";
+                } else if (this[3] > 8500) {
+                    fontColor = "#0ff";
+                }
+
+                if (this[3] != "0.00") {
+                    this[3] = '<a href="users/' + this[0] + '/guitar" target="_blank" >' + this[3].toFixed(2).fontcolor(fontColor) + '</a>';
+                } else {
+                    this[3] = "";
+                }
+            });
+            fnCallback(json);
+        } );
+     },
+      "fnRowCallback": function( nRow, aData, iDisplayIndex, iDisplayIndexFull ) {
+          $(nRow).addClass( "black" );
+      },
+
+
+      'order': [[4, 'desc']],
      "language" : {
          "sProcessing":   "処理中...",
          "sLengthMenu":   "_MENU_ 件表示",

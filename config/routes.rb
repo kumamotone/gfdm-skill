@@ -19,7 +19,8 @@ SampleApp::Application.routes.draw do
   end
   resources :sessions, only: [:new, :create, :destroy]
   root  'static_pages#home'
-  match '/update_maxuser',  to: 'skills#update_maxuser',            via: 'get'
+  match '/update_maxuser',  to: 'skills#update_maxuser',  via: 'get'
+  match '/api/userlist', to: 'users#userlist', via: 'get'
   #match '/signup',  to: 'users#new',            via: 'get'
   #match '/signin',  to: 'sessions#new',         via: 'get'
   #match '/signout', to: 'sessions#destroy',     via: 'delete'
