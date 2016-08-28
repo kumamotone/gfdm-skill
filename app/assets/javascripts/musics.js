@@ -1,18 +1,18 @@
-$(document).ready(function() {
-return $('#sTable_musics').dataTable({
-  'pagingType': 'full_numbers',
-  "lengthMenu": [[-1], ["All"]]
-});
+$(document).ready(function () {
+    return $('#sTable_musics').dataTable({
+        'pagingType': 'full_numbers',
+        "lengthMenu": [[-1], ["All"]]
+    });
 });
 
 $(function () {
-    $( '#benry' ).keypress( function ( e ) {
-        if ( e.which == 13 ) {
-            $( '#benrybtn' ).click();
+    $('#benry').keypress(function (e) {
+        if (e.which == 13) {
+            $('#benrybtn').click();
             return false;
         }
     });
-    $( '#benrybtn' ).click( function ( e ) {
+    $('#benrybtn').click(function (e) {
         // preventDefault();
         var str = $('#benry').val().trim();
         var splits = str.split(/\s+/, 12);
