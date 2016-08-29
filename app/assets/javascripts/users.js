@@ -89,7 +89,9 @@ $(document).ready(function () {
             $.getJSON(sSource, aoData, function (json) {
                 $(json.users).each(function () {
                     var fontColor = "#fff";
-                    if (Math.max(this[2], this[3]) < 2000) {
+                    if (Math.max(this[2], this[3]) < 1000) {
+                        fontColor = "#fff";
+                    } else if (Math.max(this[2], this[3]) < 2000) {
                         fontColor = "#ff9";
                     } else if (Math.max(this[2], this[3]) < 2500) {
                         fontColor = "#ff0";
@@ -97,18 +99,18 @@ $(document).ready(function () {
                         fontColor = "#ff8";
                     } else if (Math.max(this[2], this[3]) < 3500) {
                         fontColor = "#3f0";
-                    } else if (Math.max(this[2], this[3]) < 5000) {
+                    } else if (Math.max(this[2], this[3]) < 4000) {
                         fontColor = "#3f8";
                     } else if (Math.max(this[2], this[3]) < 4500) {
                         fontColor = "#36f";
                     } else if (Math.max(this[2], this[3]) < 5000) {
                         fontColor = "#6bf";
                     } else if (Math.max(this[2], this[3]) < 5500) {
-                        fontColor = "#f8f";
+                        fontColor = "#f0f";
                     } else if (Math.max(this[2], this[3]) < 6000) {
-                        fontColor = "#f00";
+                        fontColor = "#f8f";
                     } else if (Math.max(this[2], this[3]) < 6500) {
-                        fontColor = "#ff0";
+                        fontColor = "#f00";
                     } else if (Math.max(this[2], this[3]) < 7000) {
                         fontColor = "#f88";
                     } else if (Math.max(this[2], this[3]) < 7500) {
@@ -117,7 +119,7 @@ $(document).ready(function () {
                         fontColor = "#c0c0c0";
                     } else if (Math.max(this[2], this[3]) < 8500) {
                         fontColor = "#ffd700";
-                    } else if (Math.max(this[2], this[3]) > 8500) {
+                    } else if (Math.max(this[2], this[3]) >= 8500) {
                         fontColor = "#0ff";
                     }
 
@@ -126,7 +128,9 @@ $(document).ready(function () {
 
                 $(json.users).each(function () {
                     var fontColor = "#fff";
-                    if (this[2] < 2000) {
+                    if (this[2] < 1000) {
+                        fontColor = "#fff";
+                    } else if (this[2] < 2000) {
                         fontColor = "#ff9";
                     } else if (this[2] < 2500) {
                         fontColor = "#ff0";
@@ -134,18 +138,18 @@ $(document).ready(function () {
                         fontColor = "#ff8";
                     } else if (this[2] < 3500) {
                         fontColor = "#3f0";
-                    } else if (this[2] < 5000) {
+                    } else if (this[2] < 4000) {
                         fontColor = "#3f8";
                     } else if (this[2] < 4500) {
                         fontColor = "#36f";
                     } else if (this[2] < 5000) {
                         fontColor = "#6bf";
                     } else if (this[2] < 5500) {
-                        fontColor = "#f8f";
+                        fontColor = "#f0f";
                     } else if (this[2] < 6000) {
-                        fontColor = "#f00";
+                        fontColor = "#f8f";
                     } else if (this[2] < 6500) {
-                        fontColor = "#ff0";
+                        fontColor = "#f00";
                     } else if (this[2] < 7000) {
                         fontColor = "#f88";
                     } else if (this[2] < 7500) {
@@ -154,7 +158,7 @@ $(document).ready(function () {
                         fontColor = "#c0c0c0";
                     } else if (this[2] < 8500) {
                         fontColor = "#ffd700";
-                    } else if (this[2] > 8500) {
+                    } else if (this[2] >= 8500) {
                         fontColor = "#0ff";
                     }
 
@@ -166,7 +170,9 @@ $(document).ready(function () {
                 });
                 $(json.users).each(function () {
                     var fontColor = "#fff";
-                    if (this[3] < 2000) {
+                    if (this[3] < 1000) {
+                        fontColor = "#fff";
+                    } else if (this[3] < 2000) {
                         fontColor = "#ff9";
                     } else if (this[3] < 2500) {
                         fontColor = "#ff0";
@@ -174,18 +180,18 @@ $(document).ready(function () {
                         fontColor = "#ff8";
                     } else if (this[3] < 3500) {
                         fontColor = "#3f0";
-                    } else if (this[3] < 5000) {
+                    } else if (this[3] < 4000) {
                         fontColor = "#3f8";
                     } else if (this[3] < 4500) {
                         fontColor = "#36f";
                     } else if (this[3] < 5000) {
                         fontColor = "#6bf";
                     } else if (this[3] < 5500) {
-                        fontColor = "#f8f";
+                        fontColor = "#f0f";
                     } else if (this[3] < 6000) {
-                        fontColor = "#f00";
+                        fontColor = "#f8f";
                     } else if (this[3] < 6500) {
-                        fontColor = "#ff0";
+                        fontColor = "#f00";
                     } else if (this[3] < 7000) {
                         fontColor = "#f88";
                     } else if (this[3] < 7500) {
@@ -194,7 +200,7 @@ $(document).ready(function () {
                         fontColor = "#c0c0c0";
                     } else if (this[3] < 8500) {
                         fontColor = "#ffd700";
-                    } else if (this[3] > 8500) {
+                    } else if (this[3] >= 8500) {
                         fontColor = "#0ff";
                     }
 
