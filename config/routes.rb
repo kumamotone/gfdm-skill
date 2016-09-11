@@ -31,6 +31,12 @@ SampleApp::Application.routes.draw do
     match '/sessions/user', to: 'devise/sessions#create', via: :post
   end
 
+  match '/average' => 'static_pages#average', via: :get
+  match '/average/drum/other/:from/:to' => 'users#drum_average_other', via: :get
+  match '/average/drum/hot/:from/:to' => 'users#drum_average_hot', via: :get
+  match '/average/guitar/other/:from/:to' => 'users#guitar_average_other', via: :get
+  match '/average/guitar/hot/:from/:to' => 'users#guitar_average_hot', via: :get
+  # match '/average/guitar/:from/:to' => 'users#guitar_average', via: get
   # match '/help',    to: 'static_pages#help',    via: 'get'
   # match '/about',   to: 'static_pages#about',   via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.

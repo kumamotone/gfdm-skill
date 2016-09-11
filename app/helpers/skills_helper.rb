@@ -160,6 +160,36 @@ module SkillsHelper
     end
   end
 
+  def fetch_level_by_id(musicid, kind)
+    music = Music.find(musicid)
+    case kind
+      when 0 then
+        music.d_bsc
+      when 1 then
+        music.d_adv
+      when 2 then
+        music.d_ext
+      when 3 then
+        music.d_mas
+      when 4 then
+        music.g_bsc
+      when 5 then
+        music.g_adv
+      when 6 then
+        music.g_ext
+      when 7 then
+        music.g_mas
+      when 8 then
+        music.b_bsc
+      when 9 then
+        music.b_adv
+      when 10 then
+        music.b_ext
+      when 11 then
+        music.b_mas
+    end
+  end
+
   def create_max
     max_id = 3
     user = User.find(max_id)

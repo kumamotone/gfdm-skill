@@ -151,6 +151,139 @@ class UsersController < ApplicationController
     render :json => { :users => array.as_json }
   end
 
+  def drum_average_other
+    @average = calc_average(true, true)
+  end
+
+  def drum_average_hot
+    @average = calc_average(true, false)
+  end
+
+  def guitar_average_other
+    @average = calc_average(false, true)
+  end
+
+  def guitar_average_hot
+    @average = calc_average(false, false)
+  end
+
+  def calc_average(isDrum, isOther)
+    from = params[:from]
+    to = params[:to]
+    max_music_id = Music.maximum(:id)
+
+    if isDrum
+      users = User.where(d: from..to)
+    else
+      users = User.where(g: from..to)
+    end
+
+    skills = Hash.new()
+
+    # init
+    if isOther
+      if isDrum
+        1.upto(711){ |i|
+          0.upto(3) { |j|
+           skills.store([i,j], {"rates" => []})
+          }
+        }
+      else
+        1.upto(711){ |i|
+          4.upto(11) { |j|
+            skills.store([i,j], {"rates" => []})
+          }
+        }
+      end
+    else
+      if isDrum
+        712.upto(max_music_id){ |i|
+          0.upto(3) { |j|
+            skills.store([i,j], {"rates" => []})
+          }
+        }
+      else
+        712.upto(max_music_id){ |i|
+          4.upto(11) { |j|
+            skills.store([i,j], {"rates" => []})
+          }
+        }
+      end
+    end
+
+    if isOther
+      users.each { |user|
+        if isDrum
+          user.skills.where(music_id: 1..711, kind: 0..3).each { |skill|
+          arr = skills.fetch([skill.music_id,skill.kind])
+          rates = arr.fetch("rates")
+          rates.push({"rate" => skill.rate, "sp" => skill.sp})
+        }
+        else
+          user.skills.where(music_id: 1..711, kind: 4..11).each { |skill|
+            arr = skills.fetch([skill.music_id,skill.kind])
+            rates = arr.fetch("rates")
+            rates.push({"rate" => skill.rate, "sp" => skill.sp})
+          }
+        end
+      }
+    else
+      if isDrum
+        users.each { |user|
+        user.skills.where(music_id: 712..max_music_id, kind: 0..3).each { |skill|
+          arr = skills.fetch([skill.music_id,skill.kind])
+          rates = arr.fetch("rates")
+          rates.push({"rate" => skill.rate, "sp" => skill.sp})
+        }
+      }
+      else
+        users.each { |user|
+          user.skills.where(music_id: 712..max_music_id, kind: 4..11).each { |skill|
+            arr = skills.fetch([skill.music_id,skill.kind])
+            rates = arr.fetch("rates")
+            rates.push({"rate" => skill.rate, "sp" => skill.sp})
+          }
+        }
+      end
+    end
+
+    skills.delete_if {|k, v| v.fetch("rates").size == 0 }
+    # skills = skills.sort_by{|k, v| v.fetch("rates").size }.reverse
+
+    returnArr = []
+
+    skills.each { |k,v|
+      rates = v.fetch("rates")
+
+      size = rates.size
+      # v.store("size", size)
+
+      if size != 0
+        ave_rate = rates.inject(0) {|sum, item| sum + item.fetch("rate")} / size
+        ave_sp = rates.inject(0) {|sum, item| sum + item.fetch("sp")} / size
+
+        # v.store("ave_rate", ave_rate)
+        # v.store("ave_sp", ave_sp)
+
+        music = Music.find_by_id(k[0])
+        if music.nil?
+          # v.store("name", "deleted")
+          returnArr.push([k[0], "deleted", k[1], ave_rate, ave_sp, size])
+          return
+        else
+          # v.store("name", music.name)
+          returnArr.push([k[0], music.name, k[1], ave_rate, ave_sp, size])
+        end
+        # v.store("kind", k[1])
+      end
+      # v.delete("rates")
+    }
+
+    # render :json => skills.as_json
+    # render :json => { :aves => returnArr.as_json }
+    return returnArr.take(200)  # 表示に時間がかかるので
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :email, :password,

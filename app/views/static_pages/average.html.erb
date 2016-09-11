@@ -1,0 +1,49 @@
+<% provide(:title, 'SKILL AVERAGE (β)') %>
+
+<h1>SKILL AVERAGE (β) </h1>
+
+表示に多少時間が掛かります。
+
+<h2>Drummania</h2>
+
+<table class="table table-bordered table-hover table-condensed display compact">
+  <thead>
+  <tr>
+    <th>Hot</th>
+    <th>Other</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% n = 4000 %>
+    <% while n < 9200 %>
+      <tr>
+        <td><%= link_to "SP #{n} 〜 #{n+200} (Hot)", "/average/drum/hot/#{n}/#{n+200}" %></td>
+        <td><%= link_to "SP #{n} 〜 #{n+200} (Other)", "/average/drum/other/#{n}/#{n+200}" %></td>
+      </tr>
+      <% n+= 200 %>
+      <% end %>
+  </tbody>
+</table>
+
+<h2>GuitarFreaks</h2>
+
+<table class="table table-responsive table-bordered table-hover table-condensed display compact">
+  <thead>
+  <tr>
+    <th>Hot</th>
+    <th>Other</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% n = 4000 %>
+  <% while n < 9200 %>
+      <tr>
+        <td><%= link_to "SP #{n} 〜 #{n+200} (Hot)", "/average/guitar/hot/#{n}/#{n+200}" %></td>
+        <td><%= link_to "SP #{n} 〜 #{n+200} (Other)", "/average/guitar/other/#{n}/#{n+200}" %></td>
+      </tr>
+      <% n+= 200 %>
+  <% end %>
+  </tbody>
+</table>
