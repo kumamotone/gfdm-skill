@@ -9,6 +9,7 @@ SampleApp::Application.routes.draw do
       get 'other'
     end
   end
+  match '/users/old', to: 'users#index_old', via: 'get'
   resources :users do
     member do
       get 'drum'
