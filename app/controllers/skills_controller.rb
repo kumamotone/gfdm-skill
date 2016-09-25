@@ -46,6 +46,8 @@ class SkillsController < ApplicationController
 
     @skill.sp = calc_sp(_skill)
     @skill.rate = _skill.rate
+    @skill.comment = _skill.comment
+    @skill.isfc = _skill.isfc
 
     if @skill.save
       if @skill.kind.between?(0, 3)
