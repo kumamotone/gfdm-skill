@@ -24,7 +24,7 @@
         </td>
         <td><%= number_with_precision(fetch_level(skill.music, skill.kind), precision: 2) %> <%= show_kind(skill.kind) %></td>
         <td><%= number_with_precision(skill.rate, precision: 2) %>% (<%= show_rank(skill.rate, skill.isfc) %>)</td>
-        <td><%= number_with_precision(skill.sp, precision: 2) %></td>
+        <td><%= link_to number_with_precision(skill.sp, precision: 2), skill_path(skill) %></td>
         <td><%= skill.comment %></td>
       </tr>
   <% end %>
@@ -56,7 +56,7 @@
         </td>
         <td><%= number_with_precision(fetch_level(skill.music, skill.kind), precision: 2) %> <%= show_kind(skill.kind) %></td>
         <td><%= number_with_precision(skill.rate, precision: 2) %>% (<%= show_rank(skill.rate, skill.isfc) %>)</td>
-        <td><%= number_with_precision(skill.sp, precision: 2) %></td>
+        <td><%= link_to number_with_precision(skill.sp, precision: 2), skill_path(skill) %></td>
         <td><%= skill.comment %></td>
       </tr>
   <% end %>

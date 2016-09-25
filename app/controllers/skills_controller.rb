@@ -29,6 +29,9 @@ class SkillsController < ApplicationController
 
   # GET /skills/1/edit
   def edit
+    @skill = Skill.find(params[:id])
+
+    @otherSkills = Skill.where(music_id: @skill.music_id, user_id: @skill.user_id).where.not(kind: @skill.kind)
   end
 
   # POST /skills
@@ -39,9 +42,9 @@ class SkillsController < ApplicationController
 
     message = ""
     if @skill.id.nil?
-      message = "スキルが登録されました。#{_skill.music.name} 達成率: #{_skill.rate} SP: #{calc_sp(_skill)}"
+      message = "スキルが登録されました。 #{_skill.music.name} 難易度: #{ApplicationController.helpers.show_kind(_skill.kind)} 達成率: #{_skill.rate} SP: #{calc_sp(_skill)} コメント: #{_skill.comment.nil? || _skill.comment.empty? ? "なし" : _skill.comment} #{_skill.isfc == true ? "(FULLCOMBO)" : ""} "
     else
-      message = "スキルが更新されました。#{@skill.music.name} 達成率: #{@skill.rate} -> #{_skill.rate} SP: #{calc_sp(@skill)} -> #{calc_sp(_skill)} "
+      message = "スキルが更新されました。 #{@skill.music.name} 難易度: #{ApplicationController.helpers.show_kind(_skill.kind)}  達成率: #{@skill.rate} -> #{_skill.rate} SP: #{calc_sp(@skill)} -> #{calc_sp(_skill)}  コメント: #{_skill.comment.nil? || _skill.comment.empty? ? "なし" : _skill.comment} #{_skill.isfc == true ? "(FULLCOMBO)" : ""} "
     end
 
     @skill.sp = calc_sp(_skill)
@@ -75,7 +78,7 @@ class SkillsController < ApplicationController
       @skill.sp = calc_sp(@skill)
       @skill.update_attributes(skill_params)
 
-      flash[:success] = "スキルを更新しました。 #{@skill.music.name} 達成率: #{@skill.rate} SP: #{calc_sp(@skill)}"
+      flash[:success] = "スキルを更新しました。 難易度: #{ApplicationController.helpers.show_kind(@skill.kind)} #{@skill.music.name} 達成率: #{@skill.rate} SP: #{calc_sp(@skill)}"
       if (@skill.kind.between?(0, 3))
         ApplicationController.helpers.updatedrum(@skill.user_id)
         redirect_to drum_user_path(@skill.user_id)
