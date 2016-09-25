@@ -13,11 +13,15 @@ class UsersController < ApplicationController
 
   def import
     @user = User.find(params[:id])
+    @results = []
+
     if params[:csv_file].blank?
       redirect_to(@user, alert: 'インポートするCSVファイルを選択してください')
     else
-      num = Skill.import(params[:csv_file], @user.id)
-      redirect_to(@user, notice: "#{num.to_s} 件のスキルを追加 / 更新しました")
+      @results = Skill.import_preview(params[:csv_file], @user.id)
+      # redirect_to(@user, notice: "#{num.to_s} 件のスキルを追加 / 更新しました")
+      # binding.pry
+      # redirect_to(@user, notice: "#{results}")
     end
   end
 

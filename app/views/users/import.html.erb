@@ -1,0 +1,42 @@
+<h2>インポート結果 (プレビュー)</h2>
+
+<table>
+  <th>
+    <td>結果</td>
+    <td>曲名</td>
+    <td>難易度</td>
+    <td>達成率</td>
+  </th>
+<% @results.each do |result| %>
+  <tr>
+    <td><%= result.fetch(:row) %></td>
+    <td>
+      <% if result.fetch(:error).nil? %>
+        "成功"
+      <% elsif result.fetch(:error) == "name_error" %>
+        "名前エラー"
+      <% else %>
+      "不明なエラー"
+      <% end %>
+    </td>
+    <td><%= result.fetch(:name) %></td>
+    <td><%= show_kind(result.fetch(:kind)) %></td>
+    <td><%= result.fetch(:rate) %></td>
+  </tr>
+<% end %>
+
+</table>
+
+<h2>インポート</h2>
+
+<p>以上の結果をインポートします。</p>
+
+注意：
+
+<p>・エラーになっている行は登録されません。</p>
+<p>・既に登録している曲については、コメント以外の情報が登録されます。</p>
+<p>・フルコンボ情報は削除されます。</p>
+
+<%= form_tag(import_user_path, :method => :put) do %>
+    <%= submit_tag "インポート（念のため、CSVエクスポートからエクスポートしておくことをおすすめします）", :class => "btn btn-primary" %>
+<% end %>

@@ -16,6 +16,7 @@ SampleApp::Application.routes.draw do
       get 'guitar'
       get 'manage'
       post 'import'
+      put 'import'
     end
   end
   resources :sessions, only: [:new, :create, :destroy]

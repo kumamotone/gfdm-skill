@@ -30,6 +30,75 @@ class Skill < ActiveRecord::Base
     NKF::nkf('--sjis -Lw', csv_str)
   end
 
+  def self.import_preview(file, id)
+    results = []
+    row_number = 1
+
+    # 文字コード変換のためにKernel#openとCSV#newを併用。
+    # 参考: http://qiita.com/labocho/items/8559576b71642b79df67
+    open(file.path, 'r:utf-8', undef: :replace) do |f|
+      csv = CSV.new(f, :headers => :first_row)
+      csv.each do |row|
+        next if row.header_row?
+
+        # CSVの行情報をHASHに変換
+        table = Hash[[row.headers, row.fields].transpose]
+
+        # 登録済みユーザー情報取得。
+        # 登録されてなければ作成
+
+        music_id = table["music_id"]
+        if music_id.nil? || music_id.empty?
+          # first を付けないと謎の型が返ってくる
+          # http://stackoverflow.com/questions/27021036/undefined-method-id-for-activerecordrelation
+          music = Music.where(name: table["name"]).first
+          unless music.nil?
+            music_id = music.id
+          end
+        end
+
+        # binding.pry
+
+        skill = find_by(:music_id => music_id, :kind => table["kind"], :user_id => id)
+        if skill.nil?
+          # binding.pry
+          skill = new
+          skill.music_id = music_id
+          skill.kind = table["kind"]
+          skill.rate = table["rate"]
+
+          if music_id.nil?
+            kind = skill.kind.nil? ? "nil" : skill.kind
+            rate = skill.rate.nil? ? "nil" : skill.rate
+            result = {row: row_number, name: table["name"], kind: kind, rate: rate,  error: "name_error"}
+            results.push(result)
+            row_number += 1
+            next
+          end
+
+          skill.sp = ApplicationController.helpers.calc_sp(skill)
+          skill.user_id = id
+        end
+
+        # raise "hoge"
+        # バリデーションOKの場合は保存
+        if skill.valid?
+          kind = skill.kind.nil? ? "nil" : skill.kind
+          rate = skill.rate.nil? ? "nil" : skill.rate
+          result = {row: row_number, name: table["name"], kind: kind, rate: rate,  error: nil}
+          results.push(result)
+        else
+          kind = skill.kind.nil? ? "nil" : skill.kind
+          rate = skill.rate.nil? ? "nil" : skill.rate
+          result = {row: row_number, name: table["name"], kind: kind, rate: rate,  error: "error"}
+          results.push(result)
+        end
+        row_number += 1
+      end
+    end
+    return results
+  end
+
   def self.import(file, id)
     imported_num = 0
 
@@ -46,7 +115,7 @@ class Skill < ActiveRecord::Base
         # 登録済みユーザー情報取得。
         # 登録されてなければ作成
 
-        skill = find_by(:music_id => table["music_id"], :kind => table["kind"], :user_id => id)
+        skill = find_by(:music_id => table["music_id"], :name => table["name"], :kind => table["kind"], :user_id => id)
         if skill.nil?
           skill = new
           skill.user_id = id
