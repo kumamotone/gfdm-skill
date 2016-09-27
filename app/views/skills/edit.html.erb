@@ -69,7 +69,7 @@
 <% else %>
 <% @otherSkills.each do |skill| %>
     <% text = "難易度: #{show_kind(skill.kind)} 達成度: #{skill.rate} SP: #{skill.sp} " %>
-    <% unless skill.comment.empty? then text += "コメント: #{skill.comment}" %><% end %>
+    <% unless skill.comment.nil? || skill.comment.empty? then text += "コメント: #{skill.comment}" %><% end %>
     <p><%= text %>
       <a class="btn btn-primary" href=<%= edit_skill_path(skill) %> role="button">編集</a>
       <%= link_to "削除", skill, method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn btn-danger" %>

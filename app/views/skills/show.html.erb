@@ -58,7 +58,7 @@
 <% else %>
 <% @otherSkills.each do |skill| %>
     <% text = "難易度: #{show_kind(skill.kind)} 達成度: #{skill.rate} SP: #{skill.sp} " %>
-    <% unless skill.comment.empty? then text += "コメント: #{skill.comment}" %><% end %>
+    <% unless skill.comment.nil? || skill.comment.empty? then text += "コメント: #{skill.comment}" %><% end %>
     <p><%= text %></p>
     <% end %>
 <% end %>
