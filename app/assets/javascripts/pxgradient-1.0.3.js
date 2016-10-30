@@ -52,7 +52,7 @@
         
         var pxg_set = pxg.find(".pxg-set");
         var pxg_text = pxg.find(".pxg-source");
-        var pxg_w = pxg_text.innerWidth();
+        var pxg_w = pxg_text.innerWidth()+1;
         var pxg_h = pxg_text.innerHeight();
 
         pxg_text.hide();
