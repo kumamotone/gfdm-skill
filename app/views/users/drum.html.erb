@@ -1,13 +1,18 @@
 <% provide(:title, @user.name + ' さんのスキル (DrumMania)' ) %>
-  
+
   <h1>
-    <%= @user.name %> さんのスキル (DrumMania) 
+    <%= @user.name %> さんのスキル (DrumMania)
   </h1>
-  
+
   <p><%= link_to "GuitarFreaksスキル表へ", guitar_user_path %></p>
 
   <div class="well">
     <%= simple_format @user.d_comment %>
   </div>
-  <%= render partial: 'sptable', locals: { sp: @user.d, hot: @user.dhot, other: @user.dother, all: @user.dall } %>
-  <%= render 'skilltable' %>
+  <% if @rival == nil then %>
+    <%= render partial: 'sptable', locals: { name: @user.name, sp: @user.d, hot: @user.dhot, other: @user.dother, all: @user.dall, name_rival: nil } %>
+    <%= render 'skilltable' %>
+  <% else %>
+    <%= render partial: 'sptable', locals: { name: @user.name, sp: @user.d, hot: @user.dhot, other: @user.dother, all: @user.dall, name_rival: @rival.name, sp_rival: @rival.d, hot_rival: @rival.dhot, other_rival: @rival.dother, all_rival: @rival.dall } %>
+    <%= render 'skilltable_with_rival' %>
+  <% end %>
