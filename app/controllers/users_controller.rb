@@ -30,135 +30,75 @@ class UsersController < ApplicationController
   end
 
   def drum
-    @user = User.find(params[:id])
-
-    @hot= @user.skills.find_by_sql( ['SELECT s.* 
-                                     FROM skills AS s
-                                     WHERE s.user_id = ? AND
-                                          (s.music_id BETWEEN 712 AND 900) AND
-                                          (s.kind BETWEEN 0 AND 3)
-                                     AND NOT EXISTS
-                                        ( SELECT 1 FROM skills AS t
-                                          WHERE s.music_id = t.music_id AND
-                                                s.user_id = t.user_id AND
-                                                s.sp < t.sp AND (t.kind BETWEEN 0 AND 3))
-                                     ORDER BY sp DESC', @user.id]  )
-    @other = @user.skills.find_by_sql( ['SELECT s.* 
-                                     FROM skills AS s
-                                     WHERE s.user_id = ? AND
-                                          (s.music_id BETWEEN 1 AND 711) AND
-                                          (s.kind BETWEEN 0 AND 3)
-                                     AND NOT EXISTS
-                                        ( SELECT 1 FROM skills AS t
-                                          WHERE s.music_id = t.music_id AND
-                                                s.user_id = t.user_id AND
-                                                s.sp < t.sp AND (t.kind BETWEEN 0 AND 3))
-                                     ORDER BY sp DESC', @user.id]  )
+    @user = User.find_by_id(params[:id])
+    @hot = fetch_skill(user: @user, is_hot: true, is_drum: true)
+    @other = fetch_skill(user: @user, is_hot: false, is_drum: true)
 
     ActiveRecord::Associations::Preloader.new.preload(@hot, :music)
     ActiveRecord::Associations::Preloader.new.preload(@other, :music)
-    #@hot = @user.skills.where(music_id: 712..900, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")
-    #@other = @user.skills.where(music_id: 1..711, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")# 終端位置変更の必要あり
 
-    # hot計算
-    @hot_sp = 0.0
-    @hot.first(25).each do |h|
-      @hot_sp = @hot_sp + h.sp
-    end
-    
-    # other計算
-    @other_sp = 0.0
-    @other.first(25).each do |o|
-      @other_sp = @other_sp + o.sp
-    end
-  
-    # hot_sp, other_sp round
-    @hot_sp = @hot_sp.round(2)
-    @other_sp = @other_sp.round(2)
-
-    # sp計算
-    @skill_sp = (@hot_sp + @other_sp).round(2)
-    
-    # all計算
-    @all_sp = 0.0
-    @hot.each do |h|
-      @all_sp = @all_sp + h.sp
-    end
-    @other.each do |o|
-      @all_sp = @all_sp + o.sp
-    end
-
-    # all sp round
-    @all_sp = @all_sp.round(2)
+    # Skill計算
+    @skill_sp, @hot_sp, @other_sp, @all_sp = calc_skill(@hot, @other)
 
     # DBに保存
-   
     @user.update_attributes(d: @skill_sp, dhot: @hot_sp, dother: @other_sp, dall: @all_sp)
+    return if params[:rival] == nil
+
+    # ライバル情報を取得
+    @rival = User.find_by_id(params[:rival])
+    if @rival == nil then
+      flash[:error] = "ID" + params[:rival].to_s + "のユーザは存在しません"
+      return
+    end
+
+    # スキル情報取得（ライバル）
+    @hot_rival = fetch_skill(user: @rival, is_hot: true, is_drum: true)
+    @other_rival = fetch_skill(user: @rival, is_hot: false, is_drum: true)
+    ActiveRecord::Associations::Preloader.new.preload(@hot_rival, :music)
+    ActiveRecord::Associations::Preloader.new.preload(@other_rival, :music)
+
+    # Skill計算(ライバル)
+    @skill_sp_rival, @hot_sp_rival, @hot_other_rival, @all_sp_rival = calc_skill(@hot_rival, @other_rival)
+
+    # 自分と相手のスキルをDBから取得して結合
+    @merged_skill_hot = merge_rival_score(@hot, @hot_rival)
+    @merged_skill_other = merge_rival_score(@other, @other_rival)
   end
 
   def guitar
     @user = User.find(params[:id])
-    @hot= @user.skills.find_by_sql( ['SELECT s.* 
-                                     FROM skills AS s
-                                     WHERE s.user_id = ? AND
-                                          (s.music_id BETWEEN 712 AND 900) AND
-                                          (s.kind BETWEEN 4 AND 11)
-                                     AND NOT EXISTS
-                                        ( SELECT 1 FROM skills AS t
-                                          WHERE s.music_id = t.music_id AND
-                                                s.user_id = t.user_id AND
-                                                s.sp < t.sp AND (t.kind BETWEEN 4 AND 11))
-                                     ORDER BY sp DESC', @user.id]  )
-    @other = @user.skills.find_by_sql( ['SELECT s.* 
-                                     FROM skills AS s
-                                     WHERE s.user_id = ? AND
-                                          (s.music_id BETWEEN 1 AND 711) AND
-                                          (s.kind BETWEEN 4 AND 11)
-                                     AND NOT EXISTS
-                                        ( SELECT 1 FROM skills AS t
-                                          WHERE s.music_id = t.music_id AND
-                                                s.user_id = t.user_id AND
-                                                s.sp < t.sp AND (t.kind BETWEEN 4 AND 11))
-                                     ORDER BY sp DESC', @user.id]  )
-
+    @hot = fetch_skill(user: @user, is_hot: true, is_drum: false)
+    @other = fetch_skill(user: @user, is_hot: false, is_drum: false)
 
     ActiveRecord::Associations::Preloader.new.preload(@hot, :music)
     ActiveRecord::Associations::Preloader.new.preload(@other, :music)
- 
-    #@hot = @user.skills.where(music_id: 712..900, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC")
-    #@other = @user.skills.where(music_id: 1..711, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC") # 終端位置変更の必要あり
-    
-    # hot計算
-    @hot_sp = 0.0
-    @hot.first(25).each do |h|
-      @hot_sp = @hot_sp + h.sp
-    end
-    
-    # other計算
-    @other_sp = 0.0
-    @other.first(25).each do |o|
-      @other_sp = @other_sp + o.sp
-    end
-   
-    # hot_sp, other_sp round
-    @hot_sp = @hot_sp.round(2)
-    @other_sp = @other_sp.round(2)
 
-    # sp計算
-    @skill_sp = (@hot_sp + @other_sp).round(2)
-    
-    # all計算
-    @all_sp = 0.0
-    @hot.each do |h|
-      @all_sp = @all_sp + h.sp
-    end
-    @other.each do |o|
-      @all_sp = @all_sp + o.sp
+    # Skill計算
+    @skill_sp, @hot_sp, @other_sp, @all_sp = calc_skill(@hot, @other)
+
+    # DBに保存
+    @user.update_attributes(g: @skill_sp, ghot: @hot_sp, gother: @other_sp, gall: @all_sp)
+    return if params[:rival] == nil
+
+    # ライバル情報を取得
+    @rival = User.find_by_id(params[:rival])
+    if @rival == nil then
+      flash[:error] = "ID" + params[:rival].to_s + "のユーザは存在しません"
+      return
     end
 
-    #all sp round
-    @all_sp = @all_sp.round(2)
-    @user.update_attributes(g: @skill_sp, ghot: @hot_sp, gother: @other_sp, gall: @all_sp) 
+    # スキル情報取得（ライバル）
+    @hot_rival = fetch_skill(user: @rival, is_hot: true, is_drum: false)
+    @other_rival = fetch_skill(user: @rival, is_hot: false, is_drum: false)
+    ActiveRecord::Associations::Preloader.new.preload(@hot_rival, :music)
+    ActiveRecord::Associations::Preloader.new.preload(@other_rival, :music)
+
+    # Skill計算(ライバル)
+    @skill_sp_rival, @hot_sp_rival, @hot_other_rival, @all_sp_rival = calc_skill(@hot_rival, @other_rival)
+
+    # 自分と相手のスキルをDBから取得して結合
+    @merged_skill_hot = merge_rival_score(@hot, @hot_rival)
+    @merged_skill_other = merge_rival_score(@other, @other_rival)
    end
 
   def new
@@ -216,5 +156,100 @@ class UsersController < ApplicationController
     def correct_user
       @user = User.find(params[:id])
       redirect_to user_path , notice: "正しいユーザでログインしてください．" unless current_user?(@user)
+    end
+
+    def fetch_skill(user:, is_hot: true, is_drum: true)
+      if is_hot then
+        music_id_min = 712
+        music_id_max = 900
+      else
+        music_id_min = 1
+        music_id_max = 711
+      end
+      if is_drum then
+        music_kind_min = 0
+        music_kind_max = 3
+      else
+        music_kind_min = 4
+        music_kind_max = 11
+      end
+      return user.skills.find_by_sql( ['SELECT s.*
+                                      FROM skills AS s
+                                      WHERE s.user_id = :user_id AND
+                                           (s.music_id BETWEEN :music_id_min AND :music_id_max) AND
+                                           (s.kind BETWEEN :music_kind_min AND :music_kind_max)
+                                      AND NOT EXISTS
+                                         ( SELECT 1 FROM skills AS t
+                                           WHERE s.music_id = t.music_id AND
+                                                 s.user_id = t.user_id AND
+                                                 s.sp < t.sp AND (t.kind BETWEEN :music_kind_min AND :music_kind_max))
+                                      ORDER BY sp DESC',
+                                      {user_id: user.id,
+                                        music_id_min: music_id_min,
+                                        music_id_max: music_id_max,
+                                        music_kind_min: music_kind_min,
+                                        music_kind_max: music_kind_max}]  )
+    end
+
+    # @return SP, SP(新曲のみ), SP(旧曲のみ), 全曲スキル
+    def calc_skill(skill_hot, skill_other)
+      hot_sp = 0.0
+      hot_all = 0.0
+      skill_hot.each_with_index do |h, i|
+        hot_all += h.sp
+        hot_sp = hot_all if i == 24
+      end
+      # 25曲以下の場合のSPは全曲スキルと同じ
+      hot_sp = hot_all if hot_sp == 0.0
+
+      hot_sp = hot_sp.round(2)
+      hot_all = hot_all.round(2)
+
+      other_sp = 0.0
+      other_all = 0.0
+      skill_other.each_with_index do |o, i|
+        other_all += o.sp
+        other_sp = other_all if i == 24
+      end
+      # 25曲以下の場合のSPは全曲スキルと同じ
+      other_sp = other_all if other_sp == 0.0
+
+      other_sp = other_sp.round(2)
+      other_all = other_all.round(2)
+
+      total_sp = (hot_sp + other_sp).round(2)
+      total_all = (hot_all + other_all).round(2)
+      return [total_sp, hot_sp, other_sp, total_all]
+    end
+
+    # 曲名をキーに自分とライバルのスキル情報を結合する
+    def merge_rival_score(skill_me, skill_rival)
+      merged_skill = {}
+      skill_me.each do |skill|
+        merged_skill[skill.music] = {} if merged_skill[skill.music] == nil
+        merged_skill[skill.music]["me"] = skill
+      end
+
+      skill_rival.each do |skill|
+        merged_skill[skill.music] = {} if merged_skill[skill.music] == nil
+        merged_skill[skill.music]["rival"] = skill
+      end
+
+      merged_skill.each do |key, value|
+        if value["me"] == nil then
+          value["me"] = Marshal.load(Marshal.dump(value["rival"]))
+          value["me"].rate = 0.0
+          value["me"].sp = 0.0
+          value["me"].isfc = false
+          value["me"].id = -1
+        elsif value["rival"] == nil then
+          value["rival"] = Marshal.load(Marshal.dump(value["me"]))
+          value["rival"].rate = 0.0
+          value["rival"].sp = 0.0
+          value["rival"].isfc = false
+          value["rival"].id = -1
+        end
+      end
+      return merged_skill
     end
 end
