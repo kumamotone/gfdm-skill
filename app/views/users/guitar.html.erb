@@ -9,6 +9,16 @@
   <%= simple_format @user.g_comment %>
 </div>
 
+<%= form_tag(drum_user_path, method: "get") do %>
+  <%= label_tag(:rival, "ライバルID:") %>
+  <% if @rival == nil then %>
+    <%= text_field_tag(:rival) %>
+  <% else %>
+    <%= text_field_tag(:rival, @rival.id) %>
+  <% end %>
+  <%= submit_tag("比較") %>
+<% end %>
+
 <% if @rival == nil then %>
 <%= render partial: 'sptable', locals: { name: @user.name, sp: @user.g, hot: @user.ghot, other: @user.gother, all: @user.gall, updated_at: @user.skill_updated_at_g, name_rival: nil } %>
 <%= render 'skilltable' %>
