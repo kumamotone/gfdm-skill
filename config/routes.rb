@@ -1,13 +1,15 @@
 SampleApp::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users,
-    controllers: { registratoins: 'registratoins' }
-  resources :skills, except: [:index, :show] 
+             controllers: {registratoins: 'registratoins'}
+  resources :skills, except: [:index]
   resources :musics do
     collection do
       get 'hot'
       get 'other'
     end
   end
+  match '/users/old', to: 'users#index_old', via: 'get'
   resources :users do
     member do
       get 'drum'
@@ -17,18 +19,25 @@ SampleApp::Application.routes.draw do
     end
   end
   resources :sessions, only: [:new, :create, :destroy]
-  root  'static_pages#home'
-  match '/update_maxuser',  to: 'skills#update_maxuser',            via: 'get'
+  root 'static_pages#home'
+  match '/update_maxuser', to: 'skills#update_maxuser', via: 'get'
+  match '/api/userlist', to: 'users#userlist', via: 'get'
   #match '/signup',  to: 'users#new',            via: 'get'
   #match '/signin',  to: 'sessions#new',         via: 'get'
   #match '/signout', to: 'sessions#destroy',     via: 'delete'
   #post ':controller(/:action(/:id(.:format)))'
   #get ':controller(/:action(/:id(.:format)))'
-  devise_scope :user do 
+  devise_scope :user do
     match '/sessions/new.user', to: 'devise/sessions#new', via: :get
     match '/sessions/user', to: 'devise/sessions#create', via: :post
   end
 
+  match '/average' => 'static_pages#average', via: :get
+  match '/average/drum/other/:from/:to' => 'users#drum_average_other', via: :get
+  match '/average/drum/hot/:from/:to' => 'users#drum_average_hot', via: :get
+  match '/average/guitar/other/:from/:to' => 'users#guitar_average_other', via: :get
+  match '/average/guitar/hot/:from/:to' => 'users#guitar_average_hot', via: :get
+  # match '/average/guitar/:from/:to' => 'users#guitar_average', via: get
   # match '/help',    to: 'static_pages#help',    via: 'get'
   # match '/about',   to: 'static_pages#about',   via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.

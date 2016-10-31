@@ -1,18 +1,19 @@
-<% provide(:title, "#{@user.name} さんのスキル" ) %>
+<% provide(:title, "#{@user.name} さんのスキル") %>
 <h1>
-  <%= @user.name %> さんのスキル 
+  <%= @user.name %> さんのスキル
 </h1>
 
 <% if current_user == @user %>
-<div class="well">
-  公開用URLは http://tri.gfdm-skill.net<%= drum_user_path %> (Drummania) と http://tri.gfdm-skill.net<%= guitar_user_path %> (GuitarFreaks) です．
-</div>
+    <div class="well">
+      公開用URLは http://tri.gfdm-skill.net<%= drum_user_path %> (Drummania) と
+      http://tri.gfdm-skill.net<%= guitar_user_path %> (GuitarFreaks) です．
+    </div>
 <% end %>
 
 <h2><%= link_to "Drummania のスキル表へ", drum_user_path %></h2>
 
-  <%= render partial: 'sptable', locals: { sp: @user.d, hot: @user.dhot, other: @user.dother, all: @user.dall } %>
+<%= render partial: 'sptable', locals: {name: @user.name, sp: @user.d, hot: @user.dhot, other: @user.dother, all: @user.dall, updated_at: @user.skill_updated_at_d, name_rival: nil} %>
 
 <h2><%= link_to "GuitarFreaks のスキル表へ", guitar_user_path %></h2>
 
-  <%= render partial: 'sptable', locals: { sp: @user.g, hot: @user.ghot, other: @user.gother, all: @user.gall } %>
+<%= render partial: 'sptable', locals: {name: @user.name, sp: @user.g, hot: @user.ghot, other: @user.gother, all: @user.gall, updated_at: @user.skill_updated_at_g, name_rival: nil} %>

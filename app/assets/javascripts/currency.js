@@ -1,6 +1,6 @@
 /**
- * This plug-in will provide numeric sorting for currency columns (either 
- * detected automatically with the currency type detection plug-in or set 
+ * This plug-in will provide numeric sorting for currency columns (either
+ * detected automatically with the currency type detection plug-in or set
  * manually) while taking account of the currency symbol ($ or £ by default).
  *
  * DataTables 1.10+ has currency sorting abilities built-in and will be
@@ -20,18 +20,18 @@
  *    } );
  */
 
-jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-  "currency-pre": function ( a ) {
-    a = (a==="-") ? 0 : a.replace( /[^\d\-\.]/g, "" );
-    return parseFloat( a );
-  },
+jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+    "currency-pre": function (a) {
+        a = (a === "-") ? 0 : a.replace(/[^\d\-\.]/g, "");
+        return parseFloat(a);
+    },
 
-  "currency-asc": function ( a, b ) {
-    return a - b;
-  },
+    "currency-asc": function (a, b) {
+        return a - b;
+    },
 
-  "currency-desc": function ( a, b ) {
-    return b - a;
-  }
-} );
+    "currency-desc": function (a, b) {
+        return b - a;
+    }
+});
 

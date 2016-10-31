@@ -1,0 +1,25 @@
+<table id="averageTable" class="table table-bordered table-hover table-condensed display compact">
+  <thead>
+  <tr>
+    <th></th>
+    <th>曲名</th>
+    <th>レベル</th>
+    <th>達成率</th>
+    <th>スキル</th>
+    <th>登録数</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @average.each do |skill| %>
+      <tr class=<%= show_color(skill[2]) %>>
+        <td></td>
+        <td><%= skill[1] %></td>
+        <td><%= number_with_precision(fetch_level_by_id(skill[0], skill[2].to_i), precision: 2) %> <%= show_kind(skill[2]) %></td>
+        <td><%= number_with_precision(skill[3], precision: 2) %>% (<%= show_rank(skill[3], false) %>)</td>
+        <td><%= number_with_precision(skill[4], precision: 2) %></td>
+        <td><%= skill[5] %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

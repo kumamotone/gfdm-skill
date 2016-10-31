@@ -2,58 +2,58 @@
 <h1>アカウント作成</h1>
 
 <div class="row">
-    <div class="form-horizontal" role="form">
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <div class="form-horizontal" role="form">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
 
-      <div class="form-group">
-        <%= f.label :name, "名前", :class => "col-xs-offset-1 control-label" %>
-        <div class="col-xs-10 col-xs-offset-1">
-        <%= f.text_field :name, class: "form-control",autocomplete: "off"  %>
+        <div class="form-group">
+          <%= f.label :name, "名前", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-10 col-xs-offset-1">
+            <%= f.text_field :name, class: "form-control", autocomplete: "off" %>
+          </div>
         </div>
-      </div>
 
-      <div class="form-group">
-        <%= f.label :email, "メールアドレス", :class => "col-xs-offset-1 control-label"  %>
-        <div class="col-xs-10 col-xs-offset-1">
-        <%= f.text_field :email, placeholder: "ログインの際に必要になります．", class: "form-control",autocomplete: "off"  %>
-       </div>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :password, "パスワード", :class => "col-xs-offset-1 control-label"  %> 
-        <div class="col-xs-10 col-xs-offset-1">
-        <%= f.password_field :password, class: "form-control",autocomplete: "off"  %>
+        <div class="form-group">
+          <%= f.label :email, "メールアドレス", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-10 col-xs-offset-1">
+            <%= f.text_field :email, placeholder: "ログインの際に必要になります．", class: "form-control", autocomplete: "off" %>
+          </div>
         </div>
-     </div>
 
-      <div class="form-group">
-        <%= f.label :password_confirmation, "パスワード (確認)", :class => "col-xs-offset-1 control-label"  %>
-        <div class="col-xs-10 col-xs-offset-1">
-        <%= f.password_field :password_confirmation, class: "form-control",autocomplete: "off" %>
-      </div>
-     </div>
-
-      <div class="form-group">
-        <%= f.label :d_comment, "コメント (Drummania用)", :class => "col-xs-offset-1 control-label"  %>
-        <div class="col-xs-10 col-xs-offset-1">
-        <%= f.text_area :d_comment, placeholder: "プロフィール画面に表示されます．(任意)",autocomplete: "off", class: "form-control"  %>
+        <div class="form-group">
+          <%= f.label :password, "パスワード", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-10 col-xs-offset-1">
+            <%= f.password_field :password, class: "form-control", autocomplete: "off" %>
+          </div>
         </div>
-      </div>      
-      <div class="form-group">
-      <%= f.label :g_comment, "コメント (GuitarFreaks用)", :class => "col-xs-offset-1 control-label"  %>
-      <div class="col-xs-10 col-xs-offset-1">
-      <%= f.text_area :g_comment, placeholder: "プロフィール画面に表示されます．(任意)",autocomplete: "off", class: "form-control"  %>
-      </div>
-      </div>
-      <div class="form-group">
-      <div class=" col-xs-10 col-xs-offset-1">
-      <%= f.submit "アカウント作成", class: "btn btn-large btn-primary" %>
-      </div>
-      </div>
+
+        <div class="form-group">
+          <%= f.label :password_confirmation, "パスワード (確認)", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-10 col-xs-offset-1">
+            <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "off" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :d_comment, "コメント (Drummania用)", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-10 col-xs-offset-1">
+            <%= f.text_area :d_comment, placeholder: "プロフィール画面に表示されます．(任意)", autocomplete: "off", class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :g_comment, "コメント (GuitarFreaks用)", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-10 col-xs-offset-1">
+            <%= f.text_area :g_comment, placeholder: "プロフィール画面に表示されます．(任意)", autocomplete: "off", class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class=" col-xs-10 col-xs-offset-1">
+            <%= f.submit "アカウント作成", class: "btn btn-large btn-primary" %>
+          </div>
+        </div>
     <% end %>
-    </div>
-      <div class="col-xs-offset-1">
+  </div>
+  <div class="col-xs-offset-1">
     <%= render "devise/shared/links" %>
-    </div>  
+  </div>
 </div>

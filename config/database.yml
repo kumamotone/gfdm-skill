@@ -21,7 +21,7 @@ development:
   timeout: 5000
   database: gfdmskill 
   username: root
-  password: hogehoge
+  password: hogehoge 
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
