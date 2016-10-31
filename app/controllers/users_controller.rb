@@ -327,37 +327,6 @@ class UsersController < ApplicationController
                                       music_kind_max: music_kind_max}]  )
   end
 
-  # @return SP, SP(新曲のみ), SP(旧曲のみ), 全曲スキル
-  def calc_skill(skill_hot, skill_other)
-    hot_sp = 0.0
-    hot_all = 0.0
-    skill_hot.each_with_index do |h, i|
-      hot_all += h.sp
-      hot_sp = hot_all if i == 24
-    end
-    # 25曲以下の場合のSPは全曲スキルと同じ
-    hot_sp = hot_all if hot_sp == 0.0
-
-    hot_sp = hot_sp.round(2)
-    hot_all = hot_all.round(2)
-
-    other_sp = 0.0
-    other_all = 0.0
-    skill_other.each_with_index do |o, i|
-      other_all += o.sp
-      other_sp = other_all if i == 24
-    end
-    # 25曲以下の場合のSPは全曲スキルと同じ
-    other_sp = other_all if other_sp == 0.0
-
-    other_sp = other_sp.round(2)
-    other_all = other_all.round(2)
-
-    total_sp = (hot_sp + other_sp).round(2)
-    total_all = (hot_all + other_all).round(2)
-    return [total_sp, hot_sp, other_sp, total_all]
-  end
-
   # 曲名をキーに自分とライバルのスキル情報を結合する
   def merge_rival_score(skill_me, skill_rival)
     merged_skill = {}
