@@ -16,11 +16,11 @@
       <tr class=<%= show_color(skill["me"].kind)  %>>
       <td></td>
       <td>
-          <% if current_user == @user and skill["me"].id >= 0 %>
-            <%= link_to music.name, edit_skill_path(skill["me"]) %>
-          <% else %>
-            <%= music.name %>
-          <% end %>
+        <% if current_user == @user and skill["me"].id >= 0 %>
+          <%= link_to music.name, edit_skill_path(skill["me"]) %>
+        <% else %>
+          <%= music.name %>
+        <% end %>
       </td>
       <td><%= show_kind(skill["me"].kind) %><br /><%= show_kind(skill["rival"].kind) %></td>
       <td><%= number_with_precision(skill["me"].rate,precision: 2) %>%<br /><%= number_with_precision(skill["rival"].rate,precision: 2) %>%</td>
@@ -49,11 +49,11 @@
       <tr class=<%= show_color(skill["me"].kind)  %>>
       <td></td>
       <td>
-          <% if current_user == @user and skill["me"].id >= 0 %>
-            <%= link_to music.name, edit_skill_path(skill["me"]) %>
-          <% else %>
-            <%= music.name %>
-          <% end %>
+        <% if current_user == @user and skill["me"].id >= 0 %>
+          <%= link_to music.name, edit_skill_path(skill["me"]) %>
+        <% else %>
+          <%= music.name %>
+        <% end %>
       </td>
       <td><%= show_kind(skill["me"].kind) %><br /><%= show_kind(skill["rival"].kind) %></td>
       <td><%= number_with_precision(skill["me"].rate,precision: 2) %>%<br /><%= number_with_precision(skill["rival"].rate,precision: 2) %>%</td>
