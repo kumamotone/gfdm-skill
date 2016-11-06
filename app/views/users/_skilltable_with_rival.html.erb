@@ -4,14 +4,10 @@
       <tr>
         <th></th>
         <th>曲名</th>
-        <th>レベル(自分)</th>
-        <th>達成率(自分)</th>
-        <th>スキル(自分)</th>
-        <th>レベル(ライバル)</th>
-        <th>達成率(ライバル)</th>
-        <th>スキル(ライバル)</th>
+        <th>レベル</th>
+        <th>達成率</th>
+        <th>スキル</th>
         <th>スキル差分</th>
-        <th>コメント</th>
       </tr>
     </thead>
 
@@ -20,22 +16,16 @@
       <tr class=<%= show_color(skill["me"].kind)  %>>
       <td></td>
       <td>
-          <% if current_user != @user %>
-            <%= music.name %>
-          <% elsif skill["me"].id >= 0 %>
+          <% if current_user == @user and skill["me"].id >= 0 %>
             <%= link_to music.name, edit_skill_path(skill["me"]) %>
           <% else %>
-            <%= link_to music.name, new_skill_path(music_id: music.id) %>
+            <%= music.name %>
           <% end %>
       </td>
-      <td><%= number_with_precision(fetch_level(music, skill["me"].kind), precision:2) %> <%= show_kind(skill["me"].kind) %></td>
-      <td><%= number_with_precision(skill["me"].rate,precision: 2) %>% (<%= show_rank(skill["me"].rate, skill["me"].isfc) %>) </td>
-      <td><%= number_with_precision(skill["me"].sp,precision: 2) %></td>
-      <td><%= number_with_precision(fetch_level(music, skill["rival"].kind), precision:2) %> <%= show_kind(skill["rival"].kind) %></td>
-      <td><%= number_with_precision(skill["rival"].rate,precision: 2) %>% (<%= show_rank(skill["rival"].rate, skill["rival"].isfc) %>) </td>
-      <td><%= number_with_precision(skill["rival"].sp,precision: 2) %></td>
+      <td><%= show_kind(skill["me"].kind) %><br /><%= show_kind(skill["rival"].kind) %></td>
+      <td><%= number_with_precision(skill["me"].rate,precision: 2) %>%<br /><%= number_with_precision(skill["rival"].rate,precision: 2) %>%</td>
+      <td><%= number_with_precision(skill["me"].sp,precision: 2) %><br /><%= number_with_precision(skill["rival"].sp,precision: 2) %></td>
       <td><%= number_with_precision((skill["me"].sp - skill["rival"].sp),precision: 2) %></td>
-      <td><%= skill["me"].comment %></td>
       </tr>
     <% end %>
     </tbody>
@@ -47,14 +37,10 @@
       <tr>
         <th></th>
         <th>曲名</th>
-        <th>レベル(自分)</th>
-        <th>達成率(自分)</th>
-        <th>スキル(自分)</th>
-        <th>レベル(ライバル)</th>
-        <th>達成率(ライバル)</th>
-        <th>スキル(ライバル)</th>
+        <th>レベル</th>
+        <th>達成率</th>
+        <th>スキル</th>
         <th>スキル差分</th>
-        <th>コメント</th>
       </tr>
     </thead>
 
@@ -63,20 +49,16 @@
       <tr class=<%= show_color(skill["me"].kind)  %>>
       <td></td>
       <td>
-          <% if current_user == @user && skill["me"].sp > 0.0 %>
+          <% if current_user == @user and skill["me"].id >= 0 %>
             <%= link_to music.name, edit_skill_path(skill["me"]) %>
           <% else %>
             <%= music.name %>
           <% end %>
       </td>
-      <td><%= number_with_precision(fetch_level(music, skill["me"].kind), precision:2) %> <%= show_kind(skill["me"].kind) %></td>
-      <td><%= number_with_precision(skill["me"].rate,precision: 2) %>% (<%= show_rank(skill["me"].rate, skill["me"].isfc) %>) </td>
-      <td><%= number_with_precision(skill["me"].sp,precision: 2) %></td>
-      <td><%= number_with_precision(fetch_level(music, skill["rival"].kind), precision:2) %> <%= show_kind(skill["rival"].kind) %></td>
-      <td><%= number_with_precision(skill["rival"].rate,precision: 2) %>% (<%= show_rank(skill["rival"].rate, skill["rival"].isfc) %>) </td>
-      <td><%= number_with_precision(skill["rival"].sp,precision: 2) %></td>
+      <td><%= show_kind(skill["me"].kind) %><br /><%= show_kind(skill["rival"].kind) %></td>
+      <td><%= number_with_precision(skill["me"].rate,precision: 2) %>%<br /><%= number_with_precision(skill["rival"].rate,precision: 2) %>%</td>
+      <td><%= number_with_precision(skill["me"].sp,precision: 2) %><br /><%= number_with_precision(skill["rival"].sp,precision: 2) %></td>
       <td><%= number_with_precision((skill["me"].sp - skill["rival"].sp),precision: 2) %></td>
-      <td><%= skill["me"].comment %></td>
       </tr>
     <% end %>
     </tbody>
