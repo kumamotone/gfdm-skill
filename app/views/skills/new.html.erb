@@ -5,11 +5,11 @@
   <div class="form-horizontal" role="form">
     <%= form_for(@skill) do |s| %>
       <%= render 'shared/error_messages', object: s.object %>
-
-      <div class="form-group">
-        <%= s.label :name, "曲名", :class => "col-xs-offset-1 control-label"  %>
-        <div class="col-xs-offset-1 col-xs-10">
-          <%= s.collection_select :music_id, Music.all.order("name ASC"), :id, :name, {}, {:class => 'searchable form-control', autofocus: true} %>
+        <div class="form-group">
+          <%= s.label :name, "曲名", :class => "col-xs-offset-1 control-label"  %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= s.collection_select :music_id, Music.all.order("name ASC"), :id, :name, {}, {:class => 'searchable form-control', autofocus: true} %>
+          </div>
         </div>
 
         <div class="form-group">
