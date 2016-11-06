@@ -20,9 +20,9 @@
 <% end %>
 
 <% if @rival == nil then %>
-<%= render partial: 'sptable', locals: { name: @user.name, sp: @user.g, hot: @user.ghot, other: @user.gother, all: @user.gall, updated_at: @user.skill_updated_at_g, name_rival: nil } %>
-<%= render 'skilltable' %>
+  <%= render partial: 'sptable', locals: { name: @user.name, sp: @user.g, hot: @user.ghot, other: @user.gother, all: @user.gall, updated_at: @user.skill_updated_at_g, name_rival: nil } %>
+  <%= render 'skilltable' %>
 <% else %>
-<%= render partial: 'sptable', locals: { name: @user.name, sp: @user.g, hot: @user.ghot, other: @user.gother, all: @user.gall, updated_at: @user.skill_updated_at_g, name_rival: @rival.name, sp_rival: @rival.g, hot_rival: @rival.ghot, other_rival: @rival.gother, all_rival: @rival.gall } %>
-<%= render 'skilltable_with_rival' %>
+  <%= render partial: 'sptable', locals: { name: @user.name, sp: @user.g, hot: @user.ghot, other: @user.gother, all: @user.gall, updated_at: @user.skill_updated_at_g, name_rival: @rival.name, sp_rival: @rival.g, hot_rival: @rival.ghot, other_rival: @rival.gother, all_rival: @rival.gall } %>
+  <%= render 'skilltable_with_rival' %>
 <% end %>
