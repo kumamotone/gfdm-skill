@@ -9,7 +9,7 @@
   <%= simple_format @user.g_comment %>
 </div>
 
-<%= form_tag(drum_user_path, method: "get") do %>
+<%= form_tag(guitar_user_path, method: "get") do %>
   <%= label_tag(:rival, "ライバルID:") %>
   <% if @rival == nil then %>
     <%= text_field_tag(:rival) %>
