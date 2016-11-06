@@ -343,12 +343,14 @@ class UsersController < ApplicationController
     merged_skill.each do |key, value|
       if value["me"] == nil then
         value["me"] = Marshal.load(Marshal.dump(value["rival"]))
+        value["me"].kind = -1
         value["me"].rate = 0.0
         value["me"].sp = 0.0
         value["me"].isfc = false
         value["me"].id = -1
       elsif value["rival"] == nil then
         value["rival"] = Marshal.load(Marshal.dump(value["me"]))
+        value["rival"].kind = -1
         value["rival"].rate = 0.0
         value["rival"].sp = 0.0
         value["rival"].isfc = false
