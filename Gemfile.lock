@@ -361,5 +361,8 @@ DEPENDENCIES
   twitter (= 5.16.0)
   uglifier (= 2.1.1)
 
+RUBY VERSION
+   ruby 2.3.3p222
+
 BUNDLED WITH
-   1.10.6
+   1.13.6
