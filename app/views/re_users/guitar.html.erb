@@ -1,0 +1,13 @@
+<% provide(:title, @user.name + ' さんのスキル (GuitarFreaks)') %>
+<h1>
+  <%= @user.name %> さんのスキル (GuitarFreaks)
+</h1>
+
+<p><%= link_to "DrumManiaスキル表へ", drum_re_user_path %></p>
+
+<div class="well">
+  <%= simple_format @user.g_comment %>
+</div>
+
+<%= render partial: 'sptable', locals: {sp: @user.g, hot: @user.ghot, other: @user.gother, all: @user.gall, updated_at: @user.skill_updated_at_g} %>
+<%= render 'skilltable' %>

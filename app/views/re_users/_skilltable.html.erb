@@ -1,0 +1,64 @@
+<h2>Hot</h2>
+<table id="sortableTable" class="table table-bordered table-hover table-condensed display compact">
+  <thead>
+  <tr>
+    <th></th>
+    <th>曲名</th>
+    <th>レベル</th>
+    <th>達成率</th>
+    <th>スキル</th>
+    <th>コメント</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @hot.each do |skill| %>
+      <tr class=<%= show_color(skill.kind) %>>
+        <td></td>
+        <td>
+          <% if current_re_user == @user %>
+              <%= link_to skill.music.name, edit_skill_path(skill) %>
+          <% else %>
+              <%= skill.music.name %>
+          <% end %>
+        </td>
+        <td><%= number_with_precision(fetch_level(skill.music, skill.kind), precision: 2) %> <%= show_kind(skill.kind) %></td>
+        <td><%= number_with_precision(skill.rate, precision: 2) %>% (<%= show_rank(skill.rate, skill.isfc) %>)</td>
+        <td><%= link_to number_with_precision(skill.sp, precision: 2), skill_path(skill) %></td>
+        <td><%= skill.comment %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<h2>Other</h2>
+<table id="sortableTable2" class="table table-responsive table-bordered table-hover table-condensed display compact">
+  <thead>
+  <tr>
+    <th></th>
+    <th>曲名</th>
+    <th>レベル</th>
+    <th>達成率</th>
+    <th>スキル</th>
+    <th>コメント</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @other.each do |skill| %>
+      <tr class=<%= show_color(skill.kind) %>>
+        <td></td>
+        <td>
+          <% if current_re_user == @user %>
+              <%= link_to skill.music.name, edit_skill_path(skill) %>
+          <% else %>
+              <%= skill.music.name %>
+          <% end %>
+        </td>
+        <td><%= number_with_precision(fetch_level(skill.music, skill.kind), precision: 2) %> <%= show_kind(skill.kind) %></td>
+        <td><%= number_with_precision(skill.rate, precision: 2) %>% (<%= show_rank(skill.rate, skill.isfc) %>)</td>
+        <td><%= link_to number_with_precision(skill.sp, precision: 2), skill_path(skill) %></td>
+        <td><%= skill.comment %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,9 +1,25 @@
 SampleApp::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users,
-             controllers: {registratoins: 'registratoins'}
+             controllers: {
+                  # registratoins: 'users/registrations',
+                  # passwords: 'users/passwords',
+             }
+  devise_for :re_users, path: 're/users',
+             controllers: {
+                 registrations: 're_users/registrations',
+                 passwords: 're_users/passwords',
+                 sessions: 're_users/sessions'
+             }
   resources :skills, except: [:index]
+  resources :re_skills, path: 're/skills', except: [:index]
   resources :musics do
+    collection do
+      get 'hot'
+      get 'other'
+    end
+  end
+  resources :re_musics, path: 're/musics' do
     collection do
       get 'hot'
       get 'other'
@@ -18,8 +34,18 @@ SampleApp::Application.routes.draw do
       post 'import'
     end
   end
+  match '/users/old', to: 're_users#index_old', via: 'get'
+  resources :re_users, path: 're/users' do
+    member do
+      get 'drum'
+      get 'guitar'
+      get 'manage'
+      post 'import'
+    end
+  end
   resources :sessions, only: [:new, :create, :destroy]
   root 'static_pages#home'
+  match '/re', to: 'static_pages#re_home', via: 'get'
   match '/update_maxuser', to: 'skills#update_maxuser', via: 'get'
   match '/api/userlist', to: 'users#userlist', via: 'get'
   #match '/signup',  to: 'users#new',            via: 'get'
@@ -30,6 +56,11 @@ SampleApp::Application.routes.draw do
   devise_scope :user do
     match '/sessions/new.user', to: 'devise/sessions#new', via: :get
     match '/sessions/user', to: 'devise/sessions#create', via: :post
+  end
+
+  devise_scope :re_user do
+    match '/sessions/new.re_user', to: 're_users/sessions#new', via: :get
+    match '/sessions/re_user', to: 're_users/sessions#create', via: :post
   end
 
   match '/average' => 'static_pages#average', via: :get

@@ -1,0 +1,82 @@
+<% provide(:title, 'スキル編集') %>
+<h1>スキル編集</h1>
+
+<div class="row">
+  <div class="form-horizontal" role="form">
+    <%= form_for(@skill) do |s| %>
+        <%= render 'shared/error_messages', object: s.object %>
+
+        <div class="form-group">
+          <%= s.label :name, "曲名", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= fetch_music_name(@skill.re_music_id) %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= s.label :kind, "難易度", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= "#{show_kind(@skill.kind)}" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= s.label :rate, "達成率", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= s.text_field :rate, placeholder: "例: 86.79", class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= s.label :sp, "SP", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= @skill.sp %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= s.label :comment, "コメント", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= s.text_field :comment, placeholder: "省略可", class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class=" col-xs-offset-1 col-xs-10 col-xs-offset-1">
+            <%= s.check_box :isfc %>
+            <%= s.label :isfc, "FULL COMBO", :class => "control-label" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class=" col-xs-offset-1 col-xs-10">
+            <%= s.submit "編集", class: "btn btn-large btn-primary" %>
+            <%= link_to "削除", @skill, method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn btn-danger" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class=" col-xs-offset-1 col-xs-10">
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<h2>同じ曲の別難易度のSKILL</h2>
+
+<% if @otherSkills.nil? || @otherSkills.empty? %>
+  <p>なし</p>
+<% else %>
+<% @otherSkills.each do |skill| %>
+    <% text = "難易度: #{show_kind(skill.kind)} 達成度: #{skill.rate} SP: #{skill.sp} " %>
+    <% unless skill.comment.nil? || skill.comment.empty? then text += "コメント: #{skill.comment}" %><% end %>
+    <p><%= text %>
+      <a class="btn btn-primary" href=<%= edit_skill_path(skill) %> role="button">編集</a>
+      <%= link_to "削除", skill, method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn btn-danger" %>
+    </p>
+    <% end %>
+<% end %>
+
+<h2>別難度の編集</h2>
+
+<%= link_to "スキル登録", new_skill_path %> から登録できます。

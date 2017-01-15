@@ -1,0 +1,37 @@
+<h1>GITADORA Tri-boost Re:EVOLVE スキルシミュレータ</h1>
+
+<h2>これ何？</h2>
+<p>GITADORA Tri-boost
+  用スキルシミュレータです。 <%= link_to "GuitarFreaks & DrumMania Skill Simulator", "http://xv-s.heteml.jp/skill/", :target => ["_blank"] %>
+  が今作になってから活動を停止しており、スキル表を共有する手立てがなくなったため、勉強がてら作成しました (非公認)。</p>
+
+<h2>スキル表の例</h2>
+<%= link_to "DM", drum_user_path(1) %>, <%= link_to "GF", guitar_user_path(1) %>
+
+<h2>ログイン、新規登録</h2>
+<p><%= link_to "ログイン", new_user_session_path %> または <%= link_to "新規登録", new_user_registration_path %> はこちら。</p>
+
+<h2>MAX SKILL(理論値スキル計算)</h2>
+<p><%= link_to "DM", drum_user_path(3) %>, <%= link_to "GF", guitar_user_path(3) %> <p>
+
+<h2>SKILL AVERAGE (β)</h2>
+<p><%= link_to "SKILL AVERAGE (β)", "/average" %></p>
+
+<h2>ユーザ検索</h2>
+<p>とりあえず <%= link_to "ユーザ一覧", users_path %> で名前の検索やスキルポイントでの並び替え等はできます。</p>
+<p>IE など一部のブラウザでうまく表示されないようなので、暫定的に<%= link_to "旧ユーザー一覧", "/users/old" %>を復活させました。（表示に時間が掛かります）</p>
+
+<h2>開発者の方へ</h2>
+<p>ソースコードは <%= link_to "GitHub", "https://github.com/kumamotone/gfdm-skill", :target => ["_blank"] %>
+  上で公開しています。ぜひ開発にご参加ください。 issue も歓迎です。</p>
+
+<h2>リンク</h2>
+<ul>
+  <li><%= link_to "BEMANIWiki 2nd", "http://bemaniwiki.com/index.php?GITADORA%20Tri-Boost", :target => ["_blank"] %> </li>
+  <li><%= link_to "eAMUSEMENT プレーデータ", "http://p.eagate.573.jp/game/gfdm/gitadora_tb/p/eam/index.html", :target => ["_blank"] %></li>
+</ul>
+
+<h2>更新情報、連絡先</h2>
+<p>更新情報、障害情報などに関しては基本的に Twitterアカウントでお知らせする予定ですが、長くなる場合は <%= link_to "更新情報ブログ", "http://gfdmskill.blog.fc2.com/", :target => ["_blank"] %> に詳しく書くのでご確認ください。不具合や曲情報の間違いなどは、コメント欄などでお知らせください。</p>
+
+<a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/gfdmskill">Tweets by gfdmskill</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

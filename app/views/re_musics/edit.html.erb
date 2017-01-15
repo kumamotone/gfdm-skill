@@ -1,0 +1,4 @@
+<h1>曲編集</h1>
+
+<%= render partial: "form", locals: {mode: "edit"} %>
+<%= link_to "削除", @re_music, method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn btn-danger" %>

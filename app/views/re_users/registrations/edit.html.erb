@@ -1,0 +1,79 @@
+<% provide(:title, 'アカウント情報変更') %>
+<h1>アカウント情報変更</h1>
+
+<% if @user.admin? || @user.subadmin? then %>
+    <strong>曲情報登録権限があるアカウントです。</strong>
+<% end %>
+
+<div class="row">
+  <div class="form-horizontal" role="form">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
+        <%= devise_error_messages! %>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="form-group">
+          <%= f.label :name, "名前", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= f.text_field :name, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email, "メールアドレス", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= f.text_field :email, placeholder: "ログインの際に必要になります．", class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :d_comment, "コメント (Drummania用)", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= f.text_area :d_comment, placeholder: "プロフィール画面に表示されます．(任意)", class: "form-control", rows: 6 %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :g_comment, "コメント (GuitarFreaks用)", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= f.text_area :g_comment, placeholder: "プロフィール画面に表示されます．(任意)", class: "form-control", rows: 6 %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :current_password, "現在のパスワード を入力してください", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= f.password_field :current_password, class: "form-control", autocomplete: "off" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, "新しいパスワード (変更しない場合は空にしてください)", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= f.password_field :password, class: "form-control", autocomplete: "off" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password_confirmation, "新しいパスワード (確認)", :class => "col-xs-offset-1 control-label" %>
+          <div class="col-xs-offset-1 col-xs-10">
+            <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "off" %>
+          </div>
+        </div>
+
+        </div>
+        <div class="form-group">
+          <div class=" col-xs-offset-1">
+            <%= f.submit "編集", class: "btn btn-large btn-primary" %>
+          </div>
+        </div>
+    <% end %>
+    </div>
+<div class="col-xs-offset-1">
+  <%= render "re_users/shared/links" %>
+</div>
+
+</div>
+
