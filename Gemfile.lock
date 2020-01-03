@@ -318,7 +318,7 @@ GEM
     tilt (1.4.1)
     timers (4.0.4)
       hitimes
-    turbolinks (1.1.1)
+    turbolinks (2.3.0)
       coffee-rails
     twitter (5.16.0)
       addressable (~> 2.3)
@@ -382,7 +382,7 @@ DEPENDENCIES
   spork-rails (= 4.0.0)
   sprockets (= 2.12.5)
   sqlite3 (= 1.4.2)
-  turbolinks (= 1.1.1)
+  turbolinks (= 2.3.0)
   twitter (= 5.16.0)
   uglifier (= 2.1.1)
 
