@@ -14,7 +14,7 @@ gem "select2-rails"
 gem 'jquery-datatables-rails'
 gem 'google-analytics-turbolinks'
 gem 'devise', '4.7.1'
-gem 'rails_admin', '0.8.1'
+gem 'rails_admin', '1.4.2'
 gem 'nprogress-rails'
 
 gem 'sass-rails', '4.0.5'
