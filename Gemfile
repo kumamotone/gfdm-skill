@@ -13,7 +13,7 @@ gem "jquery-turbolinks" # Turbolinksで遷移したときもjQuery.ready()を呼
 gem "select2-rails"
 gem 'jquery-datatables-rails'
 gem 'google-analytics-turbolinks'
-gem 'devise', '3.5.1'
+gem 'devise', '4.7.1'
 gem 'rails_admin', '0.8.1'
 gem 'nprogress-rails'
 
