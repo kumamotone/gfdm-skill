@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.4.9'
 #ruby-gemset=railstutorial_rails_4_0
 
-gem 'rails', '4.1.9'
-gem 'bootstrap-sass', '3.2.0.2' #, '2.3.2.0'
+# gem 'json', github: 'flori/json', branch: 'v1.8'
+gem 'rails', github: 'rails/rails', branch: '4-2-stable'
+gem 'rake', '< 11.0'
+gem 'bootstrap-sass', '3.2.0.4' #, '2.3.2.0'
 gem 'sprockets', '2.12.3'
 gem 'bcrypt-ruby', '3.1.2'
 #gem 'will_paginate', '3.0.4'
@@ -23,11 +25,10 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
   
 gem 'mysql2', '0.3.21'
-
 gem 'twitter', '5.16.0'
 
 group :development, :test do
-  #gem 'sqlite3', '1.3.8'
+  gem 'sqlite3', '1.4.2' 
   gem 'debug_inspector', '0.0.2'
   gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
   gem 'pry-doc'    # methodを表示
