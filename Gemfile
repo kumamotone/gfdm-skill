@@ -6,7 +6,7 @@ ruby '2.4.9'
 gem 'rails', github: 'rails/rails', branch: '4-2-stable'
 gem 'rake', '< 11.0'
 gem 'bootstrap-sass', '3.2.0.4' #, '2.3.2.0'
-gem 'sprockets', '2.12.3'
+gem 'sprockets', '2.12.5'
 gem 'bcrypt-ruby', '3.1.2'
 #gem 'will_paginate', '3.0.4'
 gem "jquery-turbolinks" # Turbolinksで遷移したときもjQuery.ready()を呼び出してくれる

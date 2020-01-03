@@ -307,7 +307,7 @@ GEM
     spork-rails (4.0.0)
       rails (>= 3.0.0, < 5)
       spork (>= 1.0rc0)
-    sprockets (2.12.3)
+    sprockets (2.12.5)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -390,7 +390,7 @@ DEPENDENCIES
   select2-rails
   selenium-webdriver (= 2.35.1)
   spork-rails (= 4.0.0)
-  sprockets (= 2.12.3)
+  sprockets (= 2.12.5)
   sqlite3 (= 1.4.2)
   turbolinks (= 1.1.1)
   twitter (= 5.16.0)
