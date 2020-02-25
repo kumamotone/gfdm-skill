@@ -197,7 +197,7 @@ GEM
     mysql2 (0.3.21)
     naught (1.1.0)
     nested_form (0.3.2)
-    nokogiri (1.10.7)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     nprogress-rails (0.2.0.2)
     orm_adapter (0.5.0)
