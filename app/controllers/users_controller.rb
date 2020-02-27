@@ -35,79 +35,80 @@ class UsersController < ApplicationController
 
   def drum
     @user = User.find(params[:id])
-
-    @hot= @user.skills.find_by_sql(['SELECT s.*
-                                     FROM skills AS s
-                                     WHERE s.user_id = ? AND
-                                          (s.music_id >= 712) AND
-                                          (s.kind BETWEEN 0 AND 3)
-                                     AND NOT EXISTS
-                                        ( SELECT 1 FROM skills AS t
-                                          WHERE s.music_id = t.music_id AND
-                                                s.user_id = t.user_id AND
-                                                s.sp < t.sp AND (t.kind BETWEEN 0 AND 3))
-                                     ORDER BY sp DESC', @user.id])
-    @other = @user.skills.find_by_sql(['SELECT s.*
-                                     FROM skills AS s
-                                     WHERE s.user_id = ? AND
-                                          (s.music_id BETWEEN 1 AND 711) AND
-                                          (s.kind BETWEEN 0 AND 3)
-                                     AND NOT EXISTS
-                                        ( SELECT 1 FROM skills AS t
-                                          WHERE s.music_id = t.music_id AND
-                                                s.user_id = t.user_id AND
-                                                s.sp < t.sp AND (t.kind BETWEEN 0 AND 3))
-                                     ORDER BY sp DESC', @user.id])
-
+    @hot = fetch_skill(user: @user, is_hot: true, is_drum: true)
+    @other = fetch_skill(user: @user, is_hot: false, is_drum: true)
     ActiveRecord::Associations::Preloader.new.preload(@hot, :music)
     ActiveRecord::Associations::Preloader.new.preload(@other, :music)
-    #@hot = @user.skills.where(music_id: 712..900, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")
-    #@other = @user.skills.where(music_id: 1..711, kind: 0..3).order("sp DESC").group("music_id").order("sp DESC")# 終端位置変更の必要あり
 
     # 必要な情報をフェッチ
     @hot_sp = @user.dhot
     @other_sp = @user.dother
     @skill_sp = @user.d
     @all_sp = @user.dall
+
+    return if params[:rival] == nil
+
+    # ライバル情報を取得
+    @rival = User.find_by_id(params[:rival])
+    if @rival == nil then
+      flash[:error] = "ID" + params[:rival].to_s + "のユーザは存在しません"
+      return
+    end
+
+    # スキル情報取得（ライバル）
+    @hot_rival = fetch_skill(user: @rival, is_hot: true, is_drum: true)
+    @other_rival = fetch_skill(user: @rival, is_hot: false, is_drum: true)
+    ActiveRecord::Associations::Preloader.new.preload(@hot_rival, :music)
+    ActiveRecord::Associations::Preloader.new.preload(@other_rival, :music)
+
+    # 必要な情報をフェッチ（ライバル）
+    @hot_sp_rival = @rival.dhot
+    @other_sp_rival = @rival.dother
+    @skill_sp_rival = @rival.d
+    @all_sp_rival = @rival.dall
+
+    # 自分と相手のスキルをDBから取得して結合
+    @merged_skill_hot = merge_rival_score(@hot, @hot_rival)
+    @merged_skill_other = merge_rival_score(@other, @other_rival)
   end
 
   def guitar
     @user = User.find(params[:id])
-    @hot= @user.skills.find_by_sql(['SELECT s.*
-                                     FROM skills AS s
-                                     WHERE s.user_id = ? AND
-                                          (s.music_id >= 712) AND
-                                          (s.kind BETWEEN 4 AND 11)
-                                     AND NOT EXISTS
-                                        ( SELECT 1 FROM skills AS t
-                                          WHERE s.music_id = t.music_id AND
-                                                s.user_id = t.user_id AND
-                                                s.sp < t.sp AND (t.kind BETWEEN 4 AND 11))
-                                     ORDER BY sp DESC', @user.id])
-    @other = @user.skills.find_by_sql(['SELECT s.*
-                                     FROM skills AS s
-                                     WHERE s.user_id = ? AND
-                                          (s.music_id BETWEEN 1 AND 711) AND
-                                          (s.kind BETWEEN 4 AND 11)
-                                     AND NOT EXISTS
-                                        ( SELECT 1 FROM skills AS t
-                                          WHERE s.music_id = t.music_id AND
-                                                s.user_id = t.user_id AND
-                                                s.sp < t.sp AND (t.kind BETWEEN 4 AND 11))
-                                     ORDER BY sp DESC', @user.id])
-
-
+    @hot = fetch_skill(user: @user, is_hot: true, is_drum: false)
+    @other = fetch_skill(user: @user, is_hot: false, is_drum: false)
     ActiveRecord::Associations::Preloader.new.preload(@hot, :music)
     ActiveRecord::Associations::Preloader.new.preload(@other, :music)
-
-    #@hot = @user.skills.where(music_id: 712..900, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC")
-    #@other = @user.skills.where(music_id: 1..711, kind: 4..11).order("sp DESC").group("music_id").order("sp DESC") # 終端位置変更の必要あり
 
     # 必要な情報をフェッチ
     @hot_sp = @user.ghot
     @other_sp = @user.gother
     @skill_sp = @user.g
     @all_sp = @user.gall
+
+    return if params[:rival] == nil
+
+    # ライバル情報を取得
+    @rival = User.find_by_id(params[:rival])
+    if @rival == nil then
+      flash[:error] = "ID" + params[:rival].to_s + "のユーザは存在しません"
+      return
+    end
+
+    # スキル情報取得（ライバル）
+    @hot_rival = fetch_skill(user: @rival, is_hot: true, is_drum: false)
+    @other_rival = fetch_skill(user: @rival, is_hot: false, is_drum: false)
+    ActiveRecord::Associations::Preloader.new.preload(@hot_rival, :music)
+    ActiveRecord::Associations::Preloader.new.preload(@other_rival, :music)
+
+    # 必要な情報をフェッチ(ライバル)
+    @hot_sp_rival = @rival.ghot
+    @other_sp_rival = @rival.gother
+    @skill_sp_rival = @rival.g
+    @all_sp_rival = @rival.gall
+
+    # 自分と相手のスキルをDBから取得して結合
+    @merged_skill_hot = merge_rival_score(@hot, @hot_rival)
+    @merged_skill_other = merge_rival_score(@other, @other_rival)
   end
 
   def new
@@ -291,6 +292,72 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password,
                                  :password_confirmation, :g_comment, :d_comment, :g, :ghot, :gohter, :gall, :d, :dhot, :dother, :dall, :place)
+  end
+
+  def fetch_skill(user:, is_hot: true, is_drum: true)
+    if is_hot then
+      music_id_min = 712
+      music_id_max = 900
+    else
+      music_id_min = 1
+      music_id_max = 711
+    end
+    if is_drum then
+      music_kind_min = 0
+      music_kind_max = 3
+    else
+      music_kind_min = 4
+      music_kind_max = 11
+    end
+    return user.skills.find_by_sql( ['SELECT s.*
+                                    FROM skills AS s
+                                    WHERE s.user_id = :user_id AND
+                                         (s.music_id BETWEEN :music_id_min AND :music_id_max) AND
+                                         (s.kind BETWEEN :music_kind_min AND :music_kind_max)
+                                    AND NOT EXISTS
+                                       ( SELECT 1 FROM skills AS t
+                                         WHERE s.music_id = t.music_id AND
+                                               s.user_id = t.user_id AND
+                                               s.sp < t.sp AND (t.kind BETWEEN :music_kind_min AND :music_kind_max))
+                                    ORDER BY sp DESC',
+                                    {user_id: user.id,
+                                      music_id_min: music_id_min,
+                                      music_id_max: music_id_max,
+                                      music_kind_min: music_kind_min,
+                                      music_kind_max: music_kind_max}]  )
+  end
+
+  # 曲名をキーに自分とライバルのスキル情報を結合する
+  def merge_rival_score(skill_me, skill_rival)
+    merged_skill = {}
+    skill_me.each do |skill|
+      merged_skill[skill.music] = {} if merged_skill[skill.music] == nil
+      merged_skill[skill.music]["me"] = skill
+    end
+
+    skill_rival.each do |skill|
+      merged_skill[skill.music] = {} if merged_skill[skill.music] == nil
+      merged_skill[skill.music]["rival"] = skill
+    end
+
+    merged_skill.each do |key, value|
+      if value["me"] == nil then
+        value["me"] = Marshal.load(Marshal.dump(value["rival"]))
+        value["me"].kind = -1
+        value["me"].rate = 0.0
+        value["me"].sp = 0.0
+        value["me"].isfc = false
+        value["me"].id = -1
+      elsif value["rival"] == nil then
+        value["rival"] = Marshal.load(Marshal.dump(value["me"]))
+        value["rival"].kind = -1
+        value["rival"].rate = 0.0
+        value["rival"].sp = 0.0
+        value["rival"].isfc = false
+        value["rival"].id = -1
+      end
+    end
+    return merged_skill
   end
 
   # Before actions

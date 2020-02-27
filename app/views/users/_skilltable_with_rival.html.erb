@@ -1,0 +1,65 @@
+<h2>Hot</h2>
+  <table id="sortableTable" class="table table-bordered table-hover table-condensed display compact">
+    <thead>
+      <tr>
+        <th></th>
+        <th>曲名</th>
+        <th>レベル</th>
+        <th>達成率</th>
+        <th>スキル</th>
+        <th>スキル差分</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @merged_skill_hot.each do |music, skill| %>
+      <tr class=<%= show_color(skill["me"].kind)  %>>
+      <td></td>
+      <td>
+        <% if current_user == @user and skill["me"].id >= 0 %>
+          <%= link_to music.name, edit_skill_path(skill["me"]) %>
+        <% else %>
+          <%= music.name %>
+        <% end %>
+      </td>
+      <td><%= show_kind(skill["me"].kind) %><br /><%= show_kind(skill["rival"].kind) %></td>
+      <td><%= number_with_precision(skill["me"].rate,precision: 2) %>%<br /><%= number_with_precision(skill["rival"].rate,precision: 2) %>%</td>
+      <td><%= number_with_precision(skill["me"].sp,precision: 2) %><br /><%= number_with_precision(skill["rival"].sp,precision: 2) %></td>
+      <td><%= number_with_precision((skill["me"].sp - skill["rival"].sp),precision: 2) %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+<h2>Other</h2>
+  <table id="sortableTable2" class="table table-bordered table-hover table-condensed display compact">
+    <thead>
+      <tr>
+        <th></th>
+        <th>曲名</th>
+        <th>レベル</th>
+        <th>達成率</th>
+        <th>スキル</th>
+        <th>スキル差分</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @merged_skill_other.each do |music, skill| %>
+      <tr class=<%= show_color(skill["me"].kind)  %>>
+      <td></td>
+      <td>
+        <% if current_user == @user and skill["me"].id >= 0 %>
+          <%= link_to music.name, edit_skill_path(skill["me"]) %>
+        <% else %>
+          <%= music.name %>
+        <% end %>
+      </td>
+      <td><%= show_kind(skill["me"].kind) %><br /><%= show_kind(skill["rival"].kind) %></td>
+      <td><%= number_with_precision(skill["me"].rate,precision: 2) %>%<br /><%= number_with_precision(skill["rival"].rate,precision: 2) %>%</td>
+      <td><%= number_with_precision(skill["me"].sp,precision: 2) %><br /><%= number_with_precision(skill["rival"].sp,precision: 2) %></td>
+      <td><%= number_with_precision((skill["me"].sp - skill["rival"].sp),precision: 2) %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>

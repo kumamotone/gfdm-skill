@@ -114,6 +114,8 @@ module ApplicationHelper
         "EXT(B)"
       when 11
         "MAS(B)"
+      else
+        " - "
     end
   end
 

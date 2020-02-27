@@ -1,29 +1,38 @@
 最終更新: <%= updated_at %>
 <table class="table">
   <thead>
-  <tr class="gray">
-    <th>Skill</th>
-    <th>Hot</th>
-    <th>Other</th>
-    <th>All</th>
-  </tr>
+    <tr class="gray">
+      <th>Name</th>
+      <th>Skill</th>
+      <th>Hot</th>
+      <th>Other</th>
+      <th>All</th>
+    </tr>
   </thead>
   <tbody>
   <tr class="black">
     <% skillcolor = get_skillcolor(sp) %>
-    <td>
-      <div class=<%= skillcolor %>><%= number_with_precision sp, precision: 2 %></div>
-    </td>
-    <td>
-      <div class=<%= skillcolor %>><%= number_with_precision hot, precision: 2 %></div>
-    </td>
-    <td>
-      <div class=<%= skillcolor %>><%= number_with_precision other, precision: 2 %></div>
-    </td>
-    <td>
-      <div class=<%= skillcolor %>><%= number_with_precision all, precision: 2 %></div>
-    </td>
+    <td><div class=<%= skillcolor %>><%= name %></div></td>
+    <td><div class=<%= skillcolor %>><%= number_with_precision sp, precision: 2 %></div></td>
+    <td><div class=<%= skillcolor %>><%= number_with_precision hot, precision: 2 %></div></td>
+    <td><div class=<%= skillcolor %>><%= number_with_precision other, precision: 2 %></div></td>
+    <td><div class=<%= skillcolor %>><%= number_with_precision all, precision: 2 %></div></td>
   </tr>
+  <% if name_rival != nil %>
+  <tr class="black">
+    <% skillcolor = get_skillcolor(sp_rival) %>
+    <td><div class=<%= skillcolor %>><%= name_rival %></div></td>
+    <td><div class=<%= skillcolor %>><%= number_with_precision sp_rival, precision: 2 %></div></td>
+    <td><div class=<%= skillcolor %>><%= number_with_precision hot_rival, precision: 2 %></div></td>
+    <td><div class=<%= skillcolor %>><%= number_with_precision other_rival, precision: 2 %></div></td>
+    <td><div class=<%= skillcolor %>><%= number_with_precision all_rival, precision: 2 %></div></td>
+  </tr>
+  <tr class="black">
+    <td><div>差分</div></td>
+    <td><div><%= number_with_precision sp - sp_rival, precision: 2 %></div></td>
+    <td><div><%= number_with_precision hot - hot_rival, precision: 2 %></div></td>
+    <td><div><%= number_with_precision other - other_rival, precision: 2 %></div></td>
+    <td><div><%= number_with_precision all - all_rival, precision: 2 %></div></td>
+  </tr>
+  <% end %>
 </table>
-
-
