@@ -4,7 +4,7 @@ ruby '2.4.9'
 
 # gem 'json', github: 'flori/json', branch: 'v1.8'
 gem 'rails', github: 'rails/rails', branch: '4-2-stable'
-gem 'rake', '< 11.0'
+gem 'rake', '< 14.0'
 gem "bootstrap-sass", "3.4.1"
 gem 'sprockets', '2.12.5'
 gem 'bcrypt-ruby', '3.1.2'
